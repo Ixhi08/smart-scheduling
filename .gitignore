@@ -1,0 +1,12 @@
+# Python
+__pycache__/
+*.pyc
+backend/models/*.joblib
+backend/data/*.csv
+
+# Node
+frontend/node_modules/
+frontend/build/
+
+# Mac
+.DS_Store

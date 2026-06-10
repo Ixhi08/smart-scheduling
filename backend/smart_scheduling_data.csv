@@ -1,0 +1,2001 @@
+visit_type,age,insurance_type,provider_type,day_of_week,num_conditions,is_first_visit,arrived_late_min,complexity_score,actual_duration_min
+Asthma Management,56,Medicaid,NP,Wednesday,0,0,0.0,0.6,20.3
+Hypertension Follow-up,71,Private,PA,Wednesday,1,0,0.0,0.7,19.9
+Urinary Tract Infection,75,Medicaid,DO,Monday,2,0,0.0,0.2,15.4
+Asthma Management,65,Medicare,MD,Monday,0,0,0.0,0.6,25.3
+Annual Wellness Exam,77,Medicare,MD,Tuesday,0,0,9.0,0.8,49.6
+Skin Rash / Dermatology,57,Medicaid,MD,Thursday,2,0,0.0,0.3,19.2
+Hypertension Follow-up,71,Private,MD,Thursday,1,0,0.0,0.7,22.6
+Urinary Tract Infection,67,Private,MD,Wednesday,1,0,0.0,0.2,13.1
+Urinary Tract Infection,57,Medicare,MD,Thursday,1,0,0.0,0.2,9.6
+Type 2 Diabetes Management,4,Private,MD,Friday,1,0,0.0,0.9,31.9
+Acute Back Pain,26,Medicaid,MD,Tuesday,0,0,0.0,0.5,17.7
+Minor Laceration / Wound Care,3,Private,NP,Wednesday,0,0,0.0,0.3,7.8
+Upper Respiratory Infection,39,Private,PA,Tuesday,1,0,0.0,0.2,11.1
+Pediatric Well Visit,77,Private,MD,Monday,3,0,0.0,0.5,30.1
+Urinary Tract Infection,47,Medicaid,NP,Monday,2,0,0.0,0.2,18.3
+Chest Pain Evaluation,54,Private,MD,Monday,1,0,12.0,1.0,29.3
+Hypertension Follow-up,10,Uninsured,DO,Wednesday,1,1,0.0,0.7,27.1
+Asthma Management,30,Private,DO,Thursday,3,0,0.0,0.6,25.6
+Annual Wellness Exam,42,Medicare,MD,Tuesday,2,0,0.0,0.8,37.8
+Hypertension Follow-up,57,Private,NP,Thursday,2,0,10.0,0.7,17.4
+Upper Respiratory Infection,78,Medicare,MD,Tuesday,2,0,0.0,0.2,18.5
+Minor Laceration / Wound Care,70,Private,PA,Monday,0,0,0.0,0.3,16.2
+Asthma Management,15,Medicaid,PA,Monday,0,0,0.0,0.6,28.8
+Upper Respiratory Infection,45,Medicaid,MD,Monday,0,1,0.0,0.2,16.4
+Hypertension Follow-up,79,Medicare,PA,Monday,0,0,0.0,0.7,28.2
+Hypertension Follow-up,18,Private,MD,Tuesday,1,1,0.0,0.7,24.3
+Urinary Tract Infection,12,Private,NP,Monday,2,1,13.0,0.2,16.2
+Acute Back Pain,82,Medicare,NP,Tuesday,3,0,0.0,0.5,24.1
+Urinary Tract Infection,14,Private,MD,Thursday,1,0,0.0,0.2,8.9
+Skin Rash / Dermatology,37,Medicaid,MD,Wednesday,0,0,0.0,0.3,6.5
+Minor Laceration / Wound Care,65,Medicaid,DO,Thursday,1,0,0.0,0.3,16.6
+Knee / Joint Pain,24,Private,MD,Wednesday,2,0,17.0,0.5,19.6
+Hypertension Follow-up,7,Medicaid,MD,Friday,3,0,0.0,0.7,26.0
+Hypertension Follow-up,13,Private,MD,Monday,0,0,0.0,0.7,24.5
+Annual Wellness Exam,16,Medicare,PA,Thursday,0,0,16.0,0.8,51.1
+Urinary Tract Infection,80,Private,MD,Wednesday,1,1,0.0,0.2,16.5
+Medication Refill Only,59,Medicaid,PA,Monday,4,0,0.0,0.1,11.7
+Asthma Management,63,Medicare,DO,Monday,2,0,0.0,0.6,31.3
+Type 2 Diabetes Management,7,Medicare,MD,Monday,0,0,0.0,0.9,31.9
+Acute Back Pain,17,Private,PA,Thursday,3,0,0.0,0.5,21.8
+Knee / Joint Pain,42,Medicaid,DO,Thursday,1,0,0.0,0.5,16.1
+Pediatric Well Visit,43,Private,DO,Friday,0,0,8.0,0.5,18.9
+Medication Refill Only,79,Medicaid,DO,Wednesday,2,0,0.0,0.1,7.8
+Upper Respiratory Infection,66,Medicare,MD,Monday,1,0,0.0,0.2,16.8
+Skin Rash / Dermatology,48,Medicare,DO,Monday,0,1,19.0,0.3,20.6
+Acute Back Pain,78,Medicare,MD,Thursday,3,0,0.0,0.5,22.1
+Annual Wellness Exam,27,Private,PA,Monday,1,0,0.0,0.8,32.9
+Medication Refill Only,31,Medicare,MD,Thursday,4,0,0.0,0.1,12.3
+Knee / Joint Pain,74,Private,DO,Thursday,1,1,0.0,0.5,18.9
+Annual Wellness Exam,82,Private,MD,Wednesday,3,0,4.0,0.8,46.9
+Annual Wellness Exam,84,Medicaid,MD,Thursday,1,0,20.0,0.8,46.1
+Upper Respiratory Infection,22,Private,NP,Tuesday,0,0,0.0,0.2,10.3
+Upper Respiratory Infection,14,Medicare,NP,Monday,0,0,12.0,0.2,12.4
+Asthma Management,68,Medicare,NP,Wednesday,0,1,0.0,0.6,34.9
+Chest Pain Evaluation,5,Medicaid,MD,Friday,0,0,0.0,1.0,45.7
+Urinary Tract Infection,62,Private,DO,Monday,3,0,0.0,0.2,13.1
+Hypertension Follow-up,33,Medicare,NP,Friday,1,0,0.0,0.7,21.1
+Urinary Tract Infection,80,Medicare,DO,Wednesday,0,0,0.0,0.2,19.7
+Hypertension Follow-up,80,Private,MD,Monday,1,0,0.0,0.7,29.8
+Acute Back Pain,27,Private,DO,Thursday,0,0,0.0,0.5,22.6
+Urinary Tract Infection,28,Medicare,NP,Wednesday,1,0,0.0,0.2,15.2
+Anxiety / Depression Follow-up,55,Medicare,MD,Friday,2,0,0.0,0.7,30.8
+Minor Laceration / Wound Care,44,Medicaid,MD,Wednesday,1,1,16.0,0.3,22.7
+Upper Respiratory Infection,8,Private,MD,Tuesday,0,0,5.0,0.2,7.0
+Acute Back Pain,70,Private,DO,Thursday,0,0,0.0,0.5,21.2
+Annual Wellness Exam,11,Medicare,NP,Thursday,1,1,4.0,0.8,47.4
+Hypertension Follow-up,61,Medicaid,PA,Monday,1,0,0.0,0.7,26.5
+Anxiety / Depression Follow-up,71,Private,NP,Tuesday,1,0,2.0,0.7,24.7
+Upper Respiratory Infection,17,Private,MD,Monday,1,0,7.0,0.2,7.8
+Knee / Joint Pain,72,Medicare,NP,Thursday,2,1,0.0,0.5,31.4
+Annual Wellness Exam,79,Medicare,NP,Friday,2,0,0.0,0.8,37.6
+Knee / Joint Pain,33,Medicare,DO,Tuesday,0,0,0.0,0.5,21.9
+Hypertension Follow-up,2,Private,MD,Tuesday,3,0,0.0,0.7,19.2
+Upper Respiratory Infection,36,Medicaid,DO,Tuesday,4,0,0.0,0.2,15.5
+Medication Refill Only,44,Uninsured,NP,Thursday,2,1,0.0,0.1,8.3
+Urinary Tract Infection,81,Uninsured,PA,Thursday,0,0,0.0,0.2,12.0
+Hypertension Follow-up,26,Medicaid,DO,Monday,4,0,0.0,0.7,34.4
+Skin Rash / Dermatology,55,Medicare,NP,Monday,3,0,0.0,0.3,19.7
+Hypertension Follow-up,32,Medicare,NP,Thursday,2,0,0.0,0.7,26.1
+Type 2 Diabetes Management,66,Medicare,PA,Wednesday,1,0,0.0,0.9,30.8
+Knee / Joint Pain,52,Private,PA,Thursday,0,0,0.0,0.5,9.6
+Acute Back Pain,11,Medicaid,MD,Tuesday,0,0,0.0,0.5,23.0
+New Patient Intake,54,Private,MD,Tuesday,1,0,0.0,1.0,31.2
+Acute Back Pain,43,Medicare,MD,Friday,0,1,8.0,0.5,19.3
+Chest Pain Evaluation,3,Private,MD,Friday,2,0,0.0,1.0,33.4
+Type 2 Diabetes Management,81,Private,PA,Tuesday,2,0,0.0,0.9,29.8
+Type 2 Diabetes Management,45,Private,MD,Tuesday,0,0,0.0,0.9,28.0
+Anxiety / Depression Follow-up,74,Medicare,PA,Wednesday,2,0,0.0,0.7,30.2
+Urinary Tract Infection,57,Private,NP,Tuesday,1,0,19.0,0.2,5.0
+Hypertension Follow-up,26,Private,MD,Monday,1,0,0.0,0.7,24.0
+Hypertension Follow-up,54,Private,NP,Tuesday,0,0,0.0,0.7,24.7
+Upper Respiratory Infection,26,Medicaid,MD,Monday,1,0,0.0,0.2,17.2
+Asthma Management,40,Private,MD,Friday,0,0,0.0,0.6,27.3
+Annual Wellness Exam,22,Private,DO,Friday,2,0,2.0,0.8,39.2
+Upper Respiratory Infection,13,Private,MD,Monday,1,0,0.0,0.2,10.2
+Knee / Joint Pain,11,Private,PA,Wednesday,0,0,0.0,0.5,18.1
+Medication Refill Only,53,Medicare,DO,Friday,0,0,0.0,0.1,10.4
+Urinary Tract Infection,83,Private,MD,Thursday,0,1,0.0,0.2,14.9
+Hypertension Follow-up,28,Medicaid,NP,Tuesday,0,0,0.0,0.7,22.4
+Hypertension Follow-up,63,Medicare,MD,Thursday,4,1,7.0,0.7,47.4
+Urinary Tract Infection,34,Medicaid,PA,Monday,1,0,0.0,0.2,10.7
+Urinary Tract Infection,12,Medicare,NP,Tuesday,0,0,16.0,0.2,11.7
+Urinary Tract Infection,74,Medicare,MD,Thursday,2,0,0.0,0.2,11.2
+Acute Back Pain,58,Medicare,MD,Monday,1,0,15.0,0.5,25.7
+Acute Back Pain,15,Private,PA,Thursday,0,0,0.0,0.5,18.2
+Type 2 Diabetes Management,30,Medicaid,PA,Wednesday,0,0,0.0,0.9,12.7
+Asthma Management,80,Private,PA,Wednesday,2,0,0.0,0.6,34.2
+Upper Respiratory Infection,18,Uninsured,MD,Friday,3,0,0.0,0.2,26.6
+Urinary Tract Infection,61,Private,DO,Wednesday,1,0,0.0,0.2,13.2
+Hypertension Follow-up,79,Private,NP,Monday,3,0,3.0,0.7,28.5
+Knee / Joint Pain,30,Private,MD,Tuesday,1,0,0.0,0.5,21.8
+Anxiety / Depression Follow-up,9,Medicare,DO,Friday,0,0,0.0,0.7,26.0
+Knee / Joint Pain,66,Uninsured,PA,Friday,3,1,19.0,0.5,28.2
+Upper Respiratory Infection,27,Medicaid,DO,Wednesday,0,0,8.0,0.2,16.6
+Urinary Tract Infection,45,Private,MD,Thursday,1,0,0.0,0.2,16.4
+Medication Refill Only,35,Medicaid,MD,Monday,0,0,11.0,0.1,10.7
+Type 2 Diabetes Management,36,Medicaid,PA,Wednesday,0,0,17.0,0.9,17.4
+Hypertension Follow-up,5,Medicaid,NP,Friday,1,0,0.0,0.7,24.1
+Anxiety / Depression Follow-up,31,Private,PA,Monday,1,0,4.0,0.7,20.9
+Type 2 Diabetes Management,48,Private,MD,Monday,0,0,0.0,0.9,32.7
+Minor Laceration / Wound Care,78,Private,PA,Monday,2,0,16.0,0.3,19.4
+Acute Back Pain,48,Private,NP,Monday,1,0,0.0,0.5,26.7
+Medication Refill Only,46,Medicare,MD,Wednesday,4,0,4.0,0.1,11.4
+Hypertension Follow-up,40,Medicare,MD,Monday,0,0,0.0,0.7,24.5
+Urinary Tract Infection,78,Medicare,PA,Wednesday,0,0,0.0,0.2,14.9
+Anxiety / Depression Follow-up,30,Medicaid,NP,Tuesday,1,0,0.0,0.7,35.0
+Acute Back Pain,84,Medicaid,MD,Friday,2,0,0.0,0.5,27.1
+Chest Pain Evaluation,48,Private,MD,Wednesday,0,1,0.0,1.0,36.5
+Chest Pain Evaluation,38,Private,MD,Friday,2,0,0.0,1.0,26.4
+Hypertension Follow-up,74,Private,MD,Tuesday,1,0,19.0,0.7,15.7
+Medication Refill Only,46,Medicare,MD,Tuesday,0,0,0.0,0.1,8.1
+Upper Respiratory Infection,53,Private,PA,Friday,1,0,0.0,0.2,8.6
+Minor Laceration / Wound Care,52,Medicare,DO,Friday,0,0,0.0,0.3,12.6
+Medication Refill Only,29,Medicaid,NP,Tuesday,1,0,14.0,0.1,9.0
+Annual Wellness Exam,27,Medicare,MD,Tuesday,0,0,0.0,0.8,35.5
+Upper Respiratory Infection,5,Medicaid,NP,Tuesday,0,0,0.0,0.2,6.6
+Type 2 Diabetes Management,34,Private,MD,Wednesday,3,0,10.0,0.9,32.1
+Skin Rash / Dermatology,22,Medicaid,NP,Tuesday,0,0,0.0,0.3,11.1
+Minor Laceration / Wound Care,37,Medicare,NP,Monday,4,0,20.0,0.3,20.8
+Medication Refill Only,28,Medicare,MD,Tuesday,0,0,0.0,0.1,10.9
+Skin Rash / Dermatology,77,Private,MD,Friday,2,0,0.0,0.3,14.5
+Hypertension Follow-up,49,Private,MD,Friday,1,1,0.0,0.7,23.6
+Asthma Management,2,Private,NP,Thursday,0,1,0.0,0.6,18.2
+Minor Laceration / Wound Care,70,Medicaid,MD,Wednesday,2,0,0.0,0.3,18.2
+Asthma Management,34,Medicare,MD,Wednesday,0,0,0.0,0.6,25.9
+Hypertension Follow-up,15,Medicaid,MD,Monday,4,1,0.0,0.7,41.7
+Acute Back Pain,17,Uninsured,PA,Friday,0,0,0.0,0.5,17.5
+Asthma Management,2,Medicare,NP,Wednesday,2,1,19.0,0.6,19.5
+Type 2 Diabetes Management,51,Private,NP,Monday,1,0,0.0,0.9,33.0
+Annual Wellness Exam,70,Medicare,NP,Friday,0,0,0.0,0.8,39.9
+Hypertension Follow-up,7,Medicaid,DO,Friday,3,1,6.0,0.7,41.8
+Type 2 Diabetes Management,26,Private,MD,Thursday,0,0,0.0,0.9,23.5
+Annual Wellness Exam,13,Private,MD,Wednesday,0,0,3.0,0.8,33.7
+Medication Refill Only,60,Private,MD,Monday,1,1,0.0,0.1,11.5
+Skin Rash / Dermatology,59,Uninsured,MD,Wednesday,1,0,0.0,0.3,18.7
+Skin Rash / Dermatology,78,Uninsured,DO,Monday,1,0,0.0,0.3,20.2
+Urinary Tract Infection,41,Private,MD,Monday,0,0,0.0,0.2,17.0
+Acute Back Pain,38,Medicare,PA,Wednesday,3,0,0.0,0.5,27.0
+Urinary Tract Infection,33,Medicare,DO,Wednesday,0,0,0.0,0.2,17.5
+Hypertension Follow-up,43,Private,MD,Thursday,1,0,0.0,0.7,18.9
+Medication Refill Only,17,Medicare,MD,Wednesday,3,0,0.0,0.1,9.0
+Upper Respiratory Infection,53,Medicare,DO,Monday,0,0,0.0,0.2,8.0
+Anxiety / Depression Follow-up,39,Medicaid,MD,Monday,2,0,0.0,0.7,33.6
+Hypertension Follow-up,38,Medicare,DO,Thursday,4,0,0.0,0.7,24.2
+Urinary Tract Infection,81,Private,MD,Friday,2,0,0.0,0.2,5.7
+Urinary Tract Infection,77,Private,MD,Wednesday,0,0,0.0,0.2,13.4
+Annual Wellness Exam,62,Private,DO,Friday,1,0,10.0,0.8,37.4
+Urinary Tract Infection,57,Private,DO,Friday,0,1,8.0,0.2,7.5
+Upper Respiratory Infection,44,Private,NP,Friday,4,1,0.0,0.2,25.3
+Chest Pain Evaluation,31,Private,MD,Wednesday,1,0,0.0,1.0,36.4
+Pediatric Well Visit,47,Uninsured,MD,Tuesday,3,0,1.0,0.5,35.9
+Hypertension Follow-up,6,Medicare,PA,Friday,0,0,9.0,0.7,13.6
+Annual Wellness Exam,67,Private,PA,Monday,0,0,0.0,0.8,28.2
+Medication Refill Only,53,Uninsured,MD,Friday,2,0,0.0,0.1,10.9
+Medication Refill Only,38,Medicare,DO,Thursday,0,0,0.0,0.1,11.9
+Upper Respiratory Infection,49,Private,PA,Thursday,1,1,17.0,0.2,21.1
+Type 2 Diabetes Management,19,Medicare,PA,Friday,0,1,20.0,0.9,31.0
+Type 2 Diabetes Management,14,Uninsured,DO,Wednesday,1,0,0.0,0.9,47.5
+Knee / Joint Pain,53,Private,MD,Friday,0,0,0.0,0.5,18.9
+Asthma Management,12,Private,MD,Wednesday,1,0,0.0,0.6,26.9
+Pediatric Well Visit,76,Uninsured,MD,Monday,0,0,0.0,0.5,27.2
+Anxiety / Depression Follow-up,24,Medicare,DO,Friday,1,1,0.0,0.7,41.7
+Chest Pain Evaluation,52,Uninsured,DO,Monday,3,0,15.0,1.0,47.8
+Asthma Management,70,Private,DO,Monday,1,0,0.0,0.6,31.0
+Medication Refill Only,73,Private,MD,Thursday,1,0,0.0,0.1,5.6
+Asthma Management,69,Private,MD,Tuesday,2,0,0.0,0.6,36.6
+Medication Refill Only,54,Private,MD,Tuesday,1,0,0.0,0.1,11.0
+Hypertension Follow-up,26,Private,DO,Friday,0,0,0.0,0.7,17.8
+Pediatric Well Visit,14,Medicare,NP,Monday,2,0,0.0,0.5,22.7
+Type 2 Diabetes Management,30,Private,DO,Tuesday,0,0,0.0,0.9,40.5
+Annual Wellness Exam,32,Private,MD,Monday,0,0,0.0,0.8,32.8
+Minor Laceration / Wound Care,54,Medicaid,PA,Thursday,1,0,0.0,0.3,14.3
+Anxiety / Depression Follow-up,65,Private,DO,Monday,1,0,0.0,0.7,36.2
+Skin Rash / Dermatology,84,Private,NP,Monday,2,0,0.0,0.3,15.5
+Annual Wellness Exam,12,Private,DO,Wednesday,3,0,0.0,0.8,45.2
+Hypertension Follow-up,20,Private,PA,Monday,1,0,0.0,0.7,20.3
+Hypertension Follow-up,20,Private,PA,Friday,0,0,0.0,0.7,15.2
+Annual Wellness Exam,30,Private,MD,Friday,1,0,0.0,0.8,37.6
+Acute Back Pain,63,Private,MD,Friday,1,0,0.0,0.5,18.7
+Skin Rash / Dermatology,19,Private,MD,Tuesday,0,0,14.0,0.3,11.7
+Anxiety / Depression Follow-up,63,Medicare,NP,Friday,4,0,0.0,0.7,33.8
+Type 2 Diabetes Management,84,Medicaid,MD,Thursday,1,0,4.0,0.9,38.6
+Skin Rash / Dermatology,40,Uninsured,NP,Thursday,0,0,1.0,0.3,11.1
+Acute Back Pain,79,Medicaid,MD,Tuesday,0,0,0.0,0.5,25.6
+Type 2 Diabetes Management,34,Medicaid,NP,Friday,0,1,0.0,0.9,24.4
+Urinary Tract Infection,46,Private,NP,Thursday,3,0,0.0,0.2,11.9
+Minor Laceration / Wound Care,83,Medicaid,NP,Thursday,0,1,2.0,0.3,18.1
+Urinary Tract Infection,43,Private,NP,Friday,0,0,0.0,0.2,9.0
+Hypertension Follow-up,77,Medicaid,PA,Monday,3,0,0.0,0.7,31.4
+Anxiety / Depression Follow-up,61,Uninsured,MD,Wednesday,2,0,0.0,0.7,33.7
+Medication Refill Only,36,Medicaid,MD,Tuesday,0,0,0.0,0.1,7.0
+Upper Respiratory Infection,65,Private,NP,Tuesday,1,1,0.0,0.2,13.5
+Upper Respiratory Infection,48,Private,PA,Friday,2,0,0.0,0.2,10.6
+Type 2 Diabetes Management,6,Medicare,NP,Thursday,0,1,0.0,0.9,31.0
+Chest Pain Evaluation,22,Medicaid,DO,Monday,1,0,6.0,1.0,38.3
+Skin Rash / Dermatology,6,Medicare,MD,Tuesday,4,0,0.0,0.3,16.6
+Hypertension Follow-up,26,Private,MD,Tuesday,0,0,0.0,0.7,17.7
+Urinary Tract Infection,13,Medicaid,DO,Wednesday,1,0,0.0,0.2,11.0
+Acute Back Pain,75,Medicare,MD,Wednesday,0,0,15.0,0.5,24.6
+Annual Wellness Exam,81,Medicaid,MD,Thursday,2,0,6.0,0.8,42.3
+Annual Wellness Exam,59,Medicare,MD,Tuesday,1,0,0.0,0.8,45.3
+Pediatric Well Visit,48,Medicare,NP,Thursday,1,0,0.0,0.5,25.3
+Anxiety / Depression Follow-up,71,Private,NP,Thursday,1,0,0.0,0.7,35.5
+Urinary Tract Infection,61,Medicare,DO,Friday,1,0,5.0,0.2,5.9
+Medication Refill Only,44,Medicare,DO,Friday,1,0,19.0,0.1,5.0
+Upper Respiratory Infection,55,Medicaid,NP,Wednesday,0,0,0.0,0.2,10.9
+Chest Pain Evaluation,80,Private,DO,Tuesday,2,0,0.0,1.0,40.9
+Asthma Management,36,Medicaid,PA,Friday,0,0,0.0,0.6,18.2
+New Patient Intake,20,Uninsured,DO,Tuesday,2,0,11.0,1.0,57.7
+Skin Rash / Dermatology,20,Private,PA,Tuesday,4,0,0.0,0.3,15.8
+Annual Wellness Exam,54,Medicare,DO,Wednesday,1,0,0.0,0.8,37.0
+Annual Wellness Exam,45,Private,PA,Monday,1,0,0.0,0.8,30.8
+Upper Respiratory Infection,83,Private,NP,Tuesday,0,1,18.0,0.2,14.7
+Knee / Joint Pain,50,Private,DO,Tuesday,1,1,0.0,0.5,26.7
+Upper Respiratory Infection,38,Private,PA,Tuesday,0,0,0.0,0.2,9.5
+Urinary Tract Infection,47,Uninsured,DO,Wednesday,1,0,2.0,0.2,15.9
+Acute Back Pain,42,Private,MD,Thursday,1,0,0.0,0.5,11.8
+Pediatric Well Visit,5,Medicare,DO,Monday,0,1,9.0,0.5,30.8
+Hypertension Follow-up,39,Medicaid,PA,Wednesday,3,1,0.0,0.7,26.2
+Upper Respiratory Infection,18,Medicaid,PA,Monday,4,0,18.0,0.2,6.3
+Urinary Tract Infection,79,Private,DO,Thursday,0,0,12.0,0.2,6.3
+Anxiety / Depression Follow-up,62,Medicare,MD,Friday,2,0,20.0,0.7,22.3
+Anxiety / Depression Follow-up,51,Medicaid,MD,Friday,2,0,0.0,0.7,26.0
+Urinary Tract Infection,41,Private,NP,Friday,4,0,12.0,0.2,9.2
+Upper Respiratory Infection,57,Medicare,NP,Monday,0,0,0.0,0.2,10.4
+Anxiety / Depression Follow-up,25,Uninsured,NP,Monday,3,0,0.0,0.7,32.4
+Pediatric Well Visit,13,Private,MD,Monday,1,0,0.0,0.5,21.7
+Upper Respiratory Infection,58,Private,NP,Thursday,0,1,3.0,0.2,14.3
+Skin Rash / Dermatology,39,Private,DO,Tuesday,0,0,0.0,0.3,10.4
+Hypertension Follow-up,51,Medicaid,PA,Tuesday,1,0,0.0,0.7,26.7
+Chest Pain Evaluation,3,Uninsured,PA,Thursday,1,0,0.0,1.0,25.8
+New Patient Intake,17,Medicare,NP,Monday,0,0,0.0,1.0,49.8
+Hypertension Follow-up,19,Uninsured,MD,Monday,1,1,0.0,0.7,37.1
+Minor Laceration / Wound Care,83,Private,DO,Friday,2,0,0.0,0.3,9.0
+Acute Back Pain,29,Uninsured,MD,Wednesday,0,1,0.0,0.5,28.2
+Pediatric Well Visit,40,Medicare,MD,Monday,0,0,0.0,0.5,21.1
+Acute Back Pain,10,Medicare,MD,Friday,3,0,9.0,0.5,27.8
+Type 2 Diabetes Management,43,Medicaid,MD,Tuesday,3,0,0.0,0.9,30.2
+New Patient Intake,68,Private,MD,Monday,1,0,0.0,1.0,49.4
+Medication Refill Only,45,Private,MD,Friday,0,0,0.0,0.1,6.3
+Type 2 Diabetes Management,77,Private,MD,Tuesday,0,1,0.0,0.9,39.0
+New Patient Intake,18,Uninsured,DO,Thursday,0,0,0.0,1.0,50.1
+Knee / Joint Pain,46,Private,NP,Thursday,0,0,15.0,0.5,24.4
+Asthma Management,5,Medicare,MD,Monday,2,0,0.0,0.6,23.2
+Upper Respiratory Infection,64,Private,MD,Tuesday,1,0,0.0,0.2,13.0
+Knee / Joint Pain,17,Medicaid,MD,Tuesday,0,0,0.0,0.5,21.2
+Minor Laceration / Wound Care,6,Private,DO,Monday,1,0,0.0,0.3,23.0
+Asthma Management,43,Medicaid,MD,Friday,1,0,0.0,0.6,29.3
+Type 2 Diabetes Management,15,Private,DO,Friday,2,1,0.0,0.9,41.4
+Upper Respiratory Infection,44,Private,NP,Wednesday,0,0,0.0,0.2,13.3
+Annual Wellness Exam,12,Medicaid,MD,Wednesday,0,1,0.0,0.8,49.4
+Knee / Joint Pain,23,Uninsured,MD,Wednesday,0,0,0.0,0.5,19.1
+Acute Back Pain,58,Private,MD,Wednesday,3,0,0.0,0.5,24.7
+Upper Respiratory Infection,11,Private,NP,Thursday,0,0,0.0,0.2,10.9
+Hypertension Follow-up,72,Private,DO,Tuesday,0,1,0.0,0.7,29.7
+Acute Back Pain,17,Private,DO,Monday,0,0,0.0,0.5,18.6
+Acute Back Pain,26,Uninsured,DO,Wednesday,3,0,13.0,0.5,28.0
+New Patient Intake,37,Medicare,MD,Wednesday,0,0,0.0,1.0,39.6
+Knee / Joint Pain,48,Medicare,DO,Wednesday,2,0,14.0,0.5,25.1
+Type 2 Diabetes Management,14,Medicare,MD,Friday,0,0,0.0,0.9,24.3
+Upper Respiratory Infection,43,Medicaid,MD,Friday,0,0,0.0,0.2,7.5
+Annual Wellness Exam,52,Private,NP,Tuesday,0,1,0.0,0.8,33.6
+Asthma Management,19,Medicare,MD,Wednesday,0,0,0.0,0.6,28.9
+Knee / Joint Pain,53,Private,MD,Friday,0,0,0.0,0.5,21.5
+Asthma Management,70,Uninsured,MD,Wednesday,0,0,1.0,0.6,11.0
+Type 2 Diabetes Management,23,Private,DO,Wednesday,1,0,0.0,0.9,31.3
+Anxiety / Depression Follow-up,43,Medicare,PA,Friday,1,1,3.0,0.7,38.7
+Pediatric Well Visit,80,Medicaid,MD,Tuesday,2,0,2.0,0.5,25.7
+Knee / Joint Pain,3,Private,DO,Thursday,2,0,0.0,0.5,26.7
+Hypertension Follow-up,37,Medicaid,MD,Tuesday,3,0,0.0,0.7,27.2
+Acute Back Pain,41,Private,DO,Tuesday,0,0,0.0,0.5,7.7
+Hypertension Follow-up,40,Medicaid,DO,Wednesday,1,0,0.0,0.7,26.5
+Upper Respiratory Infection,11,Medicaid,PA,Monday,0,0,16.0,0.2,12.6
+Acute Back Pain,51,Private,DO,Monday,0,0,20.0,0.5,23.5
+Urinary Tract Infection,20,Medicaid,PA,Thursday,2,0,0.0,0.2,13.4
+Annual Wellness Exam,46,Medicare,PA,Friday,1,0,0.0,0.8,48.5
+Type 2 Diabetes Management,83,Private,PA,Wednesday,0,0,0.0,0.9,39.6
+Medication Refill Only,79,Private,NP,Thursday,1,0,0.0,0.1,10.5
+Urinary Tract Infection,40,Medicare,PA,Tuesday,1,0,0.0,0.2,12.5
+New Patient Intake,43,Private,DO,Monday,1,0,7.0,1.0,41.1
+Urinary Tract Infection,35,Medicare,NP,Monday,2,0,0.0,0.2,11.1
+Hypertension Follow-up,55,Private,DO,Friday,1,1,0.0,0.7,19.3
+Asthma Management,74,Medicaid,DO,Friday,0,0,0.0,0.6,14.4
+Minor Laceration / Wound Care,51,Private,MD,Thursday,0,0,0.0,0.3,14.1
+Type 2 Diabetes Management,13,Private,MD,Monday,0,0,0.0,0.9,24.3
+Acute Back Pain,69,Private,PA,Friday,1,0,17.0,0.5,22.4
+Minor Laceration / Wound Care,18,Medicare,PA,Monday,2,0,10.0,0.3,15.5
+Minor Laceration / Wound Care,80,Medicare,DO,Thursday,0,1,5.0,0.3,16.7
+Hypertension Follow-up,3,Medicare,MD,Tuesday,0,0,0.0,0.7,25.2
+Medication Refill Only,38,Uninsured,PA,Monday,2,0,0.0,0.1,11.1
+Pediatric Well Visit,45,Uninsured,DO,Monday,2,0,15.0,0.5,28.7
+Anxiety / Depression Follow-up,44,Private,MD,Monday,0,0,8.0,0.7,31.5
+Annual Wellness Exam,47,Medicare,DO,Wednesday,3,0,0.0,0.8,51.1
+Type 2 Diabetes Management,23,Private,DO,Wednesday,1,0,0.0,0.9,35.1
+Acute Back Pain,41,Private,NP,Monday,4,1,0.0,0.5,26.7
+Skin Rash / Dermatology,32,Medicare,NP,Wednesday,2,1,0.0,0.3,17.3
+Skin Rash / Dermatology,31,Private,MD,Monday,1,0,0.0,0.3,16.8
+Asthma Management,39,Medicaid,NP,Friday,0,0,0.0,0.6,22.9
+Medication Refill Only,49,Private,NP,Friday,1,0,0.0,0.1,12.7
+Type 2 Diabetes Management,13,Medicare,MD,Tuesday,2,0,0.0,0.9,33.5
+Minor Laceration / Wound Care,75,Private,PA,Wednesday,3,0,0.0,0.3,22.4
+Medication Refill Only,70,Medicare,MD,Thursday,0,0,9.0,0.1,11.2
+Minor Laceration / Wound Care,71,Medicare,DO,Friday,1,0,0.0,0.3,14.3
+Pediatric Well Visit,70,Medicaid,DO,Tuesday,0,0,0.0,0.5,25.3
+Chest Pain Evaluation,73,Medicaid,PA,Monday,2,0,0.0,1.0,52.9
+Acute Back Pain,36,Medicare,MD,Thursday,2,0,0.0,0.5,27.4
+Minor Laceration / Wound Care,20,Medicaid,PA,Thursday,1,0,0.0,0.3,13.1
+Acute Back Pain,7,Medicare,DO,Tuesday,1,0,0.0,0.5,18.7
+Skin Rash / Dermatology,43,Medicaid,MD,Monday,0,0,9.0,0.3,12.4
+Type 2 Diabetes Management,42,Uninsured,MD,Wednesday,2,0,0.0,0.9,40.4
+Skin Rash / Dermatology,47,Private,PA,Monday,1,0,0.0,0.3,11.0
+Pediatric Well Visit,3,Medicaid,MD,Wednesday,0,0,0.0,0.5,17.4
+Type 2 Diabetes Management,70,Medicaid,MD,Monday,1,0,5.0,0.9,36.7
+Skin Rash / Dermatology,48,Private,MD,Wednesday,2,0,0.0,0.3,13.5
+Knee / Joint Pain,76,Private,DO,Monday,0,0,0.0,0.5,21.7
+Minor Laceration / Wound Care,23,Medicare,MD,Thursday,2,0,0.0,0.3,20.2
+Asthma Management,16,Private,DO,Tuesday,0,0,0.0,0.6,15.0
+Upper Respiratory Infection,49,Medicaid,PA,Friday,1,0,0.0,0.2,14.1
+Medication Refill Only,52,Private,MD,Monday,3,0,0.0,0.1,11.6
+New Patient Intake,25,Medicaid,PA,Monday,0,0,0.0,1.0,43.2
+Minor Laceration / Wound Care,10,Private,MD,Tuesday,0,0,0.0,0.3,9.1
+Pediatric Well Visit,21,Medicare,PA,Thursday,0,0,6.0,0.5,15.6
+Knee / Joint Pain,63,Medicare,DO,Friday,1,0,0.0,0.5,29.2
+Upper Respiratory Infection,31,Medicare,MD,Tuesday,0,0,0.0,0.2,12.1
+Upper Respiratory Infection,18,Medicare,MD,Friday,0,0,0.0,0.2,16.5
+Anxiety / Depression Follow-up,11,Private,NP,Friday,0,0,0.0,0.7,18.9
+Anxiety / Depression Follow-up,22,Medicaid,NP,Tuesday,0,0,0.0,0.7,30.7
+Pediatric Well Visit,31,Medicare,MD,Thursday,0,1,0.0,0.5,28.2
+Anxiety / Depression Follow-up,64,Private,DO,Tuesday,0,1,0.0,0.7,32.9
+Acute Back Pain,25,Medicaid,MD,Wednesday,2,0,0.0,0.5,26.7
+Asthma Management,2,Private,DO,Wednesday,0,1,0.0,0.6,30.0
+Acute Back Pain,56,Uninsured,MD,Wednesday,1,0,5.0,0.5,20.4
+Type 2 Diabetes Management,22,Private,MD,Tuesday,0,0,8.0,0.9,33.2
+Annual Wellness Exam,40,Private,MD,Wednesday,3,1,0.0,0.8,62.5
+Urinary Tract Infection,14,Medicare,PA,Thursday,4,0,0.0,0.2,15.7
+Acute Back Pain,9,Uninsured,MD,Wednesday,0,0,0.0,0.5,23.3
+Medication Refill Only,84,Medicare,NP,Friday,1,0,0.0,0.1,9.0
+Type 2 Diabetes Management,14,Medicaid,MD,Tuesday,4,1,13.0,0.9,43.9
+Upper Respiratory Infection,16,Medicare,DO,Wednesday,0,0,0.0,0.2,15.2
+Urinary Tract Infection,61,Medicare,DO,Friday,0,1,11.0,0.2,8.2
+Type 2 Diabetes Management,2,Medicaid,MD,Thursday,1,0,0.0,0.9,38.3
+Knee / Joint Pain,25,Private,NP,Monday,3,0,0.0,0.5,24.2
+Upper Respiratory Infection,14,Private,PA,Monday,4,1,0.0,0.2,18.6
+Minor Laceration / Wound Care,68,Private,MD,Monday,0,0,0.0,0.3,16.5
+Medication Refill Only,49,Medicare,NP,Monday,2,0,0.0,0.1,5.0
+Annual Wellness Exam,56,Private,DO,Monday,0,1,0.0,0.8,49.1
+Urinary Tract Infection,7,Medicaid,NP,Monday,1,0,0.0,0.2,11.6
+Type 2 Diabetes Management,27,Uninsured,MD,Thursday,1,0,0.0,0.9,42.0
+Asthma Management,70,Medicare,MD,Tuesday,2,0,0.0,0.6,30.4
+Pediatric Well Visit,8,Private,NP,Thursday,0,0,19.0,0.5,16.7
+Asthma Management,51,Medicare,MD,Wednesday,0,0,0.0,0.6,18.0
+Acute Back Pain,40,Private,MD,Thursday,0,0,0.0,0.5,26.8
+Upper Respiratory Infection,27,Medicare,MD,Monday,3,0,0.0,0.2,14.4
+Chest Pain Evaluation,58,Private,PA,Friday,0,0,0.0,1.0,20.5
+Minor Laceration / Wound Care,40,Private,MD,Thursday,0,0,0.0,0.3,18.6
+Knee / Joint Pain,28,Private,MD,Tuesday,0,0,0.0,0.5,17.9
+Medication Refill Only,7,Medicaid,PA,Friday,3,0,0.0,0.1,11.9
+Type 2 Diabetes Management,21,Private,NP,Tuesday,2,0,0.0,0.9,26.0
+Anxiety / Depression Follow-up,63,Uninsured,PA,Wednesday,3,0,0.0,0.7,42.7
+Upper Respiratory Infection,23,Private,MD,Monday,0,0,0.0,0.2,13.9
+Chest Pain Evaluation,81,Medicare,MD,Thursday,0,0,0.0,1.0,38.7
+Pediatric Well Visit,55,Medicare,DO,Wednesday,0,0,0.0,0.5,21.9
+Hypertension Follow-up,54,Private,MD,Thursday,0,0,0.0,0.7,22.1
+Pediatric Well Visit,39,Uninsured,MD,Tuesday,0,1,0.0,0.5,28.9
+Knee / Joint Pain,76,Private,NP,Monday,0,0,0.0,0.5,17.1
+Skin Rash / Dermatology,33,Medicare,NP,Monday,2,0,13.0,0.3,10.2
+Acute Back Pain,69,Private,MD,Monday,0,1,0.0,0.5,28.7
+New Patient Intake,11,Private,NP,Friday,1,0,0.0,1.0,51.7
+Urinary Tract Infection,17,Uninsured,NP,Monday,4,0,13.0,0.2,17.9
+Acute Back Pain,59,Medicare,PA,Monday,0,0,0.0,0.5,27.3
+Pediatric Well Visit,6,Medicaid,MD,Wednesday,0,1,0.0,0.5,20.9
+Chest Pain Evaluation,25,Private,DO,Wednesday,0,0,0.0,1.0,35.1
+Medication Refill Only,9,Medicare,PA,Friday,0,1,5.0,0.1,6.9
+Acute Back Pain,16,Medicaid,DO,Thursday,0,0,0.0,0.5,18.0
+Annual Wellness Exam,8,Private,NP,Tuesday,2,0,15.0,0.8,30.4
+Type 2 Diabetes Management,69,Medicare,DO,Monday,0,0,5.0,0.9,32.6
+Hypertension Follow-up,39,Private,MD,Friday,0,0,0.0,0.7,17.8
+Annual Wellness Exam,12,Medicare,MD,Monday,2,0,0.0,0.8,35.1
+Urinary Tract Infection,36,Medicare,MD,Tuesday,2,1,0.0,0.2,18.6
+Upper Respiratory Infection,2,Medicare,MD,Monday,1,0,7.0,0.2,15.7
+Medication Refill Only,17,Private,PA,Tuesday,1,0,0.0,0.1,6.8
+Anxiety / Depression Follow-up,51,Medicare,MD,Friday,1,1,0.0,0.7,40.6
+Type 2 Diabetes Management,10,Medicare,DO,Monday,0,0,0.0,0.9,26.0
+Urinary Tract Infection,36,Medicare,DO,Monday,2,0,0.0,0.2,15.7
+Medication Refill Only,82,Private,MD,Friday,2,1,20.0,0.1,10.4
+Urinary Tract Infection,28,Uninsured,PA,Monday,1,0,0.0,0.2,16.5
+Asthma Management,74,Private,MD,Monday,0,0,0.0,0.6,20.8
+Urinary Tract Infection,18,Private,NP,Friday,1,0,0.0,0.2,9.1
+Upper Respiratory Infection,8,Private,MD,Tuesday,1,0,0.0,0.2,14.1
+Acute Back Pain,63,Private,MD,Friday,1,0,0.0,0.5,24.2
+Asthma Management,29,Private,MD,Tuesday,0,0,0.0,0.6,17.6
+Urinary Tract Infection,79,Medicare,NP,Wednesday,0,0,0.0,0.2,8.6
+Annual Wellness Exam,59,Medicare,DO,Tuesday,0,0,0.0,0.8,38.2
+Knee / Joint Pain,3,Medicare,MD,Monday,0,0,0.0,0.5,27.2
+Annual Wellness Exam,13,Uninsured,DO,Friday,0,0,0.0,0.8,34.7
+Anxiety / Depression Follow-up,13,Private,NP,Tuesday,4,1,0.0,0.7,41.2
+Upper Respiratory Infection,62,Medicare,DO,Monday,0,0,0.0,0.2,17.5
+Knee / Joint Pain,69,Medicare,MD,Friday,1,1,0.0,0.5,28.2
+Minor Laceration / Wound Care,46,Private,MD,Monday,1,0,0.0,0.3,18.7
+Acute Back Pain,72,Medicare,MD,Tuesday,1,1,0.0,0.5,30.6
+Skin Rash / Dermatology,14,Medicare,DO,Friday,0,1,0.0,0.3,13.0
+Annual Wellness Exam,83,Private,DO,Tuesday,0,1,0.0,0.8,48.6
+Annual Wellness Exam,23,Medicare,NP,Tuesday,2,0,0.0,0.8,41.1
+Upper Respiratory Infection,29,Uninsured,NP,Tuesday,3,1,0.0,0.2,24.9
+Asthma Management,79,Private,MD,Thursday,2,0,0.0,0.6,20.4
+Medication Refill Only,64,Private,MD,Thursday,1,0,0.0,0.1,5.0
+Medication Refill Only,47,Uninsured,DO,Tuesday,2,0,0.0,0.1,12.5
+Asthma Management,38,Medicare,NP,Thursday,1,0,0.0,0.6,11.5
+Urinary Tract Infection,32,Medicaid,NP,Monday,2,0,0.0,0.2,13.6
+Urinary Tract Infection,33,Medicare,NP,Monday,1,0,0.0,0.2,14.1
+Annual Wellness Exam,45,Medicaid,PA,Friday,4,0,0.0,0.8,34.0
+Hypertension Follow-up,7,Medicaid,DO,Wednesday,2,1,0.0,0.7,32.3
+Anxiety / Depression Follow-up,58,Private,NP,Monday,1,1,0.0,0.7,37.2
+Pediatric Well Visit,41,Medicaid,MD,Thursday,0,0,0.0,0.5,24.3
+Knee / Joint Pain,51,Private,MD,Thursday,1,0,6.0,0.5,11.9
+Knee / Joint Pain,55,Private,DO,Wednesday,0,0,0.0,0.5,22.6
+Chest Pain Evaluation,37,Medicaid,DO,Wednesday,3,0,0.0,1.0,50.6
+Knee / Joint Pain,3,Medicaid,MD,Wednesday,2,1,0.0,0.5,23.3
+Annual Wellness Exam,51,Medicaid,MD,Tuesday,2,1,0.0,0.8,57.7
+Acute Back Pain,50,Uninsured,NP,Thursday,0,0,0.0,0.5,21.2
+Skin Rash / Dermatology,7,Medicaid,MD,Tuesday,0,0,0.0,0.3,13.9
+Medication Refill Only,21,Private,MD,Wednesday,1,0,0.0,0.1,8.6
+Hypertension Follow-up,22,Private,MD,Tuesday,1,0,0.0,0.7,23.2
+Urinary Tract Infection,49,Private,MD,Thursday,0,0,0.0,0.2,10.1
+Anxiety / Depression Follow-up,14,Medicare,DO,Friday,3,0,0.0,0.7,27.8
+Hypertension Follow-up,64,Medicare,MD,Friday,1,1,0.0,0.7,23.4
+Skin Rash / Dermatology,43,Private,MD,Wednesday,2,0,12.0,0.3,10.3
+Acute Back Pain,64,Private,PA,Thursday,0,0,2.0,0.5,21.2
+Upper Respiratory Infection,43,Private,PA,Monday,0,0,0.0,0.2,13.1
+Pediatric Well Visit,34,Private,MD,Tuesday,0,0,0.0,0.5,28.5
+Urinary Tract Infection,63,Private,NP,Tuesday,2,0,0.0,0.2,13.7
+Upper Respiratory Infection,7,Private,MD,Thursday,1,0,10.0,0.2,7.6
+Urinary Tract Infection,30,Private,MD,Tuesday,0,0,0.0,0.2,13.2
+Annual Wellness Exam,51,Private,MD,Monday,3,0,0.0,0.8,54.4
+Upper Respiratory Infection,37,Private,MD,Tuesday,1,0,0.0,0.2,12.8
+New Patient Intake,57,Medicaid,PA,Friday,2,0,0.0,1.0,40.7
+Chest Pain Evaluation,71,Medicare,PA,Monday,2,0,0.0,1.0,33.3
+Pediatric Well Visit,37,Medicaid,PA,Tuesday,1,0,18.0,0.5,27.7
+Type 2 Diabetes Management,41,Medicaid,MD,Thursday,0,0,0.0,0.9,28.3
+Upper Respiratory Infection,11,Private,PA,Thursday,0,0,14.0,0.2,5.6
+Asthma Management,44,Medicare,MD,Wednesday,0,0,1.0,0.6,14.1
+Annual Wellness Exam,35,Private,MD,Monday,2,0,0.0,0.8,46.3
+Chest Pain Evaluation,56,Uninsured,NP,Friday,2,0,0.0,1.0,47.9
+Upper Respiratory Infection,69,Uninsured,MD,Thursday,2,0,3.0,0.2,12.7
+Medication Refill Only,45,Private,MD,Thursday,0,0,12.0,0.1,7.5
+Urinary Tract Infection,11,Medicare,NP,Thursday,1,0,1.0,0.2,9.2
+Hypertension Follow-up,19,Private,MD,Wednesday,1,0,0.0,0.7,27.9
+Hypertension Follow-up,57,Medicare,MD,Thursday,0,0,0.0,0.7,28.9
+Knee / Joint Pain,37,Medicaid,DO,Monday,0,0,0.0,0.5,20.0
+Annual Wellness Exam,46,Uninsured,DO,Thursday,1,0,0.0,0.8,48.9
+Anxiety / Depression Follow-up,41,Medicare,MD,Thursday,0,0,0.0,0.7,24.8
+Urinary Tract Infection,67,Uninsured,DO,Tuesday,2,0,0.0,0.2,17.9
+Annual Wellness Exam,62,Private,MD,Wednesday,0,0,0.0,0.8,42.6
+Upper Respiratory Infection,52,Medicare,MD,Friday,0,0,0.0,0.2,14.8
+Type 2 Diabetes Management,58,Medicare,DO,Monday,0,1,4.0,0.9,35.5
+Acute Back Pain,19,Uninsured,MD,Monday,1,0,0.0,0.5,26.9
+Anxiety / Depression Follow-up,25,Private,PA,Friday,2,0,0.0,0.7,23.5
+Chest Pain Evaluation,42,Medicare,PA,Wednesday,1,0,0.0,1.0,35.6
+Type 2 Diabetes Management,37,Medicaid,NP,Monday,1,0,0.0,0.9,27.5
+Knee / Joint Pain,45,Medicaid,DO,Wednesday,1,0,0.0,0.5,21.1
+Annual Wellness Exam,35,Medicare,NP,Wednesday,1,0,0.0,0.8,53.2
+Medication Refill Only,7,Medicare,DO,Tuesday,2,1,0.0,0.1,11.9
+Urinary Tract Infection,21,Private,DO,Wednesday,0,0,0.0,0.2,19.2
+Upper Respiratory Infection,31,Private,MD,Monday,1,0,0.0,0.2,7.2
+Upper Respiratory Infection,73,Private,MD,Friday,3,0,0.0,0.2,20.5
+Urinary Tract Infection,18,Uninsured,MD,Friday,0,0,0.0,0.2,10.5
+Acute Back Pain,59,Private,DO,Thursday,1,1,0.0,0.5,25.1
+Minor Laceration / Wound Care,15,Private,MD,Thursday,0,1,0.0,0.3,15.2
+Upper Respiratory Infection,18,Private,DO,Tuesday,0,1,0.0,0.2,9.1
+New Patient Intake,41,Uninsured,MD,Friday,0,0,0.0,1.0,30.9
+Anxiety / Depression Follow-up,3,Private,MD,Thursday,0,0,13.0,0.7,21.9
+Hypertension Follow-up,7,Private,MD,Wednesday,1,0,0.0,0.7,21.7
+Urinary Tract Infection,79,Medicare,MD,Friday,0,0,6.0,0.2,10.8
+Annual Wellness Exam,37,Medicaid,PA,Friday,1,0,0.0,0.8,39.4
+Minor Laceration / Wound Care,16,Medicare,DO,Tuesday,0,0,0.0,0.3,19.7
+Acute Back Pain,5,Private,NP,Friday,0,0,0.0,0.5,15.4
+Type 2 Diabetes Management,30,Private,NP,Tuesday,3,0,0.0,0.9,26.0
+Skin Rash / Dermatology,28,Private,PA,Friday,0,0,0.0,0.3,8.1
+Hypertension Follow-up,39,Private,NP,Wednesday,0,0,0.0,0.7,21.7
+Acute Back Pain,35,Private,MD,Thursday,0,0,0.0,0.5,11.5
+Hypertension Follow-up,79,Private,MD,Wednesday,2,0,0.0,0.7,22.4
+Minor Laceration / Wound Care,3,Private,MD,Thursday,0,0,0.0,0.3,10.0
+Type 2 Diabetes Management,18,Medicare,DO,Tuesday,1,0,0.0,0.9,36.7
+Urinary Tract Infection,41,Uninsured,MD,Tuesday,2,0,0.0,0.2,14.2
+Annual Wellness Exam,53,Medicaid,DO,Friday,2,0,0.0,0.8,31.0
+Annual Wellness Exam,45,Uninsured,NP,Wednesday,3,0,0.0,0.8,41.1
+Minor Laceration / Wound Care,68,Medicaid,PA,Wednesday,2,0,0.0,0.3,16.9
+Minor Laceration / Wound Care,30,Medicare,PA,Monday,2,0,0.0,0.3,16.3
+Upper Respiratory Infection,6,Medicare,MD,Tuesday,0,0,0.0,0.2,15.0
+Type 2 Diabetes Management,42,Private,DO,Wednesday,1,1,0.0,0.9,42.2
+Anxiety / Depression Follow-up,21,Medicare,MD,Tuesday,2,0,0.0,0.7,19.8
+Upper Respiratory Infection,84,Medicare,DO,Wednesday,4,0,0.0,0.2,17.2
+Asthma Management,12,Medicare,PA,Wednesday,1,0,0.0,0.6,23.6
+Pediatric Well Visit,30,Uninsured,NP,Wednesday,0,1,19.0,0.5,27.6
+Pediatric Well Visit,42,Medicare,NP,Friday,1,1,0.0,0.5,21.9
+Hypertension Follow-up,25,Private,NP,Friday,1,0,0.0,0.7,23.2
+Upper Respiratory Infection,10,Private,MD,Thursday,0,0,12.0,0.2,9.3
+Hypertension Follow-up,8,Private,PA,Thursday,1,0,14.0,0.7,20.2
+Type 2 Diabetes Management,29,Medicaid,DO,Friday,1,0,0.0,0.9,26.8
+Asthma Management,16,Medicaid,MD,Wednesday,0,0,0.0,0.6,24.1
+Asthma Management,16,Medicaid,DO,Wednesday,2,0,0.0,0.6,23.4
+Type 2 Diabetes Management,44,Medicaid,MD,Tuesday,0,0,0.0,0.9,37.5
+Upper Respiratory Infection,14,Medicare,PA,Friday,3,0,0.0,0.2,10.3
+Pediatric Well Visit,25,Medicare,MD,Wednesday,2,0,0.0,0.5,21.6
+Skin Rash / Dermatology,69,Medicaid,MD,Friday,1,0,0.0,0.3,19.6
+Upper Respiratory Infection,5,Private,DO,Thursday,3,0,0.0,0.2,11.3
+New Patient Intake,12,Medicare,MD,Tuesday,0,0,0.0,1.0,48.0
+Anxiety / Depression Follow-up,7,Medicare,DO,Tuesday,1,0,0.0,0.7,37.9
+Upper Respiratory Infection,59,Private,DO,Monday,3,0,0.0,0.2,18.1
+Type 2 Diabetes Management,30,Medicaid,MD,Wednesday,3,0,0.0,0.9,33.4
+Skin Rash / Dermatology,53,Medicare,DO,Thursday,0,0,0.0,0.3,21.7
+Knee / Joint Pain,21,Private,PA,Friday,0,0,0.0,0.5,19.8
+Upper Respiratory Infection,81,Medicare,NP,Monday,0,1,0.0,0.2,15.0
+Asthma Management,30,Medicaid,PA,Friday,1,0,20.0,0.6,20.4
+Upper Respiratory Infection,7,Medicaid,NP,Friday,0,0,0.0,0.2,16.6
+Minor Laceration / Wound Care,81,Medicare,PA,Friday,0,0,0.0,0.3,14.5
+Anxiety / Depression Follow-up,63,Private,MD,Wednesday,0,0,7.0,0.7,36.9
+Type 2 Diabetes Management,62,Private,DO,Friday,0,0,0.0,0.9,13.1
+Medication Refill Only,43,Private,NP,Tuesday,1,0,0.0,0.1,9.1
+Chest Pain Evaluation,6,Private,MD,Tuesday,2,0,0.0,1.0,31.6
+Asthma Management,44,Private,DO,Monday,1,0,0.0,0.6,24.3
+Hypertension Follow-up,42,Private,NP,Tuesday,0,0,0.0,0.7,22.6
+Upper Respiratory Infection,26,Medicare,MD,Monday,0,0,3.0,0.2,14.9
+Hypertension Follow-up,51,Private,MD,Tuesday,0,0,0.0,0.7,14.3
+Urinary Tract Infection,4,Medicare,NP,Tuesday,0,0,0.0,0.2,10.1
+Knee / Joint Pain,58,Private,DO,Friday,0,0,0.0,0.5,20.6
+Knee / Joint Pain,49,Medicare,NP,Friday,1,0,12.0,0.5,15.6
+Skin Rash / Dermatology,50,Private,MD,Tuesday,4,0,2.0,0.3,15.6
+Chest Pain Evaluation,84,Private,PA,Friday,0,0,19.0,1.0,28.3
+Minor Laceration / Wound Care,43,Private,NP,Wednesday,1,0,0.0,0.3,9.8
+Knee / Joint Pain,82,Private,NP,Monday,0,0,0.0,0.5,24.0
+New Patient Intake,11,Private,MD,Monday,1,0,0.0,1.0,47.8
+Upper Respiratory Infection,31,Medicare,DO,Thursday,0,0,0.0,0.2,18.6
+Asthma Management,40,Private,DO,Thursday,2,1,7.0,0.6,27.0
+Anxiety / Depression Follow-up,73,Medicaid,MD,Tuesday,0,0,0.0,0.7,37.7
+Asthma Management,4,Medicaid,NP,Wednesday,0,0,0.0,0.6,13.9
+Chest Pain Evaluation,73,Medicare,MD,Wednesday,1,0,0.0,1.0,48.1
+Upper Respiratory Infection,32,Uninsured,DO,Monday,0,0,0.0,0.2,11.3
+Annual Wellness Exam,31,Private,NP,Tuesday,1,0,0.0,0.8,33.1
+Pediatric Well Visit,2,Private,NP,Thursday,0,0,0.0,0.5,18.9
+Chest Pain Evaluation,84,Medicaid,MD,Thursday,1,0,0.0,1.0,38.3
+Acute Back Pain,47,Medicaid,MD,Tuesday,0,0,16.0,0.5,22.6
+Skin Rash / Dermatology,80,Uninsured,NP,Friday,2,0,0.0,0.3,17.2
+Knee / Joint Pain,72,Medicare,NP,Tuesday,0,0,0.0,0.5,17.8
+Hypertension Follow-up,78,Private,DO,Tuesday,3,0,0.0,0.7,27.0
+Annual Wellness Exam,79,Private,MD,Friday,4,0,0.0,0.8,39.0
+Anxiety / Depression Follow-up,69,Private,MD,Tuesday,1,0,0.0,0.7,34.6
+Medication Refill Only,64,Medicaid,MD,Thursday,1,0,0.0,0.1,10.4
+Type 2 Diabetes Management,32,Private,MD,Tuesday,0,0,17.0,0.9,34.0
+Hypertension Follow-up,30,Private,MD,Monday,1,1,0.0,0.7,24.7
+Medication Refill Only,2,Private,MD,Friday,2,0,6.0,0.1,5.0
+Knee / Joint Pain,35,Private,DO,Friday,0,0,0.0,0.5,26.1
+Upper Respiratory Infection,38,Private,NP,Wednesday,0,0,0.0,0.2,13.3
+Annual Wellness Exam,84,Private,NP,Monday,0,1,12.0,0.8,50.4
+Asthma Management,8,Medicaid,PA,Tuesday,0,0,0.0,0.6,23.8
+Anxiety / Depression Follow-up,30,Private,NP,Thursday,0,0,0.0,0.7,29.6
+Minor Laceration / Wound Care,72,Medicaid,PA,Friday,0,0,5.0,0.3,17.5
+Upper Respiratory Infection,43,Private,MD,Wednesday,2,0,0.0,0.2,12.3
+Urinary Tract Infection,7,Private,DO,Monday,1,1,0.0,0.2,14.8
+Type 2 Diabetes Management,82,Private,MD,Thursday,2,0,0.0,0.9,32.1
+Annual Wellness Exam,35,Private,MD,Friday,3,0,0.0,0.8,31.5
+Hypertension Follow-up,26,Private,MD,Thursday,2,0,0.0,0.7,19.0
+Urinary Tract Infection,5,Medicaid,MD,Friday,1,0,0.0,0.2,8.8
+Minor Laceration / Wound Care,18,Private,PA,Wednesday,3,0,0.0,0.3,13.2
+Minor Laceration / Wound Care,7,Private,MD,Wednesday,1,0,0.0,0.3,13.5
+Acute Back Pain,56,Private,MD,Friday,0,0,0.0,0.5,16.3
+Chest Pain Evaluation,47,Uninsured,PA,Tuesday,1,0,0.0,1.0,32.7
+Asthma Management,31,Medicare,DO,Monday,0,0,0.0,0.6,27.3
+Hypertension Follow-up,84,Medicare,NP,Monday,2,0,5.0,0.7,27.5
+Skin Rash / Dermatology,5,Medicaid,MD,Thursday,1,0,0.0,0.3,12.0
+Minor Laceration / Wound Care,51,Uninsured,MD,Monday,0,0,0.0,0.3,16.5
+Pediatric Well Visit,3,Private,NP,Tuesday,1,0,13.0,0.5,22.1
+Asthma Management,67,Medicare,MD,Friday,1,0,0.0,0.6,23.8
+Upper Respiratory Infection,35,Private,MD,Monday,2,0,0.0,0.2,18.5
+Acute Back Pain,2,Private,NP,Tuesday,0,0,3.0,0.5,15.1
+Hypertension Follow-up,62,Private,PA,Wednesday,1,1,0.0,0.7,27.8
+Knee / Joint Pain,40,Private,NP,Friday,0,0,11.0,0.5,20.5
+Chest Pain Evaluation,30,Private,NP,Wednesday,1,0,0.0,1.0,23.8
+Pediatric Well Visit,28,Private,MD,Tuesday,1,0,0.0,0.5,17.7
+Knee / Joint Pain,70,Medicare,MD,Monday,4,0,0.0,0.5,34.0
+Type 2 Diabetes Management,58,Medicare,MD,Thursday,1,0,0.0,0.9,41.7
+Annual Wellness Exam,75,Medicaid,NP,Monday,1,0,0.0,0.8,31.9
+Hypertension Follow-up,58,Medicare,MD,Friday,0,0,0.0,0.7,26.9
+Medication Refill Only,80,Private,MD,Thursday,0,0,0.0,0.1,7.6
+Type 2 Diabetes Management,15,Medicare,NP,Tuesday,2,0,0.0,0.9,32.9
+Chest Pain Evaluation,25,Private,MD,Friday,1,0,0.0,1.0,28.7
+Urinary Tract Infection,62,Uninsured,DO,Wednesday,1,0,0.0,0.2,18.1
+Type 2 Diabetes Management,68,Medicaid,MD,Friday,0,0,0.0,0.9,19.1
+Acute Back Pain,83,Medicaid,MD,Thursday,1,0,0.0,0.5,22.6
+Acute Back Pain,3,Private,DO,Tuesday,1,1,0.0,0.5,32.5
+Urinary Tract Infection,36,Medicare,MD,Wednesday,2,0,0.0,0.2,9.0
+Annual Wellness Exam,68,Private,MD,Monday,1,0,0.0,0.8,58.5
+Upper Respiratory Infection,30,Medicaid,MD,Friday,1,0,19.0,0.2,15.1
+Urinary Tract Infection,41,Private,NP,Tuesday,0,1,0.0,0.2,11.4
+Chest Pain Evaluation,65,Medicaid,MD,Tuesday,1,0,0.0,1.0,33.9
+Annual Wellness Exam,21,Medicare,DO,Wednesday,1,0,0.0,0.8,42.0
+Chest Pain Evaluation,51,Medicare,DO,Thursday,0,0,5.0,1.0,35.6
+Knee / Joint Pain,7,Medicare,DO,Monday,0,0,9.0,0.5,24.2
+Type 2 Diabetes Management,75,Private,MD,Wednesday,0,0,4.0,0.9,38.1
+Hypertension Follow-up,55,Private,MD,Friday,1,1,0.0,0.7,25.9
+Minor Laceration / Wound Care,60,Medicare,MD,Wednesday,0,0,0.0,0.3,15.8
+Medication Refill Only,25,Medicare,MD,Wednesday,0,0,0.0,0.1,11.8
+Anxiety / Depression Follow-up,80,Uninsured,MD,Wednesday,1,1,0.0,0.7,44.3
+Hypertension Follow-up,36,Private,MD,Wednesday,3,0,0.0,0.7,23.9
+Medication Refill Only,70,Private,NP,Tuesday,0,0,0.0,0.1,7.1
+Pediatric Well Visit,76,Medicaid,PA,Thursday,1,0,17.0,0.5,31.2
+Anxiety / Depression Follow-up,52,Private,MD,Wednesday,2,0,0.0,0.7,28.6
+Medication Refill Only,44,Private,PA,Monday,2,1,0.0,0.1,8.9
+Annual Wellness Exam,51,Private,DO,Thursday,0,0,8.0,0.8,38.4
+Medication Refill Only,16,Private,MD,Tuesday,1,0,0.0,0.1,9.5
+Upper Respiratory Infection,73,Medicaid,DO,Tuesday,1,0,0.0,0.2,14.0
+Skin Rash / Dermatology,8,Medicare,PA,Friday,0,0,20.0,0.3,16.0
+Upper Respiratory Infection,41,Private,MD,Wednesday,1,0,0.0,0.2,8.8
+Hypertension Follow-up,50,Private,DO,Tuesday,0,0,13.0,0.7,18.1
+Pediatric Well Visit,71,Medicaid,MD,Thursday,0,1,10.0,0.5,27.7
+Minor Laceration / Wound Care,2,Medicare,MD,Wednesday,1,1,0.0,0.3,19.3
+Minor Laceration / Wound Care,2,Medicaid,DO,Thursday,1,1,0.0,0.3,18.7
+Medication Refill Only,52,Private,MD,Thursday,1,0,14.0,0.1,6.9
+Anxiety / Depression Follow-up,32,Private,MD,Monday,3,1,18.0,0.7,30.3
+Medication Refill Only,39,Uninsured,MD,Wednesday,0,1,0.0,0.1,13.7
+Hypertension Follow-up,39,Medicare,MD,Wednesday,1,0,0.0,0.7,26.3
+Type 2 Diabetes Management,9,Medicaid,PA,Tuesday,1,0,0.0,0.9,31.1
+Hypertension Follow-up,34,Private,DO,Monday,0,0,0.0,0.7,24.6
+Anxiety / Depression Follow-up,73,Medicare,MD,Thursday,0,0,0.0,0.7,31.6
+Type 2 Diabetes Management,5,Medicaid,PA,Friday,1,0,0.0,0.9,31.4
+Chest Pain Evaluation,29,Private,PA,Wednesday,0,1,0.0,1.0,23.9
+Medication Refill Only,13,Uninsured,PA,Wednesday,2,0,0.0,0.1,9.9
+Urinary Tract Infection,79,Private,NP,Thursday,3,0,0.0,0.2,12.9
+Type 2 Diabetes Management,67,Medicaid,DO,Monday,0,0,0.0,0.9,41.4
+Knee / Joint Pain,34,Medicaid,DO,Thursday,4,0,0.0,0.5,34.5
+Urinary Tract Infection,8,Medicaid,MD,Thursday,0,0,0.0,0.2,12.8
+Hypertension Follow-up,81,Private,MD,Tuesday,0,0,0.0,0.7,25.7
+Upper Respiratory Infection,8,Private,MD,Friday,0,0,0.0,0.2,9.3
+Hypertension Follow-up,46,Medicare,PA,Monday,1,0,0.0,0.7,19.9
+Type 2 Diabetes Management,39,Private,NP,Monday,1,0,0.0,0.9,32.7
+Annual Wellness Exam,59,Medicaid,DO,Monday,0,1,0.0,0.8,61.3
+Chest Pain Evaluation,65,Uninsured,NP,Tuesday,1,0,0.0,1.0,45.9
+Urinary Tract Infection,29,Private,NP,Wednesday,1,1,15.0,0.2,12.3
+Medication Refill Only,76,Private,NP,Monday,0,1,0.0,0.1,10.0
+Urinary Tract Infection,70,Medicare,NP,Tuesday,2,0,0.0,0.2,16.5
+Pediatric Well Visit,23,Medicaid,MD,Tuesday,2,1,0.0,0.5,31.6
+Medication Refill Only,19,Private,PA,Wednesday,1,0,0.0,0.1,10.2
+Annual Wellness Exam,33,Private,NP,Thursday,0,0,0.0,0.8,45.4
+Acute Back Pain,47,Private,MD,Wednesday,0,0,0.0,0.5,14.9
+Pediatric Well Visit,69,Medicare,MD,Monday,0,0,0.0,0.5,32.1
+Asthma Management,81,Private,PA,Monday,3,0,0.0,0.6,34.5
+Acute Back Pain,55,Private,NP,Tuesday,2,1,0.0,0.5,19.1
+Medication Refill Only,37,Private,MD,Tuesday,2,0,0.0,0.1,9.8
+Skin Rash / Dermatology,69,Private,DO,Thursday,0,0,0.0,0.3,11.0
+Medication Refill Only,38,Medicare,MD,Monday,0,1,0.0,0.1,9.0
+Hypertension Follow-up,55,Medicaid,MD,Tuesday,2,1,0.0,0.7,23.9
+Chest Pain Evaluation,69,Private,PA,Thursday,1,1,0.0,1.0,43.4
+Urinary Tract Infection,56,Private,MD,Friday,0,0,0.0,0.2,9.7
+Knee / Joint Pain,70,Private,NP,Monday,0,0,16.0,0.5,28.7
+Type 2 Diabetes Management,28,Uninsured,MD,Tuesday,0,0,0.0,0.9,38.2
+Chest Pain Evaluation,3,Medicaid,MD,Monday,1,0,0.0,1.0,34.6
+Minor Laceration / Wound Care,15,Medicare,MD,Tuesday,4,0,0.0,0.3,19.0
+Urinary Tract Infection,54,Private,MD,Wednesday,1,0,0.0,0.2,13.5
+Type 2 Diabetes Management,12,Medicaid,MD,Friday,2,0,0.0,0.9,24.2
+Asthma Management,39,Medicare,MD,Tuesday,0,0,0.0,0.6,27.9
+Urinary Tract Infection,5,Private,PA,Wednesday,1,0,0.0,0.2,10.3
+Upper Respiratory Infection,29,Private,NP,Tuesday,2,0,0.0,0.2,10.2
+Hypertension Follow-up,23,Private,MD,Friday,0,0,10.0,0.7,17.5
+Type 2 Diabetes Management,56,Medicaid,MD,Friday,1,0,0.0,0.9,31.6
+New Patient Intake,3,Medicare,PA,Thursday,1,0,0.0,1.0,37.2
+Pediatric Well Visit,64,Uninsured,DO,Monday,1,0,0.0,0.5,31.8
+Urinary Tract Infection,26,Private,DO,Tuesday,3,0,0.0,0.2,17.7
+Minor Laceration / Wound Care,54,Private,PA,Wednesday,1,0,18.0,0.3,11.5
+Anxiety / Depression Follow-up,26,Private,NP,Thursday,0,0,0.0,0.7,30.3
+Anxiety / Depression Follow-up,8,Medicare,MD,Friday,1,0,0.0,0.7,15.2
+Upper Respiratory Infection,74,Medicaid,NP,Thursday,0,0,0.0,0.2,10.2
+Anxiety / Depression Follow-up,14,Private,NP,Monday,0,0,0.0,0.7,25.8
+Skin Rash / Dermatology,48,Medicaid,MD,Tuesday,0,0,10.0,0.3,13.2
+Hypertension Follow-up,83,Private,DO,Friday,0,0,13.0,0.7,27.8
+Hypertension Follow-up,77,Medicaid,MD,Wednesday,1,1,0.0,0.7,36.6
+Type 2 Diabetes Management,51,Medicare,NP,Friday,1,0,0.0,0.9,22.7
+Minor Laceration / Wound Care,53,Private,DO,Friday,2,0,0.0,0.3,18.4
+Hypertension Follow-up,64,Private,MD,Wednesday,0,0,0.0,0.7,24.4
+Minor Laceration / Wound Care,9,Medicare,PA,Monday,2,0,9.0,0.3,14.0
+Upper Respiratory Infection,76,Medicaid,MD,Friday,2,0,0.0,0.2,14.1
+Skin Rash / Dermatology,7,Private,DO,Wednesday,1,0,0.0,0.3,17.4
+Type 2 Diabetes Management,66,Medicaid,PA,Monday,0,0,0.0,0.9,38.1
+Knee / Joint Pain,84,Medicaid,NP,Friday,0,0,0.0,0.5,21.7
+Knee / Joint Pain,13,Medicaid,MD,Thursday,3,0,0.0,0.5,25.4
+Acute Back Pain,21,Medicare,NP,Thursday,3,0,0.0,0.5,18.4
+Medication Refill Only,17,Uninsured,MD,Thursday,2,0,4.0,0.1,16.4
+Hypertension Follow-up,64,Private,MD,Wednesday,0,0,0.0,0.7,28.5
+Anxiety / Depression Follow-up,58,Private,DO,Wednesday,0,0,0.0,0.7,26.3
+Type 2 Diabetes Management,83,Private,MD,Wednesday,2,0,0.0,0.9,39.6
+New Patient Intake,73,Medicare,PA,Friday,0,0,0.0,1.0,47.6
+Skin Rash / Dermatology,84,Medicaid,NP,Wednesday,0,1,0.0,0.3,17.6
+Minor Laceration / Wound Care,52,Medicare,MD,Friday,1,0,0.0,0.3,17.3
+Minor Laceration / Wound Care,30,Medicaid,NP,Thursday,0,0,0.0,0.3,12.6
+Pediatric Well Visit,44,Medicare,NP,Thursday,0,0,0.0,0.5,18.9
+Pediatric Well Visit,27,Medicaid,MD,Friday,0,0,0.0,0.5,27.8
+Minor Laceration / Wound Care,44,Medicare,MD,Thursday,0,0,0.0,0.3,13.7
+Knee / Joint Pain,75,Medicare,MD,Wednesday,0,0,0.0,0.5,28.1
+Anxiety / Depression Follow-up,10,Uninsured,MD,Friday,0,0,0.0,0.7,19.0
+Upper Respiratory Infection,81,Private,NP,Tuesday,1,0,0.0,0.2,13.5
+Urinary Tract Infection,49,Medicare,NP,Monday,1,0,0.0,0.2,6.9
+Hypertension Follow-up,19,Medicare,MD,Monday,0,0,0.0,0.7,32.3
+Hypertension Follow-up,41,Medicaid,MD,Tuesday,0,0,0.0,0.7,16.8
+Upper Respiratory Infection,27,Private,MD,Thursday,0,0,0.0,0.2,12.6
+Knee / Joint Pain,71,Private,NP,Tuesday,2,0,0.0,0.5,30.5
+Upper Respiratory Infection,60,Medicaid,DO,Monday,3,0,0.0,0.2,19.6
+Hypertension Follow-up,61,Private,DO,Friday,0,0,0.0,0.7,19.2
+Asthma Management,68,Private,DO,Friday,0,0,0.0,0.6,17.1
+Hypertension Follow-up,43,Medicaid,PA,Friday,0,0,17.0,0.7,33.0
+Urinary Tract Infection,27,Private,MD,Thursday,2,0,0.0,0.2,11.1
+Skin Rash / Dermatology,56,Private,MD,Monday,1,0,0.0,0.3,17.6
+Anxiety / Depression Follow-up,6,Medicare,MD,Wednesday,1,0,5.0,0.7,27.6
+Annual Wellness Exam,73,Private,DO,Monday,0,0,0.0,0.8,37.8
+Chest Pain Evaluation,66,Medicaid,MD,Tuesday,1,0,0.0,1.0,34.5
+Asthma Management,5,Private,MD,Monday,1,0,0.0,0.6,27.7
+Chest Pain Evaluation,57,Private,MD,Wednesday,3,0,4.0,1.0,28.8
+Medication Refill Only,40,Medicare,MD,Friday,1,0,0.0,0.1,12.0
+Anxiety / Depression Follow-up,8,Medicare,MD,Monday,0,0,0.0,0.7,37.5
+Asthma Management,9,Medicaid,NP,Friday,0,0,13.0,0.6,17.3
+Skin Rash / Dermatology,6,Medicaid,PA,Wednesday,3,1,0.0,0.3,21.6
+Knee / Joint Pain,83,Private,MD,Wednesday,0,0,0.0,0.5,30.4
+New Patient Intake,78,Medicaid,PA,Monday,0,0,0.0,1.0,49.8
+Asthma Management,25,Uninsured,DO,Wednesday,0,1,0.0,0.6,29.2
+Anxiety / Depression Follow-up,34,Medicare,NP,Thursday,0,1,0.0,0.7,33.2
+Skin Rash / Dermatology,11,Medicare,MD,Friday,0,0,0.0,0.3,23.3
+Anxiety / Depression Follow-up,67,Private,MD,Tuesday,3,1,0.0,0.7,35.2
+Minor Laceration / Wound Care,17,Medicare,MD,Friday,2,0,0.0,0.3,18.5
+Upper Respiratory Infection,80,Medicaid,DO,Monday,0,0,0.0,0.2,12.6
+Hypertension Follow-up,6,Medicare,PA,Thursday,0,1,0.0,0.7,26.5
+Hypertension Follow-up,46,Private,NP,Wednesday,2,0,0.0,0.7,31.1
+Hypertension Follow-up,5,Medicare,MD,Tuesday,0,0,0.0,0.7,27.3
+Asthma Management,41,Private,PA,Tuesday,0,1,0.0,0.6,21.7
+Acute Back Pain,83,Private,MD,Monday,0,0,0.0,0.5,21.2
+Pediatric Well Visit,25,Private,MD,Friday,3,0,0.0,0.5,18.6
+Hypertension Follow-up,64,Private,DO,Monday,1,0,0.0,0.7,31.3
+Medication Refill Only,69,Medicaid,NP,Thursday,0,0,0.0,0.1,5.0
+Anxiety / Depression Follow-up,44,Private,PA,Monday,1,0,0.0,0.7,33.4
+Knee / Joint Pain,72,Medicare,DO,Thursday,0,0,0.0,0.5,25.1
+Acute Back Pain,67,Private,PA,Wednesday,2,0,0.0,0.5,22.5
+Upper Respiratory Infection,82,Medicaid,NP,Wednesday,0,0,0.0,0.2,13.2
+Chest Pain Evaluation,66,Medicaid,MD,Thursday,0,0,0.0,1.0,31.0
+Hypertension Follow-up,36,Medicare,PA,Monday,1,0,7.0,0.7,24.1
+Pediatric Well Visit,34,Private,MD,Tuesday,2,1,0.0,0.5,27.8
+Urinary Tract Infection,76,Private,DO,Tuesday,1,0,0.0,0.2,9.9
+Type 2 Diabetes Management,24,Private,DO,Wednesday,0,0,0.0,0.9,40.3
+Anxiety / Depression Follow-up,40,Medicare,NP,Friday,0,0,10.0,0.7,28.4
+Skin Rash / Dermatology,36,Medicare,DO,Monday,0,0,0.0,0.3,19.3
+Medication Refill Only,54,Medicare,MD,Friday,2,0,0.0,0.1,14.3
+Medication Refill Only,50,Medicare,MD,Friday,1,0,0.0,0.1,8.8
+Upper Respiratory Infection,39,Medicare,NP,Thursday,0,0,0.0,0.2,19.1
+Type 2 Diabetes Management,4,Medicare,MD,Monday,2,0,0.0,0.9,45.6
+Asthma Management,4,Private,MD,Wednesday,2,0,0.0,0.6,18.2
+Annual Wellness Exam,9,Medicaid,NP,Friday,3,0,19.0,0.8,45.7
+Skin Rash / Dermatology,79,Private,PA,Thursday,0,0,0.0,0.3,11.3
+Pediatric Well Visit,71,Medicare,NP,Monday,0,0,2.0,0.5,28.3
+Hypertension Follow-up,72,Medicare,DO,Monday,2,0,0.0,0.7,19.3
+Acute Back Pain,46,Medicaid,MD,Thursday,0,0,0.0,0.5,20.5
+Type 2 Diabetes Management,51,Private,PA,Tuesday,1,0,0.0,0.9,34.8
+Annual Wellness Exam,44,Private,NP,Wednesday,3,0,0.0,0.8,36.8
+Chest Pain Evaluation,74,Uninsured,NP,Wednesday,1,0,0.0,1.0,38.5
+Anxiety / Depression Follow-up,43,Private,DO,Tuesday,3,0,0.0,0.7,25.8
+Chest Pain Evaluation,29,Medicare,MD,Friday,0,0,17.0,1.0,29.4
+Pediatric Well Visit,39,Private,PA,Friday,2,0,3.0,0.5,20.2
+Annual Wellness Exam,26,Medicare,NP,Monday,1,0,17.0,0.8,41.5
+Annual Wellness Exam,13,Uninsured,MD,Monday,0,0,0.0,0.8,42.8
+Urinary Tract Infection,7,Medicaid,MD,Thursday,1,0,2.0,0.2,12.2
+Minor Laceration / Wound Care,19,Private,NP,Thursday,0,0,19.0,0.3,13.3
+Asthma Management,45,Uninsured,DO,Wednesday,0,0,0.0,0.6,18.9
+Acute Back Pain,74,Medicare,NP,Wednesday,0,1,15.0,0.5,26.5
+Anxiety / Depression Follow-up,78,Private,MD,Monday,0,0,0.0,0.7,29.4
+Minor Laceration / Wound Care,74,Medicaid,DO,Tuesday,1,0,0.0,0.3,19.9
+Type 2 Diabetes Management,3,Medicare,DO,Monday,1,0,0.0,0.9,32.6
+Minor Laceration / Wound Care,38,Medicare,NP,Tuesday,1,0,0.0,0.3,18.5
+Type 2 Diabetes Management,15,Medicaid,MD,Thursday,1,0,17.0,0.9,44.0
+Knee / Joint Pain,63,Private,DO,Thursday,1,1,20.0,0.5,26.7
+Anxiety / Depression Follow-up,42,Private,NP,Tuesday,1,0,0.0,0.7,17.5
+Knee / Joint Pain,77,Medicare,MD,Tuesday,4,0,0.0,0.5,34.5
+Hypertension Follow-up,28,Private,MD,Friday,1,0,0.0,0.7,24.1
+Annual Wellness Exam,23,Medicaid,NP,Wednesday,0,0,12.0,0.8,43.1
+Asthma Management,50,Private,MD,Tuesday,0,0,0.0,0.6,19.2
+Type 2 Diabetes Management,64,Private,PA,Tuesday,0,0,0.0,0.9,40.2
+Upper Respiratory Infection,39,Medicare,MD,Tuesday,4,0,1.0,0.2,22.6
+Hypertension Follow-up,40,Medicare,DO,Monday,2,0,0.0,0.7,31.4
+Type 2 Diabetes Management,78,Medicaid,MD,Monday,2,0,0.0,0.9,49.7
+Skin Rash / Dermatology,48,Private,MD,Monday,2,1,0.0,0.3,26.0
+Anxiety / Depression Follow-up,33,Private,MD,Wednesday,1,0,0.0,0.7,26.6
+Urinary Tract Infection,80,Medicaid,NP,Monday,1,0,0.0,0.2,19.3
+Asthma Management,46,Uninsured,PA,Tuesday,1,0,16.0,0.6,34.7
+Type 2 Diabetes Management,48,Uninsured,PA,Monday,1,0,0.0,0.9,41.6
+Skin Rash / Dermatology,83,Private,MD,Friday,0,1,0.0,0.3,16.0
+Hypertension Follow-up,84,Private,NP,Tuesday,0,0,8.0,0.7,24.2
+Pediatric Well Visit,11,Private,DO,Monday,4,1,0.0,0.5,38.0
+Type 2 Diabetes Management,11,Private,NP,Tuesday,0,0,1.0,0.9,27.9
+Chest Pain Evaluation,45,Private,NP,Wednesday,1,1,0.0,1.0,28.7
+Skin Rash / Dermatology,39,Private,NP,Tuesday,2,0,13.0,0.3,7.6
+Annual Wellness Exam,69,Medicare,MD,Monday,0,0,0.0,0.8,43.6
+New Patient Intake,7,Medicare,DO,Tuesday,0,0,0.0,1.0,53.8
+Anxiety / Depression Follow-up,45,Private,PA,Tuesday,2,0,0.0,0.7,30.0
+Anxiety / Depression Follow-up,13,Private,NP,Monday,0,0,0.0,0.7,21.8
+Hypertension Follow-up,32,Private,PA,Thursday,1,0,0.0,0.7,12.1
+Skin Rash / Dermatology,4,Private,MD,Monday,3,0,0.0,0.3,20.3
+Upper Respiratory Infection,80,Medicaid,NP,Tuesday,0,0,6.0,0.2,12.6
+Urinary Tract Infection,77,Medicare,PA,Tuesday,0,0,0.0,0.2,12.6
+Minor Laceration / Wound Care,50,Private,MD,Thursday,2,0,0.0,0.3,15.7
+Skin Rash / Dermatology,53,Medicaid,DO,Thursday,1,0,0.0,0.3,12.9
+Hypertension Follow-up,28,Private,MD,Wednesday,0,0,0.0,0.7,24.3
+Minor Laceration / Wound Care,65,Medicaid,MD,Friday,4,1,0.0,0.3,20.9
+Annual Wellness Exam,26,Private,MD,Wednesday,0,1,3.0,0.8,45.4
+Anxiety / Depression Follow-up,52,Medicare,MD,Wednesday,2,0,0.0,0.7,34.1
+Skin Rash / Dermatology,24,Medicaid,MD,Friday,0,0,0.0,0.3,11.5
+Annual Wellness Exam,22,Medicare,NP,Tuesday,2,0,0.0,0.8,42.8
+Anxiety / Depression Follow-up,41,Uninsured,DO,Wednesday,0,0,0.0,0.7,22.9
+Acute Back Pain,33,Private,DO,Tuesday,1,0,0.0,0.5,16.8
+Asthma Management,7,Medicaid,MD,Thursday,2,0,0.0,0.6,27.4
+Asthma Management,29,Private,DO,Friday,1,0,0.0,0.6,21.5
+Knee / Joint Pain,15,Medicaid,DO,Monday,1,0,19.0,0.5,20.9
+Annual Wellness Exam,10,Medicare,MD,Monday,1,0,0.0,0.8,41.6
+Medication Refill Only,82,Medicare,MD,Thursday,1,1,0.0,0.1,8.1
+Asthma Management,49,Medicare,DO,Monday,4,0,0.0,0.6,36.4
+Chest Pain Evaluation,30,Medicaid,NP,Friday,4,0,0.0,1.0,32.6
+Upper Respiratory Infection,51,Private,MD,Tuesday,3,0,0.0,0.2,10.1
+Acute Back Pain,29,Private,MD,Monday,0,0,2.0,0.5,21.4
+Upper Respiratory Infection,20,Private,DO,Tuesday,1,1,0.0,0.2,18.9
+Pediatric Well Visit,31,Medicare,MD,Monday,0,0,3.0,0.5,22.8
+Pediatric Well Visit,82,Private,NP,Monday,0,0,0.0,0.5,17.8
+Anxiety / Depression Follow-up,60,Medicare,DO,Tuesday,1,0,14.0,0.7,34.6
+Hypertension Follow-up,19,Uninsured,MD,Friday,3,0,0.0,0.7,26.7
+Annual Wellness Exam,51,Medicare,NP,Tuesday,2,0,0.0,0.8,33.0
+Urinary Tract Infection,63,Medicare,NP,Monday,3,0,0.0,0.2,14.5
+Urinary Tract Infection,64,Medicaid,NP,Wednesday,1,0,5.0,0.2,12.2
+Medication Refill Only,10,Uninsured,MD,Tuesday,2,0,0.0,0.1,9.8
+Pediatric Well Visit,3,Medicare,MD,Friday,0,0,0.0,0.5,23.4
+Urinary Tract Infection,81,Medicaid,NP,Tuesday,2,0,0.0,0.2,10.3
+Medication Refill Only,33,Medicare,NP,Monday,1,0,0.0,0.1,5.0
+Medication Refill Only,26,Private,DO,Tuesday,0,1,0.0,0.1,10.0
+Urinary Tract Infection,69,Medicaid,MD,Wednesday,0,0,0.0,0.2,12.5
+Skin Rash / Dermatology,74,Medicaid,NP,Monday,4,0,0.0,0.3,20.3
+Annual Wellness Exam,83,Medicare,MD,Thursday,0,1,0.0,0.8,47.7
+Minor Laceration / Wound Care,23,Medicaid,NP,Friday,0,0,0.0,0.3,5.5
+Medication Refill Only,63,Medicare,DO,Monday,1,0,18.0,0.1,11.0
+Minor Laceration / Wound Care,46,Uninsured,MD,Monday,2,0,0.0,0.3,19.6
+Upper Respiratory Infection,45,Medicare,PA,Monday,4,0,0.0,0.2,24.0
+Type 2 Diabetes Management,57,Medicaid,MD,Thursday,0,0,8.0,0.9,31.1
+Hypertension Follow-up,15,Medicaid,PA,Tuesday,1,0,19.0,0.7,27.7
+Medication Refill Only,83,Private,MD,Friday,1,0,0.0,0.1,11.0
+Acute Back Pain,83,Private,MD,Wednesday,2,1,0.0,0.5,25.6
+Hypertension Follow-up,73,Private,MD,Monday,0,0,0.0,0.7,24.2
+Anxiety / Depression Follow-up,3,Medicare,MD,Thursday,0,0,0.0,0.7,21.8
+Type 2 Diabetes Management,39,Private,PA,Friday,2,0,0.0,0.9,22.1
+Chest Pain Evaluation,62,Medicaid,MD,Thursday,0,0,0.0,1.0,23.9
+Skin Rash / Dermatology,43,Medicare,MD,Thursday,1,0,15.0,0.3,18.9
+Type 2 Diabetes Management,2,Medicare,MD,Thursday,0,0,0.0,0.9,35.6
+Hypertension Follow-up,24,Uninsured,DO,Thursday,1,0,0.0,0.7,25.8
+Pediatric Well Visit,58,Private,NP,Thursday,0,0,0.0,0.5,22.0
+New Patient Intake,35,Private,DO,Friday,0,0,0.0,1.0,37.7
+Anxiety / Depression Follow-up,72,Private,NP,Wednesday,0,0,0.0,0.7,27.7
+Pediatric Well Visit,22,Private,PA,Thursday,2,0,0.0,0.5,26.6
+Urinary Tract Infection,19,Medicaid,PA,Wednesday,1,0,0.0,0.2,7.2
+Medication Refill Only,39,Private,DO,Monday,1,0,0.0,0.1,11.0
+Acute Back Pain,30,Private,DO,Thursday,0,0,0.0,0.5,22.5
+Chest Pain Evaluation,71,Private,MD,Tuesday,4,0,0.0,1.0,42.7
+Anxiety / Depression Follow-up,33,Private,MD,Thursday,1,0,0.0,0.7,22.6
+Chest Pain Evaluation,31,Private,DO,Wednesday,1,0,0.0,1.0,34.6
+Knee / Joint Pain,23,Medicare,MD,Thursday,0,1,0.0,0.5,30.8
+Acute Back Pain,52,Private,MD,Wednesday,1,0,0.0,0.5,17.7
+Urinary Tract Infection,46,Private,NP,Friday,2,0,0.0,0.2,17.0
+Minor Laceration / Wound Care,19,Private,NP,Thursday,0,0,0.0,0.3,17.9
+Annual Wellness Exam,9,Private,MD,Tuesday,1,0,0.0,0.8,38.0
+Anxiety / Depression Follow-up,33,Medicare,MD,Friday,2,0,0.0,0.7,17.9
+Knee / Joint Pain,2,Medicaid,DO,Monday,1,0,0.0,0.5,13.2
+Minor Laceration / Wound Care,52,Private,PA,Monday,2,1,0.0,0.3,22.6
+Minor Laceration / Wound Care,19,Medicare,MD,Monday,0,0,0.0,0.3,11.9
+Knee / Joint Pain,51,Private,MD,Friday,2,0,0.0,0.5,22.6
+Urinary Tract Infection,41,Medicaid,MD,Thursday,0,1,0.0,0.2,15.0
+Skin Rash / Dermatology,79,Medicare,MD,Monday,0,0,0.0,0.3,17.2
+Chest Pain Evaluation,54,Medicare,MD,Friday,3,0,0.0,1.0,44.5
+Knee / Joint Pain,78,Medicare,DO,Wednesday,0,0,0.0,0.5,22.8
+Annual Wellness Exam,34,Private,DO,Tuesday,0,0,0.0,0.8,26.0
+Annual Wellness Exam,27,Private,MD,Wednesday,3,0,0.0,0.8,48.1
+Anxiety / Depression Follow-up,34,Private,MD,Wednesday,3,0,0.0,0.7,30.7
+Medication Refill Only,19,Medicare,DO,Monday,3,0,0.0,0.1,11.5
+Upper Respiratory Infection,12,Private,DO,Monday,1,0,3.0,0.2,12.5
+Hypertension Follow-up,49,Medicare,DO,Friday,0,0,0.0,0.7,25.7
+Anxiety / Depression Follow-up,24,Medicaid,PA,Tuesday,0,1,16.0,0.7,28.2
+Medication Refill Only,77,Private,NP,Friday,1,0,0.0,0.1,7.8
+Upper Respiratory Infection,81,Private,MD,Friday,0,0,0.0,0.2,9.9
+Hypertension Follow-up,21,Medicare,MD,Thursday,0,0,0.0,0.7,22.1
+Type 2 Diabetes Management,20,Medicaid,PA,Thursday,0,0,0.0,0.9,28.9
+Minor Laceration / Wound Care,31,Private,DO,Tuesday,1,1,0.0,0.3,19.8
+Urinary Tract Infection,45,Medicaid,NP,Tuesday,0,0,0.0,0.2,14.8
+Type 2 Diabetes Management,11,Medicare,MD,Friday,0,0,0.0,0.9,15.7
+Asthma Management,42,Uninsured,MD,Monday,1,0,0.0,0.6,25.4
+Pediatric Well Visit,55,Private,MD,Monday,0,0,5.0,0.5,22.9
+Skin Rash / Dermatology,78,Medicaid,MD,Thursday,1,0,0.0,0.3,14.1
+Anxiety / Depression Follow-up,6,Private,MD,Tuesday,1,0,0.0,0.7,21.4
+Skin Rash / Dermatology,36,Private,NP,Wednesday,1,1,0.0,0.3,19.6
+Upper Respiratory Infection,42,Private,MD,Friday,1,0,0.0,0.2,18.4
+Anxiety / Depression Follow-up,66,Private,DO,Monday,0,0,0.0,0.7,29.4
+Medication Refill Only,41,Medicare,NP,Tuesday,2,0,1.0,0.1,8.3
+Upper Respiratory Infection,17,Uninsured,NP,Friday,0,0,0.0,0.2,17.8
+Minor Laceration / Wound Care,47,Private,DO,Thursday,2,0,0.0,0.3,14.9
+Asthma Management,32,Medicaid,DO,Friday,1,0,0.0,0.6,20.6
+Pediatric Well Visit,41,Medicare,PA,Thursday,1,0,17.0,0.5,29.0
+Anxiety / Depression Follow-up,6,Private,MD,Monday,2,0,0.0,0.7,33.3
+Hypertension Follow-up,21,Private,MD,Thursday,0,0,0.0,0.7,10.9
+Hypertension Follow-up,5,Private,PA,Thursday,1,0,0.0,0.7,18.9
+Minor Laceration / Wound Care,33,Private,MD,Thursday,3,0,0.0,0.3,20.2
+Pediatric Well Visit,2,Uninsured,MD,Wednesday,2,0,0.0,0.5,21.5
+Hypertension Follow-up,28,Private,MD,Friday,0,0,0.0,0.7,26.4
+Chest Pain Evaluation,75,Uninsured,MD,Tuesday,0,0,0.0,1.0,35.9
+Upper Respiratory Infection,31,Private,MD,Thursday,0,0,0.0,0.2,11.8
+Hypertension Follow-up,72,Uninsured,DO,Tuesday,0,0,0.0,0.7,25.4
+Urinary Tract Infection,38,Medicaid,MD,Wednesday,1,0,0.0,0.2,8.6
+Minor Laceration / Wound Care,60,Medicare,PA,Monday,2,1,0.0,0.3,23.5
+Asthma Management,83,Medicaid,NP,Tuesday,1,0,0.0,0.6,32.2
+Pediatric Well Visit,36,Medicaid,MD,Tuesday,0,1,0.0,0.5,31.1
+Medication Refill Only,63,Uninsured,MD,Tuesday,1,0,0.0,0.1,13.8
+Hypertension Follow-up,71,Private,DO,Thursday,1,0,19.0,0.7,26.7
+Annual Wellness Exam,52,Medicare,MD,Thursday,0,0,0.0,0.8,34.2
+Skin Rash / Dermatology,71,Medicare,MD,Tuesday,0,0,0.0,0.3,16.9
+Hypertension Follow-up,38,Private,PA,Wednesday,1,0,10.0,0.7,19.3
+Acute Back Pain,39,Medicare,DO,Wednesday,0,0,0.0,0.5,24.5
+Minor Laceration / Wound Care,84,Private,PA,Tuesday,4,0,0.0,0.3,23.6
+Knee / Joint Pain,77,Private,NP,Thursday,1,0,0.0,0.5,19.9
+Acute Back Pain,43,Private,MD,Tuesday,0,0,9.0,0.5,13.1
+Hypertension Follow-up,5,Medicare,DO,Wednesday,1,0,11.0,0.7,12.9
+Chest Pain Evaluation,40,Private,NP,Thursday,0,0,5.0,1.0,33.3
+Skin Rash / Dermatology,64,Private,MD,Thursday,2,1,0.0,0.3,29.3
+Acute Back Pain,76,Private,DO,Monday,0,0,0.0,0.5,15.3
+Type 2 Diabetes Management,7,Private,NP,Friday,1,1,0.0,0.9,31.9
+Anxiety / Depression Follow-up,50,Uninsured,NP,Friday,1,0,0.0,0.7,29.7
+Skin Rash / Dermatology,38,Private,PA,Friday,2,0,0.0,0.3,17.6
+Upper Respiratory Infection,26,Medicare,MD,Tuesday,3,0,0.0,0.2,15.8
+Upper Respiratory Infection,71,Private,PA,Thursday,1,1,15.0,0.2,13.9
+Pediatric Well Visit,9,Private,MD,Wednesday,0,0,0.0,0.5,18.3
+Minor Laceration / Wound Care,74,Private,MD,Friday,1,0,0.0,0.3,11.1
+Pediatric Well Visit,82,Medicare,MD,Friday,1,0,5.0,0.5,25.3
+Acute Back Pain,9,Private,NP,Tuesday,0,0,14.0,0.5,15.7
+Annual Wellness Exam,58,Uninsured,MD,Thursday,1,0,0.0,0.8,46.2
+Annual Wellness Exam,13,Medicare,NP,Tuesday,1,0,0.0,0.8,45.7
+Type 2 Diabetes Management,82,Uninsured,MD,Friday,0,0,15.0,0.9,26.5
+Pediatric Well Visit,31,Medicare,DO,Monday,0,0,0.0,0.5,12.2
+Annual Wellness Exam,78,Private,MD,Friday,1,1,0.0,0.8,47.4
+Annual Wellness Exam,39,Medicaid,DO,Tuesday,2,0,0.0,0.8,42.3
+Skin Rash / Dermatology,28,Private,NP,Monday,2,0,12.0,0.3,10.0
+Upper Respiratory Infection,12,Private,DO,Thursday,0,1,0.0,0.2,7.6
+Minor Laceration / Wound Care,59,Private,DO,Monday,4,0,0.0,0.3,18.4
+Annual Wellness Exam,66,Medicaid,MD,Thursday,0,0,0.0,0.8,44.5
+Minor Laceration / Wound Care,31,Uninsured,MD,Thursday,0,0,0.0,0.3,12.3
+Medication Refill Only,14,Private,MD,Thursday,3,0,0.0,0.1,6.4
+Urinary Tract Infection,53,Medicaid,DO,Monday,4,1,0.0,0.2,13.6
+Medication Refill Only,32,Uninsured,PA,Wednesday,3,0,0.0,0.1,10.0
+Skin Rash / Dermatology,6,Medicare,NP,Monday,0,0,0.0,0.3,16.4
+Annual Wellness Exam,8,Private,MD,Wednesday,1,0,14.0,0.8,28.0
+Chest Pain Evaluation,20,Private,MD,Monday,1,0,0.0,1.0,39.0
+Acute Back Pain,59,Private,PA,Friday,1,0,11.0,0.5,15.6
+Pediatric Well Visit,33,Private,MD,Tuesday,3,1,0.0,0.5,33.8
+Pediatric Well Visit,42,Medicaid,DO,Monday,2,1,4.0,0.5,32.9
+Minor Laceration / Wound Care,54,Private,NP,Thursday,2,0,0.0,0.3,16.5
+Acute Back Pain,76,Medicaid,PA,Tuesday,2,0,0.0,0.5,18.0
+Chest Pain Evaluation,82,Medicaid,DO,Friday,0,0,19.0,1.0,44.2
+Hypertension Follow-up,43,Private,PA,Wednesday,1,0,0.0,0.7,24.2
+Asthma Management,3,Medicare,NP,Thursday,2,0,0.0,0.6,18.6
+Pediatric Well Visit,10,Private,MD,Tuesday,2,0,0.0,0.5,22.8
+Type 2 Diabetes Management,50,Uninsured,MD,Tuesday,0,0,0.0,0.9,37.1
+Medication Refill Only,73,Medicare,MD,Wednesday,1,0,13.0,0.1,10.0
+Minor Laceration / Wound Care,73,Private,NP,Wednesday,1,0,0.0,0.3,16.9
+Type 2 Diabetes Management,16,Medicaid,PA,Tuesday,1,0,0.0,0.9,29.7
+Pediatric Well Visit,47,Uninsured,DO,Monday,0,0,0.0,0.5,24.7
+Type 2 Diabetes Management,49,Medicare,NP,Wednesday,0,1,0.0,0.9,35.5
+New Patient Intake,79,Private,DO,Friday,1,0,0.0,1.0,45.5
+Type 2 Diabetes Management,20,Uninsured,PA,Thursday,1,1,0.0,0.9,38.1
+Skin Rash / Dermatology,19,Uninsured,MD,Wednesday,0,0,6.0,0.3,14.2
+New Patient Intake,38,Medicaid,MD,Monday,1,0,0.0,1.0,54.1
+Hypertension Follow-up,39,Medicaid,NP,Thursday,0,0,0.0,0.7,15.9
+Urinary Tract Infection,48,Private,PA,Tuesday,2,1,0.0,0.2,12.2
+Annual Wellness Exam,21,Medicaid,MD,Tuesday,1,0,19.0,0.8,29.4
+Acute Back Pain,80,Medicare,DO,Friday,1,0,0.0,0.5,26.2
+Type 2 Diabetes Management,38,Private,DO,Monday,2,0,0.0,0.9,34.1
+Annual Wellness Exam,5,Private,DO,Thursday,0,0,0.0,0.8,22.6
+Minor Laceration / Wound Care,50,Medicare,DO,Wednesday,1,0,0.0,0.3,13.8
+Type 2 Diabetes Management,75,Private,MD,Wednesday,0,0,0.0,0.9,33.7
+Pediatric Well Visit,47,Uninsured,MD,Monday,4,0,0.0,0.5,33.4
+Upper Respiratory Infection,34,Medicaid,DO,Tuesday,1,0,0.0,0.2,13.8
+Minor Laceration / Wound Care,49,Private,MD,Monday,0,0,0.0,0.3,13.8
+Chest Pain Evaluation,79,Medicaid,MD,Thursday,3,0,0.0,1.0,42.9
+Anxiety / Depression Follow-up,78,Private,MD,Monday,0,0,0.0,0.7,20.8
+Acute Back Pain,83,Private,DO,Tuesday,1,0,0.0,0.5,27.1
+Type 2 Diabetes Management,81,Private,PA,Monday,1,0,0.0,0.9,37.9
+Annual Wellness Exam,49,Uninsured,MD,Wednesday,1,0,0.0,0.8,45.2
+Type 2 Diabetes Management,13,Private,PA,Tuesday,3,1,0.0,0.9,39.2
+Chest Pain Evaluation,52,Private,MD,Monday,4,0,0.0,1.0,51.9
+Hypertension Follow-up,81,Private,MD,Monday,0,1,0.0,0.7,38.3
+Pediatric Well Visit,6,Private,NP,Thursday,2,0,0.0,0.5,22.4
+Skin Rash / Dermatology,22,Uninsured,NP,Wednesday,3,0,0.0,0.3,18.7
+Anxiety / Depression Follow-up,82,Private,PA,Thursday,0,0,0.0,0.7,39.8
+Medication Refill Only,62,Private,DO,Monday,0,0,10.0,0.1,10.7
+Acute Back Pain,34,Private,MD,Friday,2,0,0.0,0.5,19.6
+Pediatric Well Visit,67,Medicare,MD,Wednesday,0,0,0.0,0.5,23.6
+Type 2 Diabetes Management,49,Medicaid,MD,Wednesday,1,0,0.0,0.9,28.0
+Knee / Joint Pain,26,Private,MD,Tuesday,0,0,0.0,0.5,14.4
+Annual Wellness Exam,65,Private,DO,Wednesday,0,0,0.0,0.8,27.0
+Pediatric Well Visit,3,Medicaid,DO,Wednesday,0,0,12.0,0.5,24.2
+Pediatric Well Visit,50,Medicaid,MD,Monday,2,0,0.0,0.5,28.8
+Acute Back Pain,35,Medicaid,DO,Tuesday,0,1,10.0,0.5,25.6
+Knee / Joint Pain,62,Private,DO,Friday,2,0,5.0,0.5,23.8
+Hypertension Follow-up,76,Uninsured,DO,Wednesday,1,0,4.0,0.7,29.6
+Annual Wellness Exam,27,Private,DO,Monday,0,0,0.0,0.8,41.2
+Pediatric Well Visit,17,Private,MD,Friday,1,0,16.0,0.5,22.3
+Acute Back Pain,27,Uninsured,DO,Wednesday,1,0,0.0,0.5,29.6
+Pediatric Well Visit,37,Private,DO,Thursday,2,0,0.0,0.5,22.2
+Hypertension Follow-up,47,Medicare,NP,Thursday,2,0,0.0,0.7,25.8
+Pediatric Well Visit,79,Medicare,DO,Tuesday,0,1,0.0,0.5,32.3
+Knee / Joint Pain,54,Private,MD,Tuesday,2,0,0.0,0.5,30.6
+Urinary Tract Infection,25,Medicaid,MD,Wednesday,1,1,20.0,0.2,14.8
+Chest Pain Evaluation,73,Medicaid,MD,Thursday,2,0,13.0,1.0,32.8
+Annual Wellness Exam,65,Private,PA,Thursday,1,0,0.0,0.8,30.5
+Medication Refill Only,51,Private,PA,Monday,0,1,0.0,0.1,9.7
+Chest Pain Evaluation,60,Uninsured,NP,Wednesday,1,0,0.0,1.0,37.7
+Acute Back Pain,5,Medicare,MD,Wednesday,1,0,0.0,0.5,23.5
+Annual Wellness Exam,34,Medicaid,MD,Tuesday,0,0,16.0,0.8,41.4
+Urinary Tract Infection,16,Medicaid,NP,Wednesday,0,0,0.0,0.2,13.2
+Medication Refill Only,80,Private,PA,Friday,1,0,0.0,0.1,6.4
+Upper Respiratory Infection,52,Private,NP,Thursday,1,0,0.0,0.2,13.0
+Type 2 Diabetes Management,15,Uninsured,PA,Tuesday,1,0,0.0,0.9,33.8
+Urinary Tract Infection,25,Uninsured,MD,Friday,0,0,0.0,0.2,13.6
+Acute Back Pain,47,Private,NP,Monday,1,0,0.0,0.5,18.4
+Upper Respiratory Infection,70,Private,PA,Monday,0,1,0.0,0.2,20.6
+Type 2 Diabetes Management,63,Private,MD,Tuesday,4,0,0.0,0.9,30.5
+Urinary Tract Infection,28,Medicaid,NP,Tuesday,1,0,0.0,0.2,12.5
+Hypertension Follow-up,52,Medicare,NP,Wednesday,2,0,2.0,0.7,35.3
+Type 2 Diabetes Management,47,Private,PA,Wednesday,1,0,0.0,0.9,28.7
+Medication Refill Only,80,Private,PA,Friday,1,1,0.0,0.1,13.7
+Hypertension Follow-up,39,Private,DO,Wednesday,0,0,0.0,0.7,21.5
+Anxiety / Depression Follow-up,51,Medicare,DO,Wednesday,0,0,0.0,0.7,36.2
+Asthma Management,83,Medicare,MD,Thursday,1,0,0.0,0.6,21.9
+Chest Pain Evaluation,26,Private,MD,Monday,0,0,14.0,1.0,40.1
+Chest Pain Evaluation,73,Private,DO,Monday,1,0,17.0,1.0,45.2
+Urinary Tract Infection,62,Private,NP,Thursday,0,0,0.0,0.2,11.3
+Knee / Joint Pain,30,Medicare,DO,Tuesday,1,1,0.0,0.5,28.0
+Acute Back Pain,2,Medicare,MD,Monday,4,1,0.0,0.5,36.8
+Acute Back Pain,25,Medicare,MD,Wednesday,1,0,0.0,0.5,27.7
+Hypertension Follow-up,40,Private,MD,Monday,1,0,0.0,0.7,23.8
+Annual Wellness Exam,17,Uninsured,PA,Friday,1,0,0.0,0.8,29.1
+Knee / Joint Pain,8,Private,MD,Thursday,0,1,0.0,0.5,24.2
+Pediatric Well Visit,83,Medicaid,NP,Monday,1,0,0.0,0.5,20.5
+Hypertension Follow-up,13,Medicaid,MD,Monday,2,0,0.0,0.7,28.2
+Upper Respiratory Infection,4,Medicaid,DO,Tuesday,0,0,0.0,0.2,11.8
+Minor Laceration / Wound Care,43,Private,DO,Tuesday,1,1,10.0,0.3,14.0
+Pediatric Well Visit,4,Private,NP,Monday,0,1,13.0,0.5,22.4
+Minor Laceration / Wound Care,84,Medicaid,DO,Monday,2,0,0.0,0.3,21.9
+New Patient Intake,58,Private,MD,Tuesday,0,0,0.0,1.0,62.8
+Asthma Management,8,Medicare,MD,Tuesday,2,0,13.0,0.6,28.5
+Pediatric Well Visit,56,Medicare,MD,Thursday,2,0,0.0,0.5,31.7
+Acute Back Pain,59,Medicaid,NP,Tuesday,0,0,0.0,0.5,17.9
+Type 2 Diabetes Management,77,Private,MD,Wednesday,1,0,0.0,0.9,39.0
+New Patient Intake,10,Private,MD,Wednesday,4,0,0.0,1.0,41.9
+Hypertension Follow-up,44,Medicaid,PA,Wednesday,0,0,9.0,0.7,23.0
+Pediatric Well Visit,81,Private,DO,Monday,0,0,0.0,0.5,29.2
+Annual Wellness Exam,56,Medicaid,DO,Tuesday,1,0,10.0,0.8,41.4
+Hypertension Follow-up,80,Private,MD,Tuesday,2,0,0.0,0.7,25.4
+Knee / Joint Pain,67,Medicaid,PA,Tuesday,4,0,0.0,0.5,36.5
+Skin Rash / Dermatology,50,Medicaid,PA,Monday,1,0,0.0,0.3,15.9
+Knee / Joint Pain,33,Medicaid,PA,Wednesday,3,1,0.0,0.5,25.0
+Urinary Tract Infection,16,Private,MD,Wednesday,2,0,0.0,0.2,10.4
+Hypertension Follow-up,55,Private,DO,Tuesday,1,0,0.0,0.7,21.9
+Medication Refill Only,66,Private,MD,Tuesday,1,0,0.0,0.1,9.1
+Medication Refill Only,82,Private,MD,Tuesday,0,0,0.0,0.1,10.8
+Anxiety / Depression Follow-up,35,Private,MD,Monday,1,0,0.0,0.7,28.1
+Asthma Management,34,Private,PA,Monday,1,0,0.0,0.6,30.4
+Medication Refill Only,68,Private,DO,Thursday,0,1,0.0,0.1,10.8
+Upper Respiratory Infection,26,Medicaid,NP,Thursday,0,0,9.0,0.2,10.4
+Annual Wellness Exam,21,Private,MD,Wednesday,2,0,0.0,0.8,47.4
+Acute Back Pain,76,Medicaid,MD,Thursday,0,0,0.0,0.5,18.4
+Anxiety / Depression Follow-up,21,Private,DO,Friday,2,0,0.0,0.7,33.1
+Upper Respiratory Infection,20,Private,MD,Thursday,2,0,0.0,0.2,7.9
+Urinary Tract Infection,40,Private,MD,Wednesday,2,0,19.0,0.2,13.3
+Anxiety / Depression Follow-up,27,Private,MD,Friday,0,0,0.0,0.7,19.0
+Upper Respiratory Infection,77,Private,MD,Thursday,0,0,0.0,0.2,8.5
+Anxiety / Depression Follow-up,61,Medicare,NP,Tuesday,0,0,20.0,0.7,38.8
+Urinary Tract Infection,33,Private,MD,Friday,0,0,0.0,0.2,14.7
+Acute Back Pain,43,Medicaid,MD,Monday,0,1,0.0,0.5,23.1
+Chest Pain Evaluation,26,Medicare,DO,Tuesday,2,0,0.0,1.0,45.6
+Medication Refill Only,55,Private,MD,Monday,0,1,0.0,0.1,10.0
+Medication Refill Only,75,Medicaid,DO,Monday,1,0,20.0,0.1,13.5
+Upper Respiratory Infection,56,Medicaid,MD,Monday,1,0,12.0,0.2,18.4
+Knee / Joint Pain,39,Private,PA,Monday,1,0,0.0,0.5,22.9
+Annual Wellness Exam,72,Uninsured,PA,Wednesday,2,0,0.0,0.8,38.2
+Upper Respiratory Infection,42,Private,MD,Wednesday,0,0,0.0,0.2,8.1
+Medication Refill Only,78,Medicare,MD,Tuesday,0,1,0.0,0.1,15.8
+Annual Wellness Exam,5,Private,MD,Monday,4,0,5.0,0.8,39.6
+Medication Refill Only,44,Medicaid,PA,Thursday,1,0,5.0,0.1,11.7
+Medication Refill Only,71,Medicare,NP,Tuesday,1,0,0.0,0.1,8.7
+Acute Back Pain,18,Private,MD,Thursday,1,0,11.0,0.5,25.0
+Pediatric Well Visit,64,Private,DO,Monday,0,1,17.0,0.5,23.7
+Type 2 Diabetes Management,4,Medicaid,DO,Thursday,1,0,5.0,0.9,25.3
+Type 2 Diabetes Management,70,Medicare,MD,Wednesday,1,0,0.0,0.9,35.2
+Anxiety / Depression Follow-up,23,Medicaid,NP,Thursday,0,0,0.0,0.7,23.7
+New Patient Intake,2,Medicare,DO,Tuesday,1,0,0.0,1.0,32.5
+Knee / Joint Pain,49,Medicare,PA,Thursday,0,0,0.0,0.5,19.6
+Urinary Tract Infection,74,Private,DO,Monday,2,0,0.0,0.2,15.6
+Pediatric Well Visit,9,Medicare,DO,Thursday,0,0,0.0,0.5,16.3
+Pediatric Well Visit,28,Private,NP,Wednesday,1,0,0.0,0.5,14.8
+Acute Back Pain,59,Uninsured,DO,Wednesday,3,0,1.0,0.5,23.9
+Annual Wellness Exam,21,Medicaid,NP,Friday,1,0,0.0,0.8,20.6
+Annual Wellness Exam,49,Private,NP,Wednesday,0,0,0.0,0.8,46.3
+Minor Laceration / Wound Care,4,Medicaid,MD,Wednesday,0,0,0.0,0.3,14.9
+New Patient Intake,37,Medicaid,DO,Tuesday,1,0,0.0,1.0,50.4
+Type 2 Diabetes Management,64,Medicare,MD,Tuesday,0,0,0.0,0.9,28.3
+Medication Refill Only,48,Private,MD,Monday,2,0,0.0,0.1,5.8
+Asthma Management,4,Uninsured,MD,Thursday,0,1,0.0,0.6,34.3
+New Patient Intake,13,Medicaid,MD,Monday,0,0,0.0,1.0,43.7
+Skin Rash / Dermatology,83,Uninsured,NP,Thursday,0,1,0.0,0.3,19.7
+Medication Refill Only,66,Private,MD,Tuesday,1,0,0.0,0.1,10.3
+Minor Laceration / Wound Care,31,Private,MD,Friday,1,0,0.0,0.3,19.4
+Skin Rash / Dermatology,33,Private,MD,Wednesday,2,0,13.0,0.3,12.8
+Medication Refill Only,24,Private,PA,Tuesday,0,0,0.0,0.1,6.9
+Pediatric Well Visit,19,Medicaid,PA,Wednesday,2,1,0.0,0.5,30.1
+Chest Pain Evaluation,60,Private,PA,Thursday,0,0,0.0,1.0,42.9
+New Patient Intake,39,Private,DO,Wednesday,0,0,0.0,1.0,36.6
+Upper Respiratory Infection,79,Medicaid,NP,Wednesday,0,0,0.0,0.2,19.9
+Medication Refill Only,12,Private,NP,Thursday,0,0,0.0,0.1,7.7
+Anxiety / Depression Follow-up,47,Uninsured,MD,Friday,1,0,0.0,0.7,29.3
+Urinary Tract Infection,66,Uninsured,PA,Monday,0,0,0.0,0.2,14.5
+Hypertension Follow-up,63,Medicare,DO,Thursday,1,1,8.0,0.7,26.2
+Chest Pain Evaluation,38,Private,DO,Monday,1,0,0.0,1.0,40.2
+Urinary Tract Infection,55,Private,MD,Tuesday,2,0,0.0,0.2,10.7
+Acute Back Pain,27,Medicare,MD,Friday,2,0,0.0,0.5,13.1
+Pediatric Well Visit,16,Uninsured,DO,Tuesday,1,1,0.0,0.5,26.1
+Chest Pain Evaluation,48,Medicaid,MD,Wednesday,2,0,0.0,1.0,41.1
+Knee / Joint Pain,83,Medicare,PA,Monday,1,0,0.0,0.5,24.8
+Annual Wellness Exam,12,Medicare,MD,Monday,1,0,0.0,0.8,43.9
+Knee / Joint Pain,29,Private,MD,Friday,1,0,0.0,0.5,23.7
+Asthma Management,18,Medicare,PA,Thursday,2,0,0.0,0.6,21.4
+Minor Laceration / Wound Care,56,Medicaid,DO,Wednesday,1,1,0.0,0.3,19.3
+Acute Back Pain,60,Private,PA,Tuesday,2,0,0.0,0.5,16.4
+Minor Laceration / Wound Care,37,Private,MD,Friday,1,0,0.0,0.3,12.8
+Hypertension Follow-up,22,Medicare,NP,Wednesday,1,0,0.0,0.7,30.5
+Asthma Management,17,Private,NP,Wednesday,1,0,0.0,0.6,16.6
+Pediatric Well Visit,34,Medicaid,MD,Tuesday,1,0,4.0,0.5,25.2
+Type 2 Diabetes Management,30,Medicaid,NP,Monday,0,0,8.0,0.9,18.8
+Medication Refill Only,34,Private,MD,Friday,0,0,20.0,0.1,6.2
+Urinary Tract Infection,18,Private,NP,Friday,0,1,0.0,0.2,9.4
+Minor Laceration / Wound Care,10,Medicaid,MD,Friday,4,0,0.0,0.3,17.6
+Asthma Management,61,Private,DO,Monday,3,0,0.0,0.6,34.0
+Knee / Joint Pain,44,Medicare,MD,Monday,0,1,0.0,0.5,19.9
+Pediatric Well Visit,15,Medicare,DO,Tuesday,1,0,0.0,0.5,25.0
+Pediatric Well Visit,19,Private,DO,Tuesday,0,0,5.0,0.5,22.7
+Knee / Joint Pain,35,Private,MD,Tuesday,3,0,16.0,0.5,21.0
+Urinary Tract Infection,44,Medicare,MD,Wednesday,0,0,0.0,0.2,10.9
+Minor Laceration / Wound Care,69,Uninsured,MD,Wednesday,0,0,17.0,0.3,24.0
+Medication Refill Only,25,Medicare,DO,Wednesday,0,0,0.0,0.1,9.3
+Hypertension Follow-up,81,Private,DO,Friday,0,1,13.0,0.7,29.0
+Minor Laceration / Wound Care,32,Medicare,NP,Tuesday,0,0,0.0,0.3,12.9
+Type 2 Diabetes Management,13,Medicaid,MD,Monday,0,0,0.0,0.9,25.2
+Upper Respiratory Infection,54,Medicare,MD,Monday,0,1,0.0,0.2,12.6
+Type 2 Diabetes Management,58,Medicaid,NP,Tuesday,0,0,0.0,0.9,31.0
+Pediatric Well Visit,72,Private,PA,Tuesday,1,0,11.0,0.5,26.0
+Pediatric Well Visit,47,Medicare,MD,Wednesday,1,0,9.0,0.5,24.0
+Minor Laceration / Wound Care,80,Uninsured,MD,Thursday,1,0,19.0,0.3,15.8
+Anxiety / Depression Follow-up,13,Private,DO,Monday,2,0,0.0,0.7,22.9
+Asthma Management,64,Medicaid,MD,Thursday,0,0,0.0,0.6,20.9
+Medication Refill Only,59,Private,DO,Tuesday,0,0,0.0,0.1,10.4
+Annual Wellness Exam,70,Private,PA,Thursday,0,0,0.0,0.8,30.2
+Minor Laceration / Wound Care,21,Medicare,NP,Tuesday,2,0,0.0,0.3,12.9
+Skin Rash / Dermatology,8,Private,PA,Wednesday,0,0,0.0,0.3,12.0
+Skin Rash / Dermatology,45,Medicaid,PA,Monday,4,0,0.0,0.3,16.2
+Medication Refill Only,43,Medicare,MD,Friday,0,0,0.0,0.1,10.3
+Acute Back Pain,47,Private,PA,Wednesday,0,1,6.0,0.5,14.5
+Upper Respiratory Infection,73,Private,MD,Monday,2,1,0.0,0.2,19.7
+Anxiety / Depression Follow-up,17,Private,MD,Tuesday,0,1,0.0,0.7,29.1
+Annual Wellness Exam,20,Private,NP,Wednesday,2,0,0.0,0.8,38.7
+Knee / Joint Pain,78,Medicaid,MD,Thursday,0,1,0.0,0.5,25.8
+Asthma Management,42,Uninsured,DO,Monday,1,0,4.0,0.6,27.8
+Urinary Tract Infection,63,Private,MD,Friday,4,0,11.0,0.2,13.0
+Hypertension Follow-up,50,Medicare,NP,Tuesday,0,0,0.0,0.7,22.0
+Skin Rash / Dermatology,44,Medicare,PA,Wednesday,0,0,0.0,0.3,9.2
+Upper Respiratory Infection,71,Medicare,MD,Friday,1,1,14.0,0.2,17.3
+Upper Respiratory Infection,3,Private,DO,Thursday,1,0,0.0,0.2,10.5
+Upper Respiratory Infection,74,Medicaid,NP,Tuesday,1,0,5.0,0.2,12.6
+Pediatric Well Visit,11,Medicaid,MD,Thursday,1,0,0.0,0.5,21.7
+Type 2 Diabetes Management,44,Private,MD,Thursday,0,1,18.0,0.9,31.8
+Type 2 Diabetes Management,19,Private,MD,Thursday,0,0,8.0,0.9,25.2
+Asthma Management,52,Private,PA,Wednesday,0,0,0.0,0.6,26.0
+Acute Back Pain,59,Medicare,MD,Tuesday,0,1,20.0,0.5,24.2
+Knee / Joint Pain,63,Uninsured,DO,Friday,1,0,16.0,0.5,24.0
+Skin Rash / Dermatology,77,Private,NP,Friday,2,1,13.0,0.3,19.3
+Knee / Joint Pain,44,Medicare,MD,Friday,0,0,9.0,0.5,18.0
+Acute Back Pain,47,Private,MD,Thursday,1,0,0.0,0.5,24.5
+Upper Respiratory Infection,80,Medicare,DO,Thursday,1,0,0.0,0.2,12.9
+Medication Refill Only,60,Private,MD,Monday,2,0,0.0,0.1,8.8
+Skin Rash / Dermatology,31,Private,MD,Thursday,0,0,0.0,0.3,14.7
+Acute Back Pain,80,Private,DO,Tuesday,0,0,0.0,0.5,10.1
+Asthma Management,65,Uninsured,DO,Monday,1,1,0.0,0.6,33.1
+Skin Rash / Dermatology,46,Medicaid,NP,Thursday,3,0,10.0,0.3,15.2
+Urinary Tract Infection,61,Medicaid,DO,Friday,0,0,15.0,0.2,11.5
+Knee / Joint Pain,21,Private,MD,Tuesday,1,0,15.0,0.5,25.9
+Minor Laceration / Wound Care,75,Medicare,MD,Monday,4,0,0.0,0.3,26.1
+Minor Laceration / Wound Care,64,Medicare,DO,Monday,0,0,0.0,0.3,18.9
+Annual Wellness Exam,62,Medicaid,PA,Thursday,0,0,0.0,0.8,36.0
+Upper Respiratory Infection,64,Private,DO,Friday,1,1,0.0,0.2,12.7
+Anxiety / Depression Follow-up,27,Medicare,NP,Thursday,0,0,0.0,0.7,38.1
+Anxiety / Depression Follow-up,48,Uninsured,MD,Monday,0,0,0.0,0.7,29.1
+Minor Laceration / Wound Care,74,Private,PA,Thursday,0,0,7.0,0.3,9.5
+Hypertension Follow-up,60,Private,MD,Thursday,4,0,0.0,0.7,22.2
+Skin Rash / Dermatology,2,Medicaid,MD,Wednesday,0,0,0.0,0.3,13.4
+Acute Back Pain,29,Private,MD,Thursday,0,0,0.0,0.5,22.7
+Type 2 Diabetes Management,15,Private,MD,Tuesday,0,0,0.0,0.9,18.7
+Pediatric Well Visit,8,Private,MD,Wednesday,3,1,0.0,0.5,29.3
+Type 2 Diabetes Management,45,Private,MD,Thursday,0,0,0.0,0.9,26.7
+Hypertension Follow-up,12,Medicaid,NP,Wednesday,2,0,9.0,0.7,15.1
+Knee / Joint Pain,79,Medicare,DO,Thursday,0,0,0.0,0.5,20.3
+Annual Wellness Exam,59,Medicare,MD,Wednesday,4,0,11.0,0.8,43.9
+Acute Back Pain,3,Medicaid,MD,Thursday,0,0,0.0,0.5,18.5
+Anxiety / Depression Follow-up,3,Medicaid,MD,Tuesday,3,0,0.0,0.7,24.8
+Hypertension Follow-up,49,Medicare,PA,Wednesday,2,0,0.0,0.7,29.6
+Hypertension Follow-up,27,Medicaid,NP,Tuesday,0,1,0.0,0.7,25.2
+Skin Rash / Dermatology,44,Medicare,NP,Thursday,1,0,0.0,0.3,14.8
+Chest Pain Evaluation,11,Medicare,MD,Friday,4,1,6.0,1.0,53.7
+Medication Refill Only,82,Medicaid,NP,Monday,0,0,0.0,0.1,7.1
+Acute Back Pain,25,Private,MD,Wednesday,0,0,0.0,0.5,20.1
+Anxiety / Depression Follow-up,73,Private,MD,Wednesday,0,1,0.0,0.7,29.5
+Upper Respiratory Infection,11,Private,MD,Friday,2,1,0.0,0.2,10.7
+Urinary Tract Infection,23,Medicaid,NP,Tuesday,0,1,4.0,0.2,9.7
+Hypertension Follow-up,70,Medicare,PA,Thursday,0,0,0.0,0.7,16.8
+Knee / Joint Pain,2,Private,MD,Wednesday,0,0,0.0,0.5,22.9
+Asthma Management,31,Private,DO,Tuesday,1,1,0.0,0.6,25.9
+Skin Rash / Dermatology,33,Medicaid,MD,Wednesday,0,0,7.0,0.3,16.0
+Pediatric Well Visit,35,Medicaid,MD,Monday,1,0,0.0,0.5,29.4
+Upper Respiratory Infection,33,Private,DO,Monday,0,0,0.0,0.2,21.6
+Annual Wellness Exam,80,Medicare,MD,Tuesday,0,0,0.0,0.8,43.1
+Chest Pain Evaluation,78,Medicaid,MD,Wednesday,2,0,0.0,1.0,27.1
+Type 2 Diabetes Management,42,Private,MD,Wednesday,0,0,0.0,0.9,35.5
+Pediatric Well Visit,36,Private,MD,Monday,2,0,0.0,0.5,29.7
+Asthma Management,59,Medicaid,NP,Thursday,0,0,0.0,0.6,22.0
+Annual Wellness Exam,8,Private,NP,Thursday,2,0,0.0,0.8,33.3
+Annual Wellness Exam,22,Private,MD,Thursday,0,0,3.0,0.8,32.9
+Upper Respiratory Infection,53,Medicaid,PA,Friday,3,0,0.0,0.2,13.6
+Knee / Joint Pain,22,Private,PA,Wednesday,2,0,0.0,0.5,17.0
+Anxiety / Depression Follow-up,22,Medicare,MD,Wednesday,0,0,0.0,0.7,22.2
+Acute Back Pain,67,Private,MD,Monday,1,1,0.0,0.5,25.1
+Knee / Joint Pain,63,Private,PA,Thursday,0,0,0.0,0.5,13.6
+Hypertension Follow-up,18,Private,NP,Wednesday,0,1,0.0,0.7,26.0
+Urinary Tract Infection,72,Uninsured,MD,Tuesday,1,0,0.0,0.2,12.0
+Minor Laceration / Wound Care,49,Private,NP,Monday,0,0,0.0,0.3,6.8
+Pediatric Well Visit,12,Medicaid,MD,Monday,4,0,0.0,0.5,29.5
+Type 2 Diabetes Management,44,Medicare,MD,Wednesday,0,0,0.0,0.9,30.9
+Acute Back Pain,2,Medicaid,DO,Thursday,0,0,0.0,0.5,16.5
+Annual Wellness Exam,2,Medicaid,NP,Wednesday,0,0,0.0,0.8,25.3
+Minor Laceration / Wound Care,82,Medicare,MD,Tuesday,0,0,0.0,0.3,15.9
+Anxiety / Depression Follow-up,70,Medicare,DO,Tuesday,1,0,0.0,0.7,31.0
+Type 2 Diabetes Management,56,Medicare,MD,Thursday,2,0,0.0,0.9,44.4
+Type 2 Diabetes Management,20,Private,MD,Monday,2,0,0.0,0.9,33.5
+Minor Laceration / Wound Care,22,Private,NP,Wednesday,0,0,0.0,0.3,11.1
+Chest Pain Evaluation,52,Medicare,MD,Friday,1,0,0.0,1.0,43.1
+Chest Pain Evaluation,18,Private,MD,Wednesday,3,0,0.0,1.0,32.4
+Minor Laceration / Wound Care,34,Medicare,MD,Monday,2,0,0.0,0.3,18.3
+Minor Laceration / Wound Care,18,Private,MD,Thursday,0,0,0.0,0.3,7.4
+Upper Respiratory Infection,45,Medicaid,MD,Thursday,1,0,0.0,0.2,14.8
+Hypertension Follow-up,17,Medicaid,MD,Friday,0,0,0.0,0.7,36.1
+Annual Wellness Exam,52,Uninsured,MD,Tuesday,3,0,0.0,0.8,49.8
+New Patient Intake,77,Medicare,DO,Thursday,2,1,0.0,1.0,63.6
+Anxiety / Depression Follow-up,59,Medicaid,MD,Friday,0,0,0.0,0.7,28.8
+Acute Back Pain,65,Uninsured,NP,Thursday,0,0,0.0,0.5,15.8
+Acute Back Pain,80,Medicare,MD,Monday,0,0,0.0,0.5,30.6
+Acute Back Pain,76,Medicare,MD,Monday,0,0,0.0,0.5,26.5
+Skin Rash / Dermatology,72,Private,DO,Thursday,0,1,0.0,0.3,16.9
+Type 2 Diabetes Management,59,Uninsured,MD,Wednesday,3,0,0.0,0.9,43.6
+Chest Pain Evaluation,51,Private,MD,Thursday,0,0,0.0,1.0,32.0
+Urinary Tract Infection,77,Private,NP,Monday,1,0,0.0,0.2,11.6
+Hypertension Follow-up,35,Private,NP,Tuesday,3,0,0.0,0.7,23.2
+Anxiety / Depression Follow-up,51,Medicaid,MD,Thursday,1,1,0.0,0.7,41.8
+Upper Respiratory Infection,81,Private,NP,Tuesday,0,0,0.0,0.2,13.3
+Medication Refill Only,15,Uninsured,DO,Friday,2,0,0.0,0.1,6.4
+Acute Back Pain,15,Medicare,DO,Thursday,0,0,18.0,0.5,19.0
+Medication Refill Only,18,Private,NP,Tuesday,2,0,0.0,0.1,10.1
+Type 2 Diabetes Management,58,Private,MD,Thursday,2,0,0.0,0.9,40.2
+Minor Laceration / Wound Care,53,Private,NP,Wednesday,1,0,0.0,0.3,14.6
+Upper Respiratory Infection,20,Private,DO,Thursday,1,0,0.0,0.2,18.0
+Medication Refill Only,55,Medicare,MD,Monday,2,0,0.0,0.1,9.3
+Anxiety / Depression Follow-up,72,Medicare,MD,Tuesday,3,0,0.0,0.7,42.6
+Hypertension Follow-up,43,Uninsured,PA,Tuesday,2,0,0.0,0.7,27.1
+Urinary Tract Infection,75,Private,MD,Monday,3,0,0.0,0.2,17.4
+Medication Refill Only,58,Medicare,DO,Monday,0,1,0.0,0.1,17.0
+Hypertension Follow-up,58,Private,PA,Tuesday,1,1,0.0,0.7,27.6
+Minor Laceration / Wound Care,54,Private,NP,Wednesday,2,0,0.0,0.3,17.4
+Minor Laceration / Wound Care,71,Medicaid,MD,Monday,2,0,0.0,0.3,20.4
+Annual Wellness Exam,21,Private,NP,Monday,1,0,14.0,0.8,25.3
+New Patient Intake,19,Private,DO,Thursday,0,1,11.0,1.0,38.1
+Skin Rash / Dermatology,10,Private,NP,Wednesday,1,0,0.0,0.3,16.2
+Anxiety / Depression Follow-up,80,Medicare,NP,Wednesday,2,0,0.0,0.7,35.7
+Knee / Joint Pain,69,Medicare,PA,Thursday,1,1,17.0,0.5,26.5
+Hypertension Follow-up,43,Medicare,PA,Wednesday,2,0,0.0,0.7,25.2
+Chest Pain Evaluation,62,Medicare,PA,Monday,1,0,0.0,1.0,49.4
+Anxiety / Depression Follow-up,39,Private,DO,Wednesday,0,0,0.0,0.7,26.6
+Urinary Tract Infection,2,Private,MD,Monday,0,0,0.0,0.2,10.3
+Urinary Tract Infection,29,Medicaid,DO,Thursday,0,0,0.0,0.2,12.0
+Anxiety / Depression Follow-up,34,Private,NP,Tuesday,0,0,0.0,0.7,26.7
+Skin Rash / Dermatology,72,Medicare,DO,Thursday,2,0,0.0,0.3,16.5
+Pediatric Well Visit,27,Private,DO,Wednesday,2,0,0.0,0.5,24.4
+Hypertension Follow-up,40,Medicare,MD,Friday,1,0,16.0,0.7,30.0
+Skin Rash / Dermatology,14,Private,MD,Thursday,1,0,0.0,0.3,13.9
+Anxiety / Depression Follow-up,29,Medicaid,DO,Friday,1,0,6.0,0.7,33.5
+Knee / Joint Pain,61,Private,MD,Thursday,0,0,0.0,0.5,19.3
+Medication Refill Only,13,Medicare,MD,Monday,0,0,0.0,0.1,7.3
+Type 2 Diabetes Management,8,Private,DO,Wednesday,1,0,0.0,0.9,35.2
+Medication Refill Only,56,Medicare,MD,Tuesday,2,1,11.0,0.1,11.5
+Type 2 Diabetes Management,63,Private,PA,Friday,0,0,0.0,0.9,27.9
+Pediatric Well Visit,10,Medicare,DO,Friday,2,1,0.0,0.5,31.7
+Annual Wellness Exam,37,Private,MD,Monday,0,0,0.0,0.8,38.2
+Type 2 Diabetes Management,61,Medicaid,MD,Thursday,2,1,0.0,0.9,41.4
+Anxiety / Depression Follow-up,77,Private,DO,Tuesday,3,0,0.0,0.7,38.2
+Pediatric Well Visit,62,Medicare,MD,Wednesday,0,0,0.0,0.5,22.6
+Upper Respiratory Infection,65,Private,NP,Thursday,1,1,0.0,0.2,14.4
+New Patient Intake,82,Medicare,MD,Thursday,0,0,7.0,1.0,57.9
+Knee / Joint Pain,75,Medicare,NP,Tuesday,0,1,0.0,0.5,34.5
+Knee / Joint Pain,8,Medicare,PA,Wednesday,0,0,19.0,0.5,21.7
+Annual Wellness Exam,10,Private,DO,Friday,0,0,0.0,0.8,39.1
+Medication Refill Only,23,Medicare,NP,Thursday,1,0,0.0,0.1,11.0
+Urinary Tract Infection,67,Private,DO,Friday,1,0,0.0,0.2,9.9
+Hypertension Follow-up,33,Uninsured,PA,Wednesday,0,0,0.0,0.7,28.9
+Minor Laceration / Wound Care,74,Private,NP,Tuesday,1,0,0.0,0.3,13.7
+Medication Refill Only,82,Medicare,PA,Wednesday,3,0,0.0,0.1,13.1
+Type 2 Diabetes Management,5,Uninsured,MD,Tuesday,2,0,0.0,0.9,33.0
+Urinary Tract Infection,16,Uninsured,MD,Wednesday,0,0,0.0,0.2,14.3
+Hypertension Follow-up,44,Uninsured,DO,Wednesday,1,0,0.0,0.7,29.8
+Acute Back Pain,37,Private,DO,Thursday,0,0,0.0,0.5,14.0
+Annual Wellness Exam,30,Private,NP,Monday,0,1,0.0,0.8,40.6
+Knee / Joint Pain,47,Medicaid,DO,Thursday,0,0,0.0,0.5,15.1
+Asthma Management,2,Uninsured,NP,Wednesday,0,0,0.0,0.6,15.5
+Hypertension Follow-up,37,Medicare,MD,Friday,3,0,0.0,0.7,24.7
+Annual Wellness Exam,61,Medicare,DO,Friday,1,1,0.0,0.8,41.0
+Medication Refill Only,58,Medicaid,MD,Friday,2,1,0.0,0.1,13.3
+Medication Refill Only,21,Private,PA,Tuesday,1,0,0.0,0.1,7.7
+Anxiety / Depression Follow-up,15,Medicaid,PA,Wednesday,0,0,0.0,0.7,35.8
+Skin Rash / Dermatology,66,Private,MD,Friday,0,1,0.0,0.3,11.7
+Acute Back Pain,35,Medicaid,MD,Tuesday,0,0,0.0,0.5,17.7
+Type 2 Diabetes Management,36,Private,MD,Monday,3,0,0.0,0.9,34.8
+Medication Refill Only,30,Private,PA,Wednesday,3,0,2.0,0.1,9.6
+Type 2 Diabetes Management,58,Medicare,NP,Thursday,0,0,0.0,0.9,37.8
+Asthma Management,43,Medicaid,DO,Wednesday,1,0,0.0,0.6,21.7
+Skin Rash / Dermatology,26,Medicare,MD,Monday,1,0,17.0,0.3,12.7
+Knee / Joint Pain,57,Private,NP,Tuesday,1,0,0.0,0.5,18.7
+Hypertension Follow-up,39,Private,NP,Monday,0,0,0.0,0.7,22.9
+Medication Refill Only,43,Medicare,NP,Friday,3,0,0.0,0.1,11.0
+Upper Respiratory Infection,8,Medicaid,MD,Tuesday,0,0,0.0,0.2,11.4
+Knee / Joint Pain,25,Uninsured,DO,Monday,0,0,0.0,0.5,22.4
+Hypertension Follow-up,16,Medicare,MD,Thursday,0,0,0.0,0.7,24.8
+Type 2 Diabetes Management,63,Private,MD,Thursday,3,0,2.0,0.9,39.9
+Pediatric Well Visit,24,Private,PA,Wednesday,1,1,0.0,0.5,16.1
+Asthma Management,70,Private,NP,Friday,3,0,0.0,0.6,29.7
+Pediatric Well Visit,68,Uninsured,DO,Monday,0,0,0.0,0.5,29.5
+Acute Back Pain,20,Uninsured,DO,Wednesday,0,0,0.0,0.5,17.2
+Urinary Tract Infection,27,Medicare,MD,Thursday,0,0,17.0,0.2,18.9
+Chest Pain Evaluation,63,Private,MD,Wednesday,1,0,0.0,1.0,36.8
+Urinary Tract Infection,15,Medicaid,MD,Tuesday,0,1,0.0,0.2,14.7
+Minor Laceration / Wound Care,8,Medicaid,MD,Tuesday,0,0,11.0,0.3,18.0
+Annual Wellness Exam,71,Medicare,NP,Thursday,0,0,20.0,0.8,50.2
+Urinary Tract Infection,70,Private,NP,Thursday,0,0,13.0,0.2,10.8
+Chest Pain Evaluation,77,Medicare,MD,Friday,1,0,0.0,1.0,32.7
+Asthma Management,29,Private,DO,Tuesday,0,0,0.0,0.6,31.6
+Type 2 Diabetes Management,61,Medicaid,DO,Wednesday,0,1,17.0,0.9,35.8
+Upper Respiratory Infection,48,Private,MD,Thursday,3,0,2.0,0.2,19.7
+Hypertension Follow-up,45,Private,MD,Monday,0,0,0.0,0.7,19.8
+Knee / Joint Pain,65,Uninsured,PA,Tuesday,1,0,0.0,0.5,20.0
+Hypertension Follow-up,57,Medicare,PA,Wednesday,2,0,0.0,0.7,27.0
+Minor Laceration / Wound Care,38,Uninsured,NP,Friday,2,0,0.0,0.3,15.7
+Upper Respiratory Infection,17,Private,DO,Tuesday,1,0,19.0,0.2,19.2
+Upper Respiratory Infection,20,Medicare,MD,Thursday,0,0,0.0,0.2,14.2
+Acute Back Pain,31,Medicare,MD,Wednesday,4,0,0.0,0.5,23.2
+Acute Back Pain,70,Private,MD,Monday,1,0,0.0,0.5,27.4
+Hypertension Follow-up,5,Private,NP,Tuesday,1,0,9.0,0.7,28.0
+Upper Respiratory Infection,37,Private,MD,Wednesday,1,0,0.0,0.2,13.5
+Type 2 Diabetes Management,14,Private,NP,Friday,3,0,0.0,0.9,32.4
+Hypertension Follow-up,40,Medicaid,DO,Wednesday,0,0,15.0,0.7,19.6
+Upper Respiratory Infection,69,Medicaid,MD,Monday,1,0,0.0,0.2,13.0
+Anxiety / Depression Follow-up,31,Private,MD,Wednesday,0,0,6.0,0.7,20.8
+Anxiety / Depression Follow-up,26,Medicaid,MD,Friday,1,0,0.0,0.7,25.6
+Medication Refill Only,74,Medicaid,DO,Thursday,0,0,0.0,0.1,7.4
+Acute Back Pain,15,Medicare,MD,Monday,0,0,0.0,0.5,23.6
+Asthma Management,14,Medicaid,DO,Thursday,3,0,16.0,0.6,25.6
+Hypertension Follow-up,68,Medicare,NP,Monday,0,1,0.0,0.7,32.1
+Upper Respiratory Infection,42,Medicaid,DO,Thursday,1,0,1.0,0.2,15.7
+Annual Wellness Exam,64,Private,MD,Thursday,0,1,0.0,0.8,43.5
+Pediatric Well Visit,6,Medicare,NP,Thursday,0,1,0.0,0.5,23.3
+Type 2 Diabetes Management,81,Private,PA,Thursday,1,0,0.0,0.9,28.5
+Knee / Joint Pain,2,Medicaid,MD,Thursday,2,0,0.0,0.5,16.1
+Upper Respiratory Infection,31,Private,MD,Tuesday,0,0,0.0,0.2,8.6
+Chest Pain Evaluation,4,Medicare,MD,Friday,0,0,0.0,1.0,24.4
+Type 2 Diabetes Management,60,Medicaid,MD,Thursday,0,0,0.0,0.9,26.4
+Upper Respiratory Infection,4,Uninsured,DO,Wednesday,1,0,0.0,0.2,8.3
+Knee / Joint Pain,34,Private,DO,Wednesday,2,0,0.0,0.5,11.6
+Urinary Tract Infection,2,Private,MD,Thursday,4,0,3.0,0.2,16.8
+Acute Back Pain,55,Medicaid,MD,Monday,3,0,0.0,0.5,26.9
+Urinary Tract Infection,62,Medicare,MD,Tuesday,2,1,0.0,0.2,20.4
+Asthma Management,55,Medicaid,MD,Friday,1,0,0.0,0.6,27.8
+Urinary Tract Infection,55,Private,NP,Tuesday,0,0,0.0,0.2,7.4
+Pediatric Well Visit,55,Private,PA,Wednesday,2,0,0.0,0.5,19.8
+Anxiety / Depression Follow-up,37,Private,MD,Monday,1,0,0.0,0.7,36.1
+Skin Rash / Dermatology,18,Private,PA,Friday,2,1,0.0,0.3,19.1
+Chest Pain Evaluation,47,Medicare,NP,Wednesday,0,0,0.0,1.0,21.9
+Asthma Management,50,Private,MD,Tuesday,1,0,0.0,0.6,26.9
+Acute Back Pain,76,Private,DO,Tuesday,2,1,0.0,0.5,27.5
+Type 2 Diabetes Management,83,Private,MD,Friday,1,0,3.0,0.9,23.6
+Minor Laceration / Wound Care,2,Private,NP,Monday,0,0,17.0,0.3,13.0
+Type 2 Diabetes Management,76,Private,DO,Thursday,1,0,0.0,0.9,24.9
+Medication Refill Only,14,Medicare,NP,Tuesday,1,0,0.0,0.1,8.7
+Asthma Management,42,Medicaid,PA,Tuesday,2,1,0.0,0.6,18.7
+Urinary Tract Infection,82,Private,DO,Tuesday,0,0,0.0,0.2,14.0
+Urinary Tract Infection,31,Medicare,MD,Tuesday,0,0,10.0,0.2,8.4
+Asthma Management,4,Private,MD,Wednesday,2,0,0.0,0.6,24.4
+Anxiety / Depression Follow-up,48,Private,DO,Thursday,1,0,7.0,0.7,20.8
+Medication Refill Only,19,Medicare,MD,Friday,1,0,0.0,0.1,11.5
+Knee / Joint Pain,35,Private,MD,Tuesday,1,0,0.0,0.5,14.4
+Type 2 Diabetes Management,51,Private,NP,Friday,1,0,0.0,0.9,28.8
+Asthma Management,62,Private,DO,Monday,1,0,0.0,0.6,29.6
+Chest Pain Evaluation,9,Private,MD,Thursday,0,0,0.0,1.0,25.9
+Pediatric Well Visit,15,Uninsured,MD,Wednesday,1,0,0.0,0.5,23.4
+Upper Respiratory Infection,57,Medicare,NP,Wednesday,0,0,0.0,0.2,7.6
+Hypertension Follow-up,20,Uninsured,NP,Friday,2,0,0.0,0.7,20.2
+Anxiety / Depression Follow-up,70,Private,MD,Friday,3,0,10.0,0.7,31.2
+Knee / Joint Pain,27,Private,DO,Friday,1,0,0.0,0.5,14.1
+Annual Wellness Exam,49,Medicare,MD,Friday,0,1,0.0,0.8,51.6
+Urinary Tract Infection,41,Medicaid,MD,Thursday,0,0,0.0,0.2,11.4
+Type 2 Diabetes Management,20,Private,MD,Thursday,0,0,3.0,0.9,29.3
+Urinary Tract Infection,2,Medicare,MD,Thursday,1,0,0.0,0.2,14.1
+Pediatric Well Visit,84,Medicare,MD,Thursday,1,0,0.0,0.5,31.4
+Hypertension Follow-up,41,Medicaid,MD,Tuesday,2,0,0.0,0.7,22.8
+Urinary Tract Infection,10,Private,NP,Wednesday,4,0,0.0,0.2,16.5
+Anxiety / Depression Follow-up,79,Medicare,MD,Thursday,0,0,0.0,0.7,38.7
+Asthma Management,34,Medicare,MD,Thursday,1,0,10.0,0.6,24.5
+Type 2 Diabetes Management,9,Medicare,MD,Wednesday,2,0,0.0,0.9,36.3
+Upper Respiratory Infection,24,Uninsured,PA,Friday,1,0,0.0,0.2,12.2
+Minor Laceration / Wound Care,54,Private,MD,Friday,0,0,0.0,0.3,8.9
+Annual Wellness Exam,12,Private,DO,Tuesday,1,0,0.0,0.8,43.1
+Skin Rash / Dermatology,53,Private,DO,Friday,2,0,3.0,0.3,10.1
+Urinary Tract Infection,47,Private,DO,Thursday,0,0,0.0,0.2,6.8
+Urinary Tract Infection,6,Medicaid,DO,Wednesday,0,0,0.0,0.2,8.9
+Skin Rash / Dermatology,80,Private,DO,Monday,1,0,0.0,0.3,16.9
+Type 2 Diabetes Management,76,Uninsured,MD,Tuesday,1,0,0.0,0.9,37.2
+Pediatric Well Visit,20,Medicaid,MD,Thursday,1,0,0.0,0.5,25.8
+Type 2 Diabetes Management,31,Medicaid,NP,Friday,1,0,0.0,0.9,10.8
+Pediatric Well Visit,81,Medicaid,MD,Thursday,0,0,0.0,0.5,25.9
+Skin Rash / Dermatology,35,Medicare,MD,Thursday,1,0,0.0,0.3,14.9
+New Patient Intake,42,Medicaid,DO,Tuesday,1,0,2.0,1.0,47.8
+Hypertension Follow-up,17,Private,DO,Wednesday,2,0,5.0,0.7,24.0
+Asthma Management,10,Medicaid,MD,Monday,1,0,0.0,0.6,19.6
+Type 2 Diabetes Management,35,Medicaid,MD,Monday,1,0,0.0,0.9,43.3
+Medication Refill Only,6,Private,MD,Tuesday,0,0,0.0,0.1,8.7
+Minor Laceration / Wound Care,19,Medicare,MD,Tuesday,0,0,7.0,0.3,14.0
+Chest Pain Evaluation,17,Uninsured,MD,Wednesday,0,1,0.0,1.0,40.1
+Acute Back Pain,73,Medicaid,DO,Friday,0,1,0.0,0.5,19.9
+Type 2 Diabetes Management,44,Private,PA,Monday,1,0,14.0,0.9,29.4
+Upper Respiratory Infection,43,Private,PA,Tuesday,3,0,20.0,0.2,19.3
+Annual Wellness Exam,24,Private,NP,Wednesday,3,0,0.0,0.8,39.3
+Type 2 Diabetes Management,52,Medicare,NP,Monday,0,0,0.0,0.9,34.9
+Pediatric Well Visit,14,Medicare,MD,Thursday,3,1,15.0,0.5,28.5
+Urinary Tract Infection,64,Medicare,NP,Tuesday,1,1,0.0,0.2,14.0
+Urinary Tract Infection,38,Private,PA,Friday,1,1,0.0,0.2,7.7
+Skin Rash / Dermatology,34,Private,MD,Wednesday,4,1,0.0,0.3,16.3
+Hypertension Follow-up,15,Private,MD,Monday,4,0,0.0,0.7,29.3
+Acute Back Pain,48,Uninsured,PA,Tuesday,1,0,0.0,0.5,21.8
+Hypertension Follow-up,28,Private,DO,Monday,0,0,0.0,0.7,37.9
+Acute Back Pain,43,Private,MD,Monday,1,1,0.0,0.5,24.1
+Urinary Tract Infection,73,Medicare,DO,Monday,0,0,12.0,0.2,17.1
+Anxiety / Depression Follow-up,59,Private,DO,Thursday,0,0,0.0,0.7,27.0
+Acute Back Pain,53,Medicaid,MD,Tuesday,3,0,0.0,0.5,28.6
+Chest Pain Evaluation,74,Medicaid,DO,Monday,0,0,0.0,1.0,34.4
+Minor Laceration / Wound Care,62,Medicaid,NP,Wednesday,2,0,0.0,0.3,11.5
+Hypertension Follow-up,80,Private,MD,Tuesday,2,0,0.0,0.7,29.4
+Knee / Joint Pain,15,Medicare,NP,Friday,0,0,0.0,0.5,11.7
+New Patient Intake,4,Medicare,MD,Monday,2,1,0.0,1.0,73.7
+Annual Wellness Exam,40,Medicare,DO,Thursday,0,0,0.0,0.8,46.6
+Anxiety / Depression Follow-up,71,Medicaid,MD,Wednesday,0,0,0.0,0.7,30.1
+Chest Pain Evaluation,33,Private,MD,Wednesday,0,1,0.0,1.0,36.5
+Upper Respiratory Infection,16,Private,MD,Tuesday,0,0,0.0,0.2,11.9
+Knee / Joint Pain,14,Medicaid,DO,Wednesday,1,0,0.0,0.5,32.6
+Annual Wellness Exam,77,Private,NP,Wednesday,1,0,0.0,0.8,33.9
+Anxiety / Depression Follow-up,6,Private,PA,Friday,2,0,0.0,0.7,29.4
+Upper Respiratory Infection,59,Private,MD,Thursday,2,0,0.0,0.2,11.7
+Hypertension Follow-up,44,Private,PA,Friday,1,0,0.0,0.7,22.1
+Pediatric Well Visit,76,Private,DO,Friday,2,0,0.0,0.5,20.4
+Minor Laceration / Wound Care,70,Private,MD,Friday,2,1,0.0,0.3,20.8
+Pediatric Well Visit,72,Private,NP,Monday,1,0,0.0,0.5,26.8
+Pediatric Well Visit,74,Medicare,MD,Monday,0,1,0.0,0.5,27.6
+Annual Wellness Exam,14,Medicaid,MD,Monday,3,0,0.0,0.8,47.3
+Upper Respiratory Infection,73,Uninsured,MD,Friday,1,0,0.0,0.2,15.9
+Medication Refill Only,58,Medicare,NP,Tuesday,0,0,0.0,0.1,8.3
+New Patient Intake,78,Private,MD,Monday,0,0,0.0,1.0,39.1
+Chest Pain Evaluation,13,Private,NP,Tuesday,1,0,0.0,1.0,53.0
+Anxiety / Depression Follow-up,47,Private,NP,Thursday,1,0,0.0,0.7,33.1
+Acute Back Pain,3,Private,MD,Monday,0,0,7.0,0.5,14.7
+Type 2 Diabetes Management,20,Medicare,NP,Monday,0,0,2.0,0.9,31.8
+Pediatric Well Visit,10,Private,PA,Thursday,0,0,0.0,0.5,17.9
+Hypertension Follow-up,39,Uninsured,MD,Monday,2,0,0.0,0.7,36.2
+Type 2 Diabetes Management,56,Uninsured,MD,Wednesday,3,0,2.0,0.9,44.5
+Chest Pain Evaluation,46,Uninsured,PA,Tuesday,0,0,18.0,1.0,33.2
+Type 2 Diabetes Management,62,Private,MD,Monday,0,1,0.0,0.9,39.9
+Type 2 Diabetes Management,7,Private,NP,Thursday,0,0,0.0,0.9,31.0
+Urinary Tract Infection,62,Medicaid,MD,Thursday,1,0,7.0,0.2,13.2
+Type 2 Diabetes Management,7,Private,MD,Thursday,1,0,0.0,0.9,30.8
+Medication Refill Only,51,Medicaid,DO,Friday,1,0,0.0,0.1,10.0
+Medication Refill Only,19,Uninsured,DO,Friday,3,1,0.0,0.1,11.8
+Annual Wellness Exam,82,Private,DO,Monday,0,1,0.0,0.8,49.6
+New Patient Intake,2,Private,MD,Monday,0,0,0.0,1.0,42.7
+Upper Respiratory Infection,72,Private,DO,Friday,2,0,0.0,0.2,7.5
+Anxiety / Depression Follow-up,36,Private,NP,Wednesday,2,0,0.0,0.7,22.5
+Pediatric Well Visit,52,Medicaid,DO,Friday,0,0,0.0,0.5,20.9
+Skin Rash / Dermatology,74,Private,MD,Friday,2,0,0.0,0.3,11.0
+Type 2 Diabetes Management,8,Private,NP,Wednesday,0,1,0.0,0.9,34.6
+Chest Pain Evaluation,19,Medicare,PA,Tuesday,2,0,6.0,1.0,44.9
+Urinary Tract Infection,76,Private,MD,Thursday,3,0,20.0,0.2,19.5
+Skin Rash / Dermatology,23,Medicare,PA,Monday,0,0,6.0,0.3,8.5
+Upper Respiratory Infection,14,Medicaid,DO,Tuesday,0,0,0.0,0.2,11.4
+Pediatric Well Visit,80,Private,MD,Monday,2,0,0.0,0.5,26.5
+Annual Wellness Exam,43,Private,MD,Monday,1,0,1.0,0.8,37.0
+Pediatric Well Visit,57,Private,NP,Thursday,0,0,0.0,0.5,15.5
+Annual Wellness Exam,15,Uninsured,MD,Monday,2,0,0.0,0.8,42.6
+Upper Respiratory Infection,46,Medicare,MD,Wednesday,2,0,14.0,0.2,14.0
+Minor Laceration / Wound Care,8,Medicare,DO,Tuesday,3,0,2.0,0.3,21.9
+Type 2 Diabetes Management,27,Private,MD,Friday,3,0,14.0,0.9,27.9
+Acute Back Pain,33,Medicare,NP,Friday,3,0,13.0,0.5,22.5
+Anxiety / Depression Follow-up,52,Uninsured,MD,Monday,0,0,0.0,0.7,32.1
+Chest Pain Evaluation,40,Private,MD,Wednesday,1,0,0.0,1.0,50.4
+Asthma Management,41,Private,DO,Thursday,3,0,0.0,0.6,25.1
+Asthma Management,64,Uninsured,PA,Thursday,0,0,0.0,0.6,23.2
+Annual Wellness Exam,15,Medicaid,NP,Friday,0,0,0.0,0.8,27.3
+Urinary Tract Infection,69,Private,PA,Wednesday,2,0,0.0,0.2,14.4
+Medication Refill Only,62,Medicare,MD,Wednesday,0,0,0.0,0.1,6.1
+Medication Refill Only,72,Private,NP,Wednesday,0,0,0.0,0.1,5.0
+Urinary Tract Infection,49,Private,MD,Wednesday,1,0,12.0,0.2,13.5
+Anxiety / Depression Follow-up,28,Private,NP,Tuesday,1,0,0.0,0.7,17.8
+Asthma Management,10,Uninsured,MD,Tuesday,0,0,0.0,0.6,20.0
+Anxiety / Depression Follow-up,81,Private,NP,Tuesday,3,0,0.0,0.7,32.0
+Urinary Tract Infection,36,Private,MD,Wednesday,1,0,0.0,0.2,6.1
+Annual Wellness Exam,9,Private,MD,Monday,1,0,0.0,0.8,37.3
+Chest Pain Evaluation,11,Private,DO,Tuesday,0,0,0.0,1.0,38.7
+Asthma Management,79,Medicaid,DO,Monday,2,0,0.0,0.6,30.3
+Skin Rash / Dermatology,46,Private,MD,Friday,0,0,3.0,0.3,14.1
+Minor Laceration / Wound Care,56,Private,DO,Monday,2,0,16.0,0.3,15.1
+Upper Respiratory Infection,26,Uninsured,MD,Friday,2,0,0.0,0.2,15.5
+Medication Refill Only,12,Private,MD,Thursday,2,0,0.0,0.1,5.5
+Acute Back Pain,73,Medicaid,PA,Friday,0,0,0.0,0.5,18.5
+Knee / Joint Pain,16,Private,MD,Monday,3,1,0.0,0.5,27.4
+Medication Refill Only,30,Medicaid,MD,Friday,0,0,0.0,0.1,10.0
+Anxiety / Depression Follow-up,26,Medicaid,DO,Wednesday,0,0,0.0,0.7,26.1
+Urinary Tract Infection,12,Private,NP,Tuesday,1,1,0.0,0.2,14.1
+Anxiety / Depression Follow-up,4,Medicaid,MD,Tuesday,1,0,0.0,0.7,25.5
+Pediatric Well Visit,63,Medicaid,NP,Monday,1,1,0.0,0.5,29.1
+Type 2 Diabetes Management,24,Medicare,PA,Monday,1,0,0.0,0.9,31.2
+Hypertension Follow-up,6,Private,DO,Monday,3,0,0.0,0.7,27.0
+Pediatric Well Visit,19,Medicare,MD,Friday,0,0,0.0,0.5,16.8
+Annual Wellness Exam,24,Medicare,MD,Thursday,0,0,0.0,0.8,45.8
+Knee / Joint Pain,25,Private,NP,Wednesday,0,0,0.0,0.5,18.3
+Annual Wellness Exam,54,Uninsured,MD,Monday,1,0,0.0,0.8,45.9
+Medication Refill Only,62,Private,DO,Tuesday,1,0,14.0,0.1,11.3
+Medication Refill Only,53,Private,MD,Friday,1,1,19.0,0.1,9.0
+Urinary Tract Infection,19,Medicaid,MD,Wednesday,0,0,0.0,0.2,12.6
+Pediatric Well Visit,37,Private,PA,Monday,0,1,0.0,0.5,30.9
+Acute Back Pain,71,Private,NP,Thursday,0,1,0.0,0.5,23.3
+Knee / Joint Pain,52,Medicaid,MD,Friday,0,0,0.0,0.5,26.6
+Skin Rash / Dermatology,18,Private,DO,Tuesday,1,0,0.0,0.3,13.3
+Acute Back Pain,4,Medicaid,NP,Tuesday,3,1,0.0,0.5,27.1
+Pediatric Well Visit,24,Private,DO,Tuesday,0,0,0.0,0.5,19.0
+Medication Refill Only,2,Medicaid,MD,Wednesday,1,0,0.0,0.1,7.2
+Type 2 Diabetes Management,61,Private,DO,Friday,0,1,0.0,0.9,29.6
+Urinary Tract Infection,32,Medicaid,PA,Wednesday,0,0,0.0,0.2,10.6
+Acute Back Pain,23,Private,DO,Thursday,2,0,0.0,0.5,18.3
+Minor Laceration / Wound Care,19,Medicaid,MD,Tuesday,0,0,0.0,0.3,17.2
+Annual Wellness Exam,11,Private,PA,Tuesday,2,1,0.0,0.8,46.7
+Asthma Management,75,Medicaid,DO,Wednesday,0,1,0.0,0.6,29.2
+Acute Back Pain,9,Medicaid,MD,Friday,0,0,0.0,0.5,17.6
+Skin Rash / Dermatology,46,Private,NP,Tuesday,1,0,0.0,0.3,11.9
+Upper Respiratory Infection,17,Private,DO,Thursday,1,0,0.0,0.2,12.6
+Knee / Joint Pain,68,Private,NP,Thursday,0,0,0.0,0.5,10.1
+Anxiety / Depression Follow-up,47,Medicare,DO,Tuesday,2,0,0.0,0.7,41.6
+New Patient Intake,37,Private,MD,Thursday,1,0,0.0,1.0,60.0
+Knee / Joint Pain,16,Private,DO,Wednesday,0,1,0.0,0.5,17.7
+Type 2 Diabetes Management,11,Private,MD,Tuesday,0,1,3.0,0.9,30.8
+Medication Refill Only,71,Private,PA,Thursday,4,0,17.0,0.1,14.4
+Asthma Management,61,Medicare,DO,Thursday,0,1,0.0,0.6,28.8
+Acute Back Pain,83,Private,MD,Friday,1,0,0.0,0.5,16.3
+Medication Refill Only,4,Medicare,PA,Friday,0,0,0.0,0.1,7.2
+Chest Pain Evaluation,31,Medicare,MD,Thursday,0,1,0.0,1.0,50.9
+Asthma Management,47,Medicaid,PA,Friday,1,0,0.0,0.6,25.5
+Pediatric Well Visit,38,Private,MD,Thursday,2,0,0.0,0.5,27.8
+Asthma Management,73,Private,DO,Monday,0,0,0.0,0.6,27.1
+Hypertension Follow-up,6,Private,NP,Monday,2,0,0.0,0.7,21.1
+Hypertension Follow-up,32,Private,MD,Friday,0,1,0.0,0.7,23.5
+Medication Refill Only,6,Medicare,DO,Thursday,1,0,0.0,0.1,7.9
+Type 2 Diabetes Management,17,Medicare,DO,Monday,0,0,0.0,0.9,22.8
+Minor Laceration / Wound Care,48,Private,PA,Monday,0,0,0.0,0.3,12.6
+Upper Respiratory Infection,11,Private,NP,Friday,0,0,4.0,0.2,11.1
+Type 2 Diabetes Management,16,Medicaid,MD,Thursday,1,0,0.0,0.9,29.7
+Anxiety / Depression Follow-up,41,Private,MD,Friday,0,0,0.0,0.7,23.5
+Hypertension Follow-up,25,Private,DO,Thursday,4,0,0.0,0.7,28.8
+Hypertension Follow-up,20,Private,DO,Friday,0,0,0.0,0.7,16.1
+Hypertension Follow-up,31,Private,DO,Monday,0,1,1.0,0.7,28.8
+Annual Wellness Exam,21,Private,MD,Friday,0,0,0.0,0.8,46.7
+Upper Respiratory Infection,27,Medicaid,MD,Wednesday,1,0,0.0,0.2,12.3
+Acute Back Pain,48,Medicare,PA,Friday,2,0,0.0,0.5,21.5
+Skin Rash / Dermatology,19,Uninsured,DO,Monday,1,0,0.0,0.3,15.1
+Chest Pain Evaluation,21,Medicare,MD,Tuesday,1,0,0.0,1.0,31.2
+Urinary Tract Infection,62,Medicare,NP,Tuesday,0,1,0.0,0.2,10.9
+Hypertension Follow-up,64,Private,MD,Friday,0,0,0.0,0.7,26.8
+Type 2 Diabetes Management,84,Medicaid,MD,Tuesday,0,0,14.0,0.9,41.9
+Upper Respiratory Infection,30,Medicare,MD,Wednesday,3,0,17.0,0.2,12.0
+Type 2 Diabetes Management,20,Medicare,DO,Thursday,1,0,0.0,0.9,23.3
+Knee / Joint Pain,37,Private,DO,Friday,1,0,0.0,0.5,23.5
+Annual Wellness Exam,80,Private,PA,Tuesday,4,0,0.0,0.8,40.7
+Urinary Tract Infection,21,Uninsured,NP,Wednesday,1,0,8.0,0.2,12.5
+Anxiety / Depression Follow-up,30,Medicare,NP,Tuesday,1,0,0.0,0.7,28.6
+Chest Pain Evaluation,56,Uninsured,MD,Tuesday,0,0,0.0,1.0,45.3
+Upper Respiratory Infection,51,Private,MD,Thursday,0,0,0.0,0.2,14.6
+Type 2 Diabetes Management,74,Medicaid,PA,Monday,1,0,0.0,0.9,36.5
+Upper Respiratory Infection,68,Private,DO,Wednesday,1,0,0.0,0.2,13.4
+Hypertension Follow-up,77,Medicaid,MD,Friday,0,1,16.0,0.7,28.0
+Knee / Joint Pain,6,Medicaid,NP,Tuesday,2,0,0.0,0.5,31.7
+Asthma Management,53,Medicaid,DO,Tuesday,0,0,0.0,0.6,22.8
+Upper Respiratory Infection,6,Uninsured,MD,Tuesday,0,0,0.0,0.2,11.8
+Chest Pain Evaluation,56,Medicare,MD,Monday,1,0,0.0,1.0,39.4
+Asthma Management,17,Medicaid,MD,Thursday,1,0,2.0,0.6,20.5
+Type 2 Diabetes Management,56,Medicaid,DO,Tuesday,2,0,0.0,0.9,49.8
+Upper Respiratory Infection,84,Uninsured,MD,Wednesday,1,0,4.0,0.2,21.4
+Acute Back Pain,11,Private,DO,Thursday,0,0,4.0,0.5,19.3
+Type 2 Diabetes Management,18,Medicaid,MD,Thursday,0,0,0.0,0.9,16.8
+Minor Laceration / Wound Care,21,Private,NP,Monday,1,0,0.0,0.3,16.8
+Anxiety / Depression Follow-up,84,Private,PA,Wednesday,1,0,0.0,0.7,17.0
+Minor Laceration / Wound Care,81,Private,MD,Tuesday,0,0,2.0,0.3,16.5
+Skin Rash / Dermatology,11,Private,PA,Wednesday,0,0,0.0,0.3,12.7
+Acute Back Pain,36,Medicare,MD,Friday,0,0,0.0,0.5,27.2
+Upper Respiratory Infection,49,Medicare,DO,Thursday,1,1,1.0,0.2,25.1
+Hypertension Follow-up,72,Medicare,NP,Tuesday,0,1,0.0,0.7,33.7
+Anxiety / Depression Follow-up,31,Medicaid,PA,Thursday,0,0,0.0,0.7,26.3
+Acute Back Pain,52,Private,MD,Friday,1,0,0.0,0.5,15.3
+Acute Back Pain,66,Medicare,MD,Tuesday,1,1,0.0,0.5,24.7
+Annual Wellness Exam,23,Medicare,MD,Monday,1,1,0.0,0.8,51.4
+Skin Rash / Dermatology,12,Private,MD,Tuesday,1,0,0.0,0.3,8.2
+Hypertension Follow-up,64,Private,DO,Wednesday,2,0,10.0,0.7,25.8
+Hypertension Follow-up,51,Private,DO,Thursday,1,0,3.0,0.7,24.6
+Urinary Tract Infection,18,Medicare,NP,Monday,0,0,18.0,0.2,16.7
+Hypertension Follow-up,14,Private,NP,Tuesday,4,0,0.0,0.7,24.6
+Hypertension Follow-up,28,Private,PA,Thursday,3,1,0.0,0.7,21.5
+Knee / Joint Pain,23,Private,MD,Thursday,2,0,0.0,0.5,26.0
+Anxiety / Depression Follow-up,10,Private,PA,Monday,0,1,0.0,0.7,33.4
+Minor Laceration / Wound Care,74,Private,PA,Friday,2,0,0.0,0.3,14.0
+Chest Pain Evaluation,20,Medicare,PA,Thursday,1,0,0.0,1.0,36.2
+Upper Respiratory Infection,50,Medicare,MD,Thursday,2,0,0.0,0.2,14.2
+Acute Back Pain,48,Medicare,MD,Thursday,1,0,15.0,0.5,21.0
+Medication Refill Only,56,Private,MD,Friday,1,0,0.0,0.1,7.5
+Upper Respiratory Infection,78,Uninsured,MD,Friday,1,0,0.0,0.2,25.8
+Upper Respiratory Infection,60,Medicare,NP,Wednesday,3,0,2.0,0.2,18.4
+Medication Refill Only,73,Medicaid,MD,Monday,0,0,0.0,0.1,10.7
+Hypertension Follow-up,28,Private,MD,Thursday,0,0,0.0,0.7,21.0
+Upper Respiratory Infection,84,Medicaid,MD,Wednesday,0,0,0.0,0.2,17.9
+Medication Refill Only,28,Medicare,MD,Wednesday,1,0,0.0,0.1,8.3
+Asthma Management,48,Medicare,PA,Tuesday,1,0,0.0,0.6,20.8
+Type 2 Diabetes Management,15,Medicare,PA,Monday,1,0,0.0,0.9,32.7
+Hypertension Follow-up,19,Private,NP,Monday,0,0,0.0,0.7,16.7
+Acute Back Pain,12,Private,NP,Tuesday,0,0,0.0,0.5,19.3
+Acute Back Pain,29,Private,MD,Monday,0,1,0.0,0.5,13.5
+Asthma Management,74,Private,DO,Friday,0,0,0.0,0.6,17.8
+Acute Back Pain,80,Medicare,MD,Monday,0,0,11.0,0.5,25.5
+Type 2 Diabetes Management,18,Medicaid,NP,Thursday,4,0,0.0,0.9,32.5
+Medication Refill Only,66,Private,MD,Thursday,2,0,0.0,0.1,8.8
+Acute Back Pain,31,Medicare,DO,Friday,1,0,0.0,0.5,18.1
+Knee / Joint Pain,19,Private,MD,Friday,1,0,0.0,0.5,17.8
+Upper Respiratory Infection,46,Medicaid,PA,Tuesday,1,0,0.0,0.2,7.5
+Minor Laceration / Wound Care,80,Private,NP,Tuesday,1,0,0.0,0.3,19.0
+Acute Back Pain,76,Private,DO,Friday,1,0,0.0,0.5,16.7
+Knee / Joint Pain,26,Medicare,MD,Monday,4,0,1.0,0.5,35.1
+Urinary Tract Infection,71,Private,MD,Tuesday,1,0,0.0,0.2,12.5
+Type 2 Diabetes Management,54,Medicare,MD,Thursday,0,0,0.0,0.9,30.0
+Hypertension Follow-up,34,Medicare,DO,Wednesday,0,0,0.0,0.7,31.1
+Upper Respiratory Infection,3,Medicaid,NP,Tuesday,1,0,0.0,0.2,14.8
+Type 2 Diabetes Management,57,Medicaid,PA,Monday,0,0,18.0,0.9,30.5
+Acute Back Pain,57,Private,MD,Thursday,0,1,0.0,0.5,16.7
+Asthma Management,29,Medicaid,MD,Thursday,1,0,18.0,0.6,25.8
+Urinary Tract Infection,51,Medicaid,MD,Tuesday,0,0,14.0,0.2,11.1
+Anxiety / Depression Follow-up,52,Private,MD,Tuesday,1,0,0.0,0.7,27.5
+Knee / Joint Pain,10,Medicaid,MD,Wednesday,1,0,3.0,0.5,26.3
+Hypertension Follow-up,52,Uninsured,MD,Tuesday,3,0,0.0,0.7,29.5
+Hypertension Follow-up,37,Private,NP,Monday,1,0,0.0,0.7,21.0
+Minor Laceration / Wound Care,28,Medicare,PA,Wednesday,1,0,0.0,0.3,15.6
+Knee / Joint Pain,76,Medicare,MD,Tuesday,0,0,0.0,0.5,21.7
+Annual Wellness Exam,64,Medicare,DO,Wednesday,0,0,0.0,0.8,35.6
+Anxiety / Depression Follow-up,44,Private,NP,Tuesday,2,1,0.0,0.7,32.2
+Upper Respiratory Infection,3,Medicare,MD,Monday,2,0,0.0,0.2,23.2
+Chest Pain Evaluation,81,Medicare,MD,Wednesday,2,0,0.0,1.0,53.3
+Urinary Tract Infection,28,Medicare,NP,Wednesday,2,0,0.0,0.2,13.3
+Asthma Management,36,Private,NP,Wednesday,0,0,0.0,0.6,16.8
+Medication Refill Only,19,Private,PA,Monday,3,0,0.0,0.1,9.6
+Type 2 Diabetes Management,67,Private,NP,Friday,3,0,0.0,0.9,25.7
+Knee / Joint Pain,15,Uninsured,MD,Wednesday,0,0,0.0,0.5,22.7
+Upper Respiratory Infection,59,Private,MD,Friday,0,0,0.0,0.2,13.3
+Urinary Tract Infection,69,Private,NP,Tuesday,4,0,12.0,0.2,8.3
+Skin Rash / Dermatology,55,Medicaid,MD,Tuesday,1,0,0.0,0.3,19.4
+Annual Wellness Exam,66,Private,DO,Wednesday,1,0,0.0,0.8,33.2
+Upper Respiratory Infection,71,Medicaid,PA,Friday,3,0,0.0,0.2,19.3
+Asthma Management,62,Medicaid,MD,Friday,0,0,0.0,0.6,27.9
+Pediatric Well Visit,8,Medicaid,MD,Tuesday,1,0,0.0,0.5,30.7
+Asthma Management,3,Private,NP,Thursday,0,0,0.0,0.6,25.6
+Medication Refill Only,67,Medicaid,MD,Tuesday,1,0,0.0,0.1,6.8
+Skin Rash / Dermatology,30,Uninsured,PA,Tuesday,1,1,0.0,0.3,20.8
+Medication Refill Only,47,Private,MD,Friday,1,0,18.0,0.1,8.6
+Type 2 Diabetes Management,10,Medicaid,MD,Wednesday,1,0,0.0,0.9,33.3
+Asthma Management,38,Medicaid,NP,Thursday,1,0,0.0,0.6,21.1
+Acute Back Pain,43,Private,DO,Wednesday,0,0,0.0,0.5,24.3
+Annual Wellness Exam,43,Private,MD,Tuesday,0,0,0.0,0.8,32.9
+Chest Pain Evaluation,43,Private,MD,Tuesday,0,0,0.0,1.0,44.2
+Type 2 Diabetes Management,67,Uninsured,PA,Wednesday,0,0,17.0,0.9,34.1
+Pediatric Well Visit,72,Private,DO,Friday,0,0,8.0,0.5,21.8
+Pediatric Well Visit,73,Private,DO,Monday,1,0,0.0,0.5,26.7
+Annual Wellness Exam,25,Medicare,PA,Wednesday,2,0,0.0,0.8,48.7
+Pediatric Well Visit,26,Medicare,DO,Wednesday,0,0,0.0,0.5,25.2
+Chest Pain Evaluation,82,Medicaid,DO,Friday,0,0,0.0,1.0,41.2
+Annual Wellness Exam,71,Private,PA,Friday,1,0,0.0,0.8,46.0
+Asthma Management,6,Uninsured,DO,Wednesday,2,0,10.0,0.6,31.9
+Urinary Tract Infection,52,Medicare,NP,Thursday,2,0,0.0,0.2,11.7
+Type 2 Diabetes Management,26,Medicare,NP,Wednesday,1,1,0.0,0.9,28.8
+Urinary Tract Infection,69,Uninsured,MD,Tuesday,0,0,0.0,0.2,11.6
+Upper Respiratory Infection,14,Medicaid,PA,Thursday,3,0,0.0,0.2,16.4
+Urinary Tract Infection,28,Medicare,PA,Friday,2,0,17.0,0.2,12.6
+Medication Refill Only,11,Private,NP,Monday,1,1,0.0,0.1,8.3
+Annual Wellness Exam,48,Medicare,NP,Friday,0,0,0.0,0.8,44.9
+Medication Refill Only,5,Uninsured,MD,Wednesday,0,0,0.0,0.1,11.4
+Type 2 Diabetes Management,34,Private,MD,Thursday,1,0,0.0,0.9,28.7
+Upper Respiratory Infection,31,Private,NP,Monday,0,0,0.0,0.2,7.2
+Acute Back Pain,25,Private,NP,Monday,0,0,0.0,0.5,22.3
+Upper Respiratory Infection,77,Medicare,MD,Thursday,1,0,16.0,0.2,13.6
+Pediatric Well Visit,78,Medicaid,NP,Thursday,1,0,0.0,0.5,20.5
+Knee / Joint Pain,10,Private,NP,Friday,1,0,0.0,0.5,24.6
+Anxiety / Depression Follow-up,17,Medicaid,NP,Monday,1,0,0.0,0.7,22.1
+Annual Wellness Exam,18,Medicaid,MD,Tuesday,1,0,0.0,0.8,41.9
+Hypertension Follow-up,16,Private,DO,Tuesday,3,0,0.0,0.7,25.3
+Medication Refill Only,46,Private,PA,Wednesday,1,0,12.0,0.1,7.4
+Anxiety / Depression Follow-up,16,Uninsured,MD,Tuesday,2,0,0.0,0.7,30.8
+Pediatric Well Visit,53,Medicaid,MD,Friday,1,0,6.0,0.5,27.7
+Type 2 Diabetes Management,39,Medicare,MD,Tuesday,0,1,5.0,0.9,42.2
+Acute Back Pain,37,Private,DO,Thursday,1,0,0.0,0.5,18.2
+Upper Respiratory Infection,27,Medicaid,PA,Monday,0,0,0.0,0.2,11.0
+Medication Refill Only,73,Medicaid,MD,Wednesday,0,0,20.0,0.1,10.1
+Medication Refill Only,33,Private,NP,Wednesday,2,0,0.0,0.1,9.0
+Chest Pain Evaluation,76,Uninsured,MD,Tuesday,0,0,0.0,1.0,47.4
+Medication Refill Only,8,Medicare,MD,Wednesday,2,1,3.0,0.1,10.3
+Acute Back Pain,55,Private,MD,Thursday,1,0,0.0,0.5,16.4
+Type 2 Diabetes Management,58,Medicare,MD,Thursday,2,1,0.0,0.9,44.1
+Asthma Management,18,Uninsured,PA,Thursday,1,0,0.0,0.6,19.3
+Upper Respiratory Infection,27,Private,NP,Friday,1,0,0.0,0.2,12.2
+Type 2 Diabetes Management,8,Uninsured,DO,Thursday,3,0,0.0,0.9,27.7
+Hypertension Follow-up,35,Private,NP,Friday,1,0,0.0,0.7,18.9
+Asthma Management,30,Private,NP,Friday,2,0,0.0,0.6,20.6
+Hypertension Follow-up,32,Medicare,MD,Thursday,1,0,0.0,0.7,27.5
+Medication Refill Only,60,Private,DO,Wednesday,0,0,0.0,0.1,7.2
+Acute Back Pain,64,Medicare,DO,Friday,0,0,0.0,0.5,20.1
+Type 2 Diabetes Management,56,Private,PA,Tuesday,0,1,2.0,0.9,31.9
+Skin Rash / Dermatology,49,Medicaid,MD,Wednesday,1,0,0.0,0.3,20.6
+Annual Wellness Exam,21,Medicare,MD,Wednesday,2,0,20.0,0.8,26.4
+Knee / Joint Pain,65,Medicaid,MD,Wednesday,4,0,0.0,0.5,28.6
+Hypertension Follow-up,55,Uninsured,DO,Friday,1,0,0.0,0.7,30.8
+Chest Pain Evaluation,76,Uninsured,PA,Monday,1,0,0.0,1.0,51.2
+Urinary Tract Infection,82,Private,MD,Tuesday,0,0,10.0,0.2,14.2
+Medication Refill Only,46,Uninsured,PA,Thursday,0,0,1.0,0.1,9.4
+Annual Wellness Exam,9,Uninsured,DO,Tuesday,4,0,0.0,0.8,48.6
+Medication Refill Only,31,Medicare,PA,Monday,1,0,0.0,0.1,11.2
+Upper Respiratory Infection,68,Private,MD,Tuesday,2,0,0.0,0.2,16.1
+Skin Rash / Dermatology,38,Private,DO,Monday,3,0,0.0,0.3,11.2
+Minor Laceration / Wound Care,4,Private,MD,Thursday,4,0,0.0,0.3,9.5
+Type 2 Diabetes Management,14,Private,DO,Wednesday,0,1,0.0,0.9,31.4
+Annual Wellness Exam,28,Medicare,NP,Wednesday,0,0,0.0,0.8,36.8
+Anxiety / Depression Follow-up,57,Uninsured,NP,Friday,3,1,0.0,0.7,31.7
+Annual Wellness Exam,52,Medicaid,NP,Wednesday,2,0,0.0,0.8,41.9
+Knee / Joint Pain,67,Medicare,NP,Tuesday,4,1,0.0,0.5,30.7
+Annual Wellness Exam,38,Private,MD,Friday,2,0,0.0,0.8,35.3
+New Patient Intake,52,Medicaid,PA,Monday,2,0,0.0,1.0,45.1
+Type 2 Diabetes Management,17,Private,NP,Thursday,0,0,0.0,0.9,24.1
+Annual Wellness Exam,69,Medicaid,DO,Monday,1,0,13.0,0.8,41.5
+Annual Wellness Exam,30,Medicaid,NP,Friday,1,1,0.0,0.8,29.5
+Upper Respiratory Infection,5,Uninsured,MD,Monday,0,0,0.0,0.2,10.5
+Skin Rash / Dermatology,17,Private,DO,Wednesday,0,0,0.0,0.3,11.7
+Type 2 Diabetes Management,20,Medicare,DO,Wednesday,0,0,0.0,0.9,31.6
+Chest Pain Evaluation,81,Medicaid,NP,Wednesday,2,0,0.0,1.0,24.6
+Urinary Tract Infection,79,Medicaid,PA,Wednesday,0,0,18.0,0.2,12.2
+Pediatric Well Visit,21,Medicaid,DO,Monday,1,0,0.0,0.5,22.6
+Upper Respiratory Infection,52,Private,MD,Monday,0,0,0.0,0.2,16.1
+Urinary Tract Infection,27,Private,NP,Friday,0,0,0.0,0.2,8.8
+Annual Wellness Exam,47,Private,NP,Friday,1,0,0.0,0.8,36.3
+Hypertension Follow-up,66,Medicare,NP,Friday,0,1,0.0,0.7,24.2
+Annual Wellness Exam,9,Medicare,MD,Thursday,2,0,0.0,0.8,40.7
+Minor Laceration / Wound Care,53,Medicaid,MD,Friday,1,0,0.0,0.3,12.9
+Annual Wellness Exam,56,Medicaid,PA,Tuesday,2,0,0.0,0.8,46.3
+Anxiety / Depression Follow-up,76,Medicare,DO,Tuesday,0,0,0.0,0.7,32.4
+Type 2 Diabetes Management,65,Private,NP,Tuesday,1,0,0.0,0.9,34.0
+Asthma Management,31,Uninsured,MD,Tuesday,1,0,0.0,0.6,22.4
+Hypertension Follow-up,9,Medicaid,PA,Wednesday,1,0,0.0,0.7,23.7
+Knee / Joint Pain,39,Medicare,DO,Wednesday,0,0,0.0,0.5,27.3
+Pediatric Well Visit,55,Private,DO,Tuesday,2,0,15.0,0.5,24.4
+Medication Refill Only,49,Private,PA,Wednesday,0,0,0.0,0.1,5.9
+Minor Laceration / Wound Care,3,Private,MD,Wednesday,0,0,0.0,0.3,14.5
+Knee / Joint Pain,50,Private,MD,Monday,1,0,0.0,0.5,24.8
+Knee / Joint Pain,76,Private,DO,Tuesday,1,1,2.0,0.5,31.0
+Annual Wellness Exam,24,Private,MD,Thursday,0,0,5.0,0.8,19.8
+Asthma Management,13,Medicare,MD,Wednesday,1,0,17.0,0.6,18.6
+Anxiety / Depression Follow-up,53,Medicare,MD,Tuesday,0,0,9.0,0.7,29.3
+Minor Laceration / Wound Care,38,Private,DO,Wednesday,2,0,0.0,0.3,12.1
+Medication Refill Only,79,Medicare,MD,Thursday,0,0,14.0,0.1,12.7
+Asthma Management,35,Medicare,NP,Thursday,2,0,0.0,0.6,29.8
+Hypertension Follow-up,34,Private,PA,Friday,0,1,2.0,0.7,26.4
+Acute Back Pain,51,Private,MD,Friday,1,0,3.0,0.5,17.0
+Chest Pain Evaluation,57,Private,DO,Tuesday,1,1,12.0,1.0,31.6
+Skin Rash / Dermatology,66,Medicare,DO,Friday,0,0,14.0,0.3,17.0
+Anxiety / Depression Follow-up,65,Medicare,MD,Friday,0,0,0.0,0.7,38.4
+Medication Refill Only,45,Medicare,MD,Monday,2,0,0.0,0.1,13.5
+Chest Pain Evaluation,67,Medicaid,MD,Monday,0,0,0.0,1.0,46.6
+Asthma Management,48,Medicare,MD,Thursday,2,0,14.0,0.6,26.4
+Annual Wellness Exam,28,Private,MD,Friday,4,0,0.0,0.8,43.6
+Acute Back Pain,6,Medicaid,PA,Tuesday,2,0,0.0,0.5,14.6
+Asthma Management,63,Private,DO,Tuesday,1,1,0.0,0.6,32.7
+Chest Pain Evaluation,76,Medicaid,NP,Thursday,0,0,0.0,1.0,38.1
+Hypertension Follow-up,73,Private,MD,Tuesday,2,0,14.0,0.7,31.7
+Knee / Joint Pain,21,Private,MD,Tuesday,2,0,18.0,0.5,20.6
+Anxiety / Depression Follow-up,27,Private,MD,Monday,2,0,0.0,0.7,29.1
+Acute Back Pain,27,Medicaid,MD,Thursday,2,0,0.0,0.5,19.4
+Skin Rash / Dermatology,30,Medicaid,MD,Thursday,1,0,0.0,0.3,11.4
+Hypertension Follow-up,40,Private,NP,Monday,2,1,0.0,0.7,27.1
+Acute Back Pain,2,Medicaid,MD,Monday,1,0,7.0,0.5,20.1
+Chest Pain Evaluation,81,Medicaid,NP,Friday,1,0,0.0,1.0,49.3
+Skin Rash / Dermatology,32,Medicaid,MD,Friday,0,0,0.0,0.3,16.9
+Minor Laceration / Wound Care,18,Medicaid,NP,Thursday,0,0,17.0,0.3,12.0
+Chest Pain Evaluation,75,Medicare,DO,Monday,2,0,9.0,1.0,29.5
+Minor Laceration / Wound Care,83,Medicaid,MD,Tuesday,2,1,0.0,0.3,22.2
+Minor Laceration / Wound Care,39,Medicare,MD,Tuesday,2,0,0.0,0.3,22.9
+Urinary Tract Infection,56,Private,DO,Friday,0,0,12.0,0.2,12.2
+Anxiety / Depression Follow-up,37,Private,DO,Friday,0,0,0.0,0.7,24.9
+Upper Respiratory Infection,72,Medicare,MD,Thursday,1,0,0.0,0.2,19.4
+Hypertension Follow-up,78,Medicaid,DO,Wednesday,2,0,9.0,0.7,34.3
+Asthma Management,59,Medicaid,DO,Monday,1,0,12.0,0.6,27.7
+Acute Back Pain,22,Medicare,PA,Thursday,1,0,0.0,0.5,15.7
+Medication Refill Only,29,Uninsured,MD,Tuesday,4,0,9.0,0.1,11.1
+Annual Wellness Exam,51,Private,DO,Monday,0,0,0.0,0.8,22.5
+Minor Laceration / Wound Care,14,Private,MD,Monday,0,0,0.0,0.3,13.9
+Acute Back Pain,55,Medicaid,MD,Friday,0,1,0.0,0.5,16.3
+Anxiety / Depression Follow-up,76,Medicaid,NP,Friday,4,0,10.0,0.7,24.2
+Type 2 Diabetes Management,79,Private,MD,Monday,0,0,0.0,0.9,33.7
+Medication Refill Only,11,Private,DO,Monday,0,0,0.0,0.1,7.2
+Type 2 Diabetes Management,84,Medicare,PA,Thursday,0,0,0.0,0.9,23.4
+Chest Pain Evaluation,4,Private,DO,Thursday,1,0,11.0,1.0,39.3
+Chest Pain Evaluation,43,Medicare,DO,Wednesday,0,0,0.0,1.0,36.6
+Asthma Management,46,Medicare,PA,Tuesday,1,1,0.0,0.6,33.7
+Chest Pain Evaluation,23,Medicaid,MD,Thursday,2,1,0.0,1.0,48.0
+Medication Refill Only,52,Medicaid,MD,Tuesday,0,0,9.0,0.1,11.2
+Upper Respiratory Infection,42,Private,MD,Thursday,0,0,0.0,0.2,20.8
+Type 2 Diabetes Management,41,Private,MD,Monday,0,1,20.0,0.9,36.5
+Upper Respiratory Infection,28,Medicare,DO,Friday,0,0,0.0,0.2,7.9
+Skin Rash / Dermatology,75,Private,PA,Tuesday,0,0,0.0,0.3,11.8
+Asthma Management,69,Private,NP,Friday,2,0,0.0,0.6,28.3
+Hypertension Follow-up,9,Private,MD,Monday,0,0,0.0,0.7,32.7
+Type 2 Diabetes Management,83,Medicare,MD,Monday,1,0,0.0,0.9,35.2
+Acute Back Pain,71,Medicaid,MD,Thursday,2,1,0.0,0.5,22.5
+Pediatric Well Visit,47,Medicare,MD,Tuesday,3,0,0.0,0.5,25.3
+Urinary Tract Infection,8,Private,NP,Wednesday,0,0,12.0,0.2,9.9
+Urinary Tract Infection,48,Medicaid,DO,Tuesday,0,0,0.0,0.2,11.2
+Minor Laceration / Wound Care,44,Private,MD,Friday,1,0,13.0,0.3,15.3
+Asthma Management,50,Private,MD,Friday,0,0,0.0,0.6,27.4
+Anxiety / Depression Follow-up,2,Medicare,PA,Monday,3,0,0.0,0.7,30.8
+Annual Wellness Exam,58,Medicaid,MD,Friday,0,0,0.0,0.8,43.1
+Upper Respiratory Infection,80,Private,PA,Friday,0,0,0.0,0.2,7.2
+Urinary Tract Infection,24,Private,MD,Wednesday,0,0,0.0,0.2,14.0
+Urinary Tract Infection,53,Private,PA,Monday,0,0,0.0,0.2,13.7
+Acute Back Pain,70,Private,NP,Tuesday,3,0,9.0,0.5,12.7
+Hypertension Follow-up,6,Medicaid,NP,Friday,2,0,16.0,0.7,16.4
+Annual Wellness Exam,37,Private,NP,Wednesday,1,1,0.0,0.8,40.0
+Knee / Joint Pain,18,Medicaid,MD,Monday,2,0,0.0,0.5,27.9
+Type 2 Diabetes Management,67,Private,MD,Monday,3,0,0.0,0.9,45.5
+Pediatric Well Visit,43,Private,PA,Friday,1,0,0.0,0.5,19.9
+Annual Wellness Exam,30,Medicare,PA,Tuesday,0,0,0.0,0.8,31.8
+Acute Back Pain,11,Medicare,NP,Monday,2,1,0.0,0.5,23.5
+Knee / Joint Pain,48,Private,MD,Tuesday,0,0,0.0,0.5,19.5
+Minor Laceration / Wound Care,16,Medicare,MD,Friday,0,0,15.0,0.3,12.4
+Urinary Tract Infection,82,Private,NP,Monday,0,0,0.0,0.2,13.3
+Pediatric Well Visit,63,Medicaid,MD,Monday,0,0,0.0,0.5,24.4
+Acute Back Pain,59,Medicare,PA,Monday,1,0,19.0,0.5,21.2
+Pediatric Well Visit,68,Private,MD,Friday,1,0,0.0,0.5,19.4
+Type 2 Diabetes Management,9,Medicare,DO,Wednesday,2,1,0.0,0.9,39.2
+Hypertension Follow-up,21,Medicare,NP,Tuesday,2,0,0.0,0.7,29.0
+Medication Refill Only,38,Private,PA,Friday,0,0,14.0,0.1,9.9
+Medication Refill Only,49,Medicare,MD,Tuesday,1,0,4.0,0.1,14.9
+Asthma Management,47,Medicaid,NP,Thursday,1,0,0.0,0.6,21.0
+Knee / Joint Pain,33,Private,MD,Thursday,0,0,0.0,0.5,15.8
+Urinary Tract Infection,81,Medicaid,NP,Friday,0,1,0.0,0.2,18.7
+Annual Wellness Exam,45,Medicaid,DO,Wednesday,4,1,0.0,0.8,66.7
+Upper Respiratory Infection,27,Private,NP,Monday,2,0,0.0,0.2,14.8
+Hypertension Follow-up,57,Medicare,MD,Thursday,1,0,0.0,0.7,25.0
+Upper Respiratory Infection,55,Medicare,NP,Tuesday,0,0,0.0,0.2,14.3
+Urinary Tract Infection,73,Private,DO,Wednesday,0,0,11.0,0.2,12.5
+Upper Respiratory Infection,35,Medicare,NP,Friday,0,0,0.0,0.2,10.9
+Acute Back Pain,81,Private,NP,Tuesday,1,0,0.0,0.5,17.6
+Annual Wellness Exam,5,Medicare,DO,Tuesday,3,0,0.0,0.8,52.4
+Type 2 Diabetes Management,13,Private,MD,Monday,1,0,0.0,0.9,34.9
+Hypertension Follow-up,66,Medicaid,DO,Wednesday,0,0,0.0,0.7,35.0
+Annual Wellness Exam,79,Medicare,MD,Monday,2,0,0.0,0.8,48.4
+Urinary Tract Infection,30,Medicare,MD,Friday,2,0,0.0,0.2,7.9
+Annual Wellness Exam,19,Private,DO,Friday,1,0,9.0,0.8,33.1
+Asthma Management,69,Medicaid,DO,Monday,0,0,5.0,0.6,28.6
+Medication Refill Only,70,Private,PA,Tuesday,0,0,0.0,0.1,7.8
+Knee / Joint Pain,52,Uninsured,MD,Thursday,1,1,0.0,0.5,30.7
+Annual Wellness Exam,21,Medicare,MD,Friday,1,0,0.0,0.8,39.6
+Medication Refill Only,5,Private,NP,Wednesday,1,0,0.0,0.1,5.0
+Pediatric Well Visit,70,Medicaid,MD,Monday,2,0,17.0,0.5,24.9
+Chest Pain Evaluation,15,Uninsured,MD,Friday,1,0,0.0,1.0,31.4
+Skin Rash / Dermatology,66,Uninsured,MD,Tuesday,1,0,0.0,0.3,17.0
+Urinary Tract Infection,48,Private,DO,Monday,1,0,0.0,0.2,10.3
+Asthma Management,12,Medicare,DO,Wednesday,0,0,1.0,0.6,21.6
+Annual Wellness Exam,60,Uninsured,MD,Wednesday,0,0,7.0,0.8,51.1
+Anxiety / Depression Follow-up,13,Uninsured,MD,Thursday,1,1,0.0,0.7,40.9
+Upper Respiratory Infection,21,Medicare,MD,Friday,0,0,0.0,0.2,17.6
+Minor Laceration / Wound Care,61,Uninsured,MD,Monday,1,0,0.0,0.3,20.2
+Medication Refill Only,12,Private,NP,Monday,0,0,0.0,0.1,11.6
+Urinary Tract Infection,77,Private,PA,Friday,2,0,13.0,0.2,10.6
+Type 2 Diabetes Management,81,Medicare,MD,Thursday,4,1,0.0,0.9,60.9
+Acute Back Pain,59,Medicaid,NP,Monday,0,0,0.0,0.5,14.1
+Urinary Tract Infection,43,Medicaid,NP,Wednesday,0,0,0.0,0.2,8.1
+Urinary Tract Infection,5,Medicaid,MD,Monday,2,0,0.0,0.2,15.6
+Urinary Tract Infection,2,Private,PA,Wednesday,0,0,0.0,0.2,6.8
+Acute Back Pain,84,Private,NP,Wednesday,4,0,0.0,0.5,18.7
+Pediatric Well Visit,37,Uninsured,MD,Tuesday,1,0,0.0,0.5,30.7
+Anxiety / Depression Follow-up,75,Private,MD,Monday,0,0,18.0,0.7,26.8
+Medication Refill Only,63,Medicaid,PA,Thursday,1,0,20.0,0.1,8.3
+Skin Rash / Dermatology,37,Medicare,DO,Wednesday,0,0,19.0,0.3,18.8
+Chest Pain Evaluation,82,Medicare,NP,Tuesday,2,0,0.0,1.0,30.2
+Hypertension Follow-up,6,Private,NP,Monday,2,1,0.0,0.7,26.7
+Acute Back Pain,80,Private,PA,Thursday,0,0,0.0,0.5,20.5
+Skin Rash / Dermatology,54,Private,MD,Monday,0,0,18.0,0.3,17.5
+Chest Pain Evaluation,30,Medicaid,NP,Friday,0,0,0.0,1.0,39.3
+Upper Respiratory Infection,74,Private,MD,Friday,3,0,0.0,0.2,15.8
+Acute Back Pain,82,Private,NP,Thursday,0,0,15.0,0.5,11.8
+Asthma Management,25,Medicare,MD,Thursday,0,0,0.0,0.6,27.1
+Chest Pain Evaluation,49,Private,MD,Monday,1,0,0.0,1.0,50.0
+Skin Rash / Dermatology,64,Medicare,MD,Tuesday,1,0,0.0,0.3,13.6
+Anxiety / Depression Follow-up,6,Medicare,DO,Tuesday,2,1,0.0,0.7,37.8
+Type 2 Diabetes Management,40,Medicaid,MD,Thursday,0,0,0.0,0.9,34.6
+Anxiety / Depression Follow-up,23,Private,PA,Tuesday,1,0,0.0,0.7,19.9
+Acute Back Pain,10,Medicaid,MD,Thursday,0,0,11.0,0.5,28.3
+Medication Refill Only,69,Private,DO,Thursday,2,0,0.0,0.1,7.1
+Type 2 Diabetes Management,6,Private,MD,Wednesday,1,0,0.0,0.9,22.5
+Asthma Management,27,Medicare,PA,Friday,4,0,0.0,0.6,26.4
+Minor Laceration / Wound Care,13,Medicaid,MD,Friday,0,0,0.0,0.3,16.2
+Annual Wellness Exam,63,Private,PA,Wednesday,1,0,0.0,0.8,44.3
+Chest Pain Evaluation,77,Private,PA,Wednesday,2,0,0.0,1.0,42.4
+Pediatric Well Visit,51,Uninsured,PA,Wednesday,2,0,0.0,0.5,25.1
+Type 2 Diabetes Management,62,Private,MD,Wednesday,3,0,0.0,0.9,32.1
+Upper Respiratory Infection,48,Private,DO,Monday,0,0,0.0,0.2,12.4
+Acute Back Pain,26,Private,MD,Monday,2,0,0.0,0.5,22.3
+Minor Laceration / Wound Care,29,Private,DO,Tuesday,0,0,0.0,0.3,13.3
+Upper Respiratory Infection,42,Private,MD,Friday,0,0,0.0,0.2,5.4
+Anxiety / Depression Follow-up,7,Private,DO,Tuesday,0,0,0.0,0.7,32.5
+Medication Refill Only,57,Medicare,NP,Friday,3,1,0.0,0.1,8.7
+New Patient Intake,72,Medicaid,MD,Friday,3,1,0.0,1.0,70.7
+Knee / Joint Pain,53,Private,MD,Thursday,0,0,0.0,0.5,22.3
+Acute Back Pain,39,Medicaid,PA,Thursday,0,0,0.0,0.5,21.8
+Type 2 Diabetes Management,19,Uninsured,NP,Friday,0,0,0.0,0.9,35.7
+Type 2 Diabetes Management,45,Private,DO,Monday,1,0,0.0,0.9,31.6
+Medication Refill Only,65,Private,MD,Friday,1,1,6.0,0.1,5.0
+Skin Rash / Dermatology,8,Private,PA,Friday,0,0,15.0,0.3,15.6
+Asthma Management,10,Medicare,MD,Thursday,3,0,0.0,0.6,21.8
+Upper Respiratory Infection,80,Private,DO,Monday,2,0,0.0,0.2,14.1
+New Patient Intake,24,Medicaid,DO,Thursday,1,0,9.0,1.0,37.7
+Type 2 Diabetes Management,49,Private,NP,Wednesday,1,0,0.0,0.9,20.4
+Chest Pain Evaluation,37,Medicaid,DO,Monday,0,1,0.0,1.0,48.3
+Chest Pain Evaluation,66,Medicare,DO,Wednesday,0,0,0.0,1.0,28.8
+Anxiety / Depression Follow-up,74,Uninsured,PA,Wednesday,0,0,20.0,0.7,38.0
+Anxiety / Depression Follow-up,72,Uninsured,MD,Tuesday,1,1,0.0,0.7,44.5
+Knee / Joint Pain,71,Medicaid,MD,Wednesday,0,0,1.0,0.5,21.9
+Skin Rash / Dermatology,77,Medicaid,DO,Monday,0,0,12.0,0.3,11.1
+Skin Rash / Dermatology,53,Medicaid,MD,Thursday,3,1,0.0,0.3,19.5
+Chest Pain Evaluation,75,Private,NP,Monday,4,0,16.0,1.0,47.9
+Annual Wellness Exam,34,Private,PA,Monday,1,1,0.0,0.8,48.8
+Annual Wellness Exam,69,Medicaid,NP,Wednesday,1,0,3.0,0.8,41.2
+Type 2 Diabetes Management,43,Medicare,MD,Thursday,0,0,5.0,0.9,30.3
+Type 2 Diabetes Management,37,Private,MD,Thursday,2,0,0.0,0.9,17.7
+Medication Refill Only,19,Medicaid,NP,Friday,3,0,7.0,0.1,8.6

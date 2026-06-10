@@ -1,0 +1,53 @@
+{
+  "best_model": "Neural Network",
+  "models": {
+    "Random Forest": {
+      "mae": 3.987,
+      "rmse": 5.353,
+      "r2": 0.7936
+    },
+    "XGBoost": {
+      "mae": 3.991,
+      "rmse": 5.276,
+      "r2": 0.7995
+    },
+    "KNN": {
+      "mae": 4.621,
+      "rmse": 6.247,
+      "r2": 0.7189
+    },
+    "Neural Network": {
+      "mae": 3.74,
+      "rmse": 4.932,
+      "r2": 0.8248
+    }
+  },
+  "feature_names": [
+    "visit_type",
+    "insurance_type",
+    "provider_type",
+    "day_of_week",
+    "age",
+    "num_conditions",
+    "is_first_visit",
+    "arrived_late_min",
+    "complexity_score"
+  ],
+  "visit_types": [
+    "Acute Back Pain",
+    "Annual Wellness Exam",
+    "Anxiety / Depression Follow-up",
+    "Asthma Management",
+    "Chest Pain Evaluation",
+    "Hypertension Follow-up",
+    "Knee / Joint Pain",
+    "Medication Refill Only",
+    "Minor Laceration / Wound Care",
+    "New Patient Intake",
+    "Pediatric Well Visit",
+    "Skin Rash / Dermatology",
+    "Type 2 Diabetes Management",
+    "Upper Respiratory Infection",
+    "Urinary Tract Infection"
+  ]
+}
