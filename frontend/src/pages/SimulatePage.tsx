@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 import { Play, RefreshCw } from 'lucide-react';
 import { api } from '../api';
-import { SimulationResult, SimAggregate } from '../types';
+import { SimulationResult } from '../types';
 
 function minToTime(min: number): string {
   const h = Math.floor(min / 60);
@@ -120,7 +120,7 @@ export const SimulatePage: React.FC = () => {
     finally { setLoading(false); }
   };
 
-  useEffect(() => { run(); }, []);
+  useEffect(() => { run(); }, [run]);
 
   const barData = result ? [
     { name: 'Avg Wait',       fixed: result.fixed.aggregate.avg_wait_min,       ai: result.ai.aggregate.avg_wait_min },

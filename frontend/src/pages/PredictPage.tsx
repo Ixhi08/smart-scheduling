@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Clock, TrendingDown, AlertCircle, ChevronDown } from 'lucide-react';
+import { Clock, AlertCircle } from 'lucide-react';
 import { api } from '../api';
 import { PatientInput, PredictionResult, VisitTypesResponse } from '../types';
 
