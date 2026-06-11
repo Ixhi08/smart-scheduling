@@ -120,7 +120,7 @@ export const SimulatePage: React.FC = () => {
     finally { setLoading(false); }
   };
 
-  useEffect(() => { run(); }, [run]);
+  useEffect(() => { run(); }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   const barData = result ? [
     { name: 'Avg Wait',       fixed: result.fixed.aggregate.avg_wait_min,       ai: result.ai.aggregate.avg_wait_min },
