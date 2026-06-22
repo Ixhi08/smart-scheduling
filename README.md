@@ -2,7 +2,7 @@
 
 AI-powered healthcare appointment duration predictor and clinic scheduling optimizer.
 
-Built over 2 years as an independent research project — started as a Bayesian prototype, rebuilt as a full-stack ML system with a discrete-event simulation engine and production web interface.
+Built over ~2 years as an independent research project — started as a Bayesian prototype, rebuilt as a full-stack ML system with a discrete-event simulation engine and production web interface.
 
 **Live demo:** (https://smart-scheduling-app.vercel.app/)
 
