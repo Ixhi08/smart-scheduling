@@ -119,4 +119,4 @@ smart-scheduling/
 
 ## Background
 
-This project started in 10th grade as a Bayesian prototype with a simple symptom dataset. In 11th grade it was rebuilt with supervised ML, a multi-model benchmark, a discrete-event simulation, and a full-stack web interface. Currently exploring integration with real de-identified clinic data for a third iteration.
+This project started in 10th grade as a Bayesian prototype with a simple symptom dataset. In 11th grade it was rebuilt with supervised ML, a multi-model benchmark, a discrete-event simulation, and a full-stack web interface.
