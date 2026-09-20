@@ -54,18 +54,11 @@ Built over ~2 years as an independent research project — beginning as a Bayesi
 
 ---
 
-## Demo
 
 <!--
-Add screenshots or a GIF to a /docs folder in the repository.
 
-Recommended files:
-docs/demo.gif
-docs/predict.png
-docs/simulation.png
-docs/benchmark.png
 
-Then uncomment the sections below.
+
 -->
 
 <!--
