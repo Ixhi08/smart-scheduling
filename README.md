@@ -52,7 +52,6 @@ Built over ~2 years as an independent research project — beginning as a Bayesi
 - Built the complete system end-to-end: **data generation → model training → API → simulation → frontend → deployment**
 - Developed the project across multiple years, progressing from a Bayesian prototype to a production full-stack ML application
 
----
 
 
 <!--
