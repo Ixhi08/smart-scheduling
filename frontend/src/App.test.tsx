@@ -2,8 +2,9 @@ import React from 'react';
 import { render, screen } from '@testing-library/react';
 import App from './App';
 
-test('renders learn react link', () => {
+test('renders Smart Scheduling navigation', () => {
   render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+  expect(screen.getByText('Smart Scheduling')).toBeInTheDocument();
+  expect(screen.getByText('Predict')).toBeInTheDocument();
+  expect(screen.getByText('Model Analytics')).toBeInTheDocument();
 });

@@ -10,8 +10,7 @@ Distributions grounded in published primary care literature:
 
 import numpy as np
 import pandas as pd
-
-rng = np.random.default_rng(seed=42)
+from pathlib import Path
 
 # --- Visit type definitions ---
 # Each entry: (base_duration_min, std_dev, complexity_weight)
@@ -44,7 +43,8 @@ DAY_OF_WEEK = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
 DAY_MULTIPLIERS = {"Monday": 1.08, "Tuesday": 1.02, "Wednesday": 1.0, "Thursday": 0.98, "Friday": 0.95}
 
 
-def generate_dataset(n: int = 2000) -> pd.DataFrame:
+def generate_dataset(n: int = 2000, seed: int = 42) -> pd.DataFrame:
+    rng = np.random.default_rng(seed=seed)
     visit_type_names = list(VISIT_TYPES.keys())
     visit_type_probs = [0.10, 0.09, 0.08, 0.07, 0.08, 0.07, 0.06,
                         0.07, 0.05, 0.06, 0.06, 0.05, 0.06, 0.08, 0.02]
@@ -103,7 +103,7 @@ def generate_dataset(n: int = 2000) -> pd.DataFrame:
 
 if __name__ == "__main__":
     df = generate_dataset(2000)
-    out_path = "smart_scheduling_data.csv"
+    out_path = Path(__file__).parent / "smart_scheduling_data.csv"
     df.to_csv(out_path, index=False)
 
     print(f"Generated {len(df)} records")

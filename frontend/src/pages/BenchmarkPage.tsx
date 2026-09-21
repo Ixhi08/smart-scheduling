@@ -1,153 +1,161 @@
 import React, { useEffect, useState } from 'react';
-import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Cell } from 'recharts';
-import { Award } from 'lucide-react';
+import {
+  Bar, BarChart, CartesianGrid, Cell, ReferenceLine, ResponsiveContainer,
+  Scatter, ScatterChart, Tooltip, XAxis, YAxis,
+} from 'recharts';
+import { Award, ShieldCheck } from 'lucide-react';
 import { api } from '../api';
 import { BenchmarkResult } from '../types';
+import { Card, SectionLabel, StatBox } from '../components/Common';
 
 const COLORS: Record<string, string> = {
-  'Neural Network': 'var(--accent)',
-  'Random Forest':  'var(--accent2)',
-  'XGBoost':        '#a78bfa',
-  'KNN':            '#f59e0b',
+  'Neural Network': '#0f766e',
+  'Random Forest': '#2563eb',
+  'XGBoost': '#a78bfa',
+  'KNN': '#f59e0b',
 };
 
-const MetricChart = ({ data, metric, label, unit, lowerBetter }: {
-  data: { name: string; value: number; best: boolean }[];
-  metric: string; label: string; unit: string; lowerBetter: boolean;
-}) => (
-  <div style={{ background: 'var(--surface)', border: '1px solid var(--border)', borderRadius: 'var(--radius-lg)', padding: '24px' }}>
-    <div style={{ marginBottom: '20px' }}>
-      <span style={{ fontSize: '11px', fontWeight: 600, color: 'var(--text-muted)', textTransform: 'uppercase', letterSpacing: '0.8px' }}>
-        {label}
-      </span>
-      <span style={{ fontSize: '11px', color: 'var(--text-muted)', marginLeft: '8px' }}>({lowerBetter ? 'lower = better' : 'higher = better'})</span>
-    </div>
-    <ResponsiveContainer width="100%" height={180}>
-      <BarChart data={data} margin={{ top: 4, right: 4, bottom: 0, left: 0 }}>
-        <CartesianGrid strokeDasharray="3 3" stroke="var(--border)" vertical={false} />
-        <XAxis dataKey="name" tick={{ fill: 'var(--text-muted)', fontSize: 11 }} axisLine={false} tickLine={false} />
-        <YAxis tick={{ fill: 'var(--text-muted)', fontSize: 11 }} axisLine={false} tickLine={false}
-          tickFormatter={v => `${v}${unit}`} />
-        <Tooltip contentStyle={{ background: 'var(--surface2)', border: '1px solid var(--border)', borderRadius: '8px', color: 'var(--text)', fontSize: '12px' }}
-          formatter={(v: any) => [`${v}${unit}`, label]} />
-        <Bar dataKey="value" radius={[6, 6, 0, 0]}>
-          {data.map(entry => (
-            <Cell key={entry.name} fill={entry.best ? COLORS[entry.name] || 'var(--accent)' : 'var(--surface2)'}
-              stroke={entry.best ? COLORS[entry.name] || 'var(--accent)' : 'var(--border)'} strokeWidth={1} />
-          ))}
-        </Bar>
-      </BarChart>
-    </ResponsiveContainer>
-  </div>
-);
-
 export const BenchmarkPage: React.FC = () => {
-  const [data, setData]     = useState<BenchmarkResult | null>(null);
+  const [data, setData] = useState<BenchmarkResult | null>(null);
   const [loading, setLoading] = useState(true);
+  useEffect(() => { api.benchmark().then(setData).finally(() => setLoading(false)); }, []);
 
-  useEffect(() => {
-    api.benchmark().then(setData).catch(() => {}).finally(() => setLoading(false));
-  }, []);
-
-  if (loading) return (
-    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '400px', color: 'var(--text-muted)' }}>
-      Loading model benchmarks…
-    </div>
-  );
-
-  if (!data) return (
-    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '400px', color: '#ef4444' }}>
-      Failed to load. Is the backend running?
-    </div>
-  );
+  if (loading) return <div style={{ padding: 80, textAlign: 'center', color: 'var(--text-muted)' }}>Loading model analytics…</div>;
+  if (!data) return <div style={{ padding: 80, textAlign: 'center', color: '#ef4444' }}>Could not load benchmark data.</div>;
 
   const models = Object.entries(data.models);
-  const bestMAE   = Math.min(...models.map(([, m]) => m.mae));
-  const bestRMSE  = Math.min(...models.map(([, m]) => m.rmse));
-  const bestR2    = Math.max(...models.map(([, m]) => m.r2));
-
-  const maeData   = models.map(([n, m]) => ({ name: n, value: m.mae,  best: m.mae  === bestMAE }));
-  const rmseData  = models.map(([n, m]) => ({ name: n, value: m.rmse, best: m.rmse === bestRMSE }));
-  const r2Data    = models.map(([n, m]) => ({ name: n, value: +(m.r2 * 100).toFixed(1), best: m.r2 === bestR2 }));
+  const selected = data.models[data.best_model];
+  const metricData = models.map(([name, m]) => ({ name, mae: m.test_mae, rmse: m.test_rmse, r2: +(m.test_r2 * 100).toFixed(1) }));
+  const importance = data.analytics.feature_importance.map(d => ({ ...d, label: d.feature.replaceAll('_', ' ') }));
+  const visitError = [...data.analytics.error_by_visit_type].sort((a, b) => b.mae - a.mae);
 
   return (
-    <div style={{ maxWidth: '1100px', margin: '0 auto', padding: '40px 24px' }}>
-      <div style={{ marginBottom: '32px' }}>
-        <h1 style={{ fontSize: '26px', fontWeight: 700, letterSpacing: '-0.5px', marginBottom: '6px' }}>
-          Model Comparison
-        </h1>
-        <p style={{ color: 'var(--text-muted)', fontSize: '14px' }}>
-          Four ML models trained and benchmarked on 2,000 synthetic patient records. Evaluated on held-out 20% test set.
+    <div style={{ maxWidth: 1220, margin: '0 auto', padding: '38px 24px 56px' }}>
+      <div style={{ marginBottom: 28 }}>
+        <h1 style={{ fontSize: 27, letterSpacing: '-0.6px', marginBottom: 5 }}>Model Analytics</h1>
+        <p style={{ color: 'var(--text-muted)', fontSize: 14 }}>
+          Model selection uses cross-validation on training data only; calibration and final test data remain disjoint.
         </p>
       </div>
 
-      {/* Winner callout */}
-      <div style={{
-        background: 'rgba(0,212,170,0.06)', border: '1px solid rgba(0,212,170,0.25)',
-        borderRadius: 'var(--radius-lg)', padding: '20px 24px', marginBottom: '28px',
-        display: 'flex', alignItems: 'center', gap: '14px',
-      }}>
-        <Award size={22} color="var(--accent)" />
-        <div>
-          <span style={{ fontWeight: 700, color: 'var(--accent)', fontSize: '15px' }}>{data.best_model}</span>
-          <span style={{ color: 'var(--text-dim)', fontSize: '14px' }}> is the best-performing model — lowest MAE and highest R².</span>
+      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 14, marginBottom: 14 }}>
+        <Card style={{ background: 'rgba(15,118,110,0.045)', borderColor: 'rgba(15,118,110,0.20)' }}>
+          <div style={{ display: 'flex', gap: 12, alignItems: 'center' }}><Award color="var(--accent)" size={21} /><div><div style={{ fontWeight: 700, color: 'var(--accent)' }}>{data.best_model}</div><div style={{ color: 'var(--text-muted)', fontSize: 11 }}>Selected by 5-fold CV MAE: {selected.cv_mae_mean} ± {selected.cv_mae_std} min</div></div></div>
+        </Card>
+        <Card style={{ background: 'rgba(59,130,246,0.04)', borderColor: 'rgba(59,130,246,0.25)' }}>
+          <div style={{ display: 'flex', gap: 12, alignItems: 'center' }}><ShieldCheck color="var(--accent2)" size={21} /><div><div style={{ fontWeight: 700, color: 'var(--accent2)' }}>90% Mondrian Conformal</div><div style={{ color: 'var(--text-muted)', fontSize: 11 }}>Held-out coverage: {(data.conformal.test_empirical_coverage * 100).toFixed(1)}% · visit-type calibrated with global fallback</div></div></div>
+        </Card>
+      </div>
+
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4,1fr)', gap: 10, marginBottom: 16 }}>
+        <StatBox label="Final Test MAE" value={selected.test_mae} unit="min" />
+        <StatBox label="Final Test RMSE" value={selected.test_rmse} unit="min" />
+        <StatBox label="Final Test R²" value={selected.test_r2} accent="var(--accent)" />
+        <StatBox label="Avg 90% Interval Width" value={data.conformal.test_avg_interval_width_min} unit="min" />
+      </div>
+
+      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 14, marginBottom: 14 }}>
+        <Card>
+          <SectionLabel>Final Test Model Comparison</SectionLabel>
+          <ResponsiveContainer width="100%" height={260}>
+            <BarChart data={metricData} margin={{ top: 15, right: 5, bottom: 0, left: -8 }}>
+              <CartesianGrid strokeDasharray="3 3" stroke="var(--border)" vertical={false} />
+              <XAxis dataKey="name" tick={{ fill: 'var(--text-muted)', fontSize: 9 }} axisLine={false} tickLine={false} />
+              <YAxis tick={{ fill: 'var(--text-muted)', fontSize: 10 }} axisLine={false} tickLine={false} />
+              <Tooltip contentStyle={{ background: 'var(--surface2)', border: '1px solid var(--border)', borderRadius: 8, fontSize: 11 }} />
+              <Bar dataKey="mae" name="MAE (min)" radius={[4,4,0,0]}>
+                {metricData.map(d => <Cell key={d.name} fill={COLORS[d.name] || '#64748b'} />)}
+              </Bar>
+            </BarChart>
+          </ResponsiveContainer>
+        </Card>
+
+        <Card>
+          <SectionLabel>Predicted vs Actual — Final Test</SectionLabel>
+          <ResponsiveContainer width="100%" height={260}>
+            <ScatterChart margin={{ top: 15, right: 15, bottom: 5, left: -8 }}>
+              <CartesianGrid strokeDasharray="3 3" stroke="var(--border)" />
+              <XAxis type="number" dataKey="actual" name="Actual" unit="m" domain={[5,75]} tick={{ fill: 'var(--text-muted)', fontSize: 10 }} />
+              <YAxis type="number" dataKey="predicted" name="Predicted" unit="m" domain={[5,75]} tick={{ fill: 'var(--text-muted)', fontSize: 10 }} />
+              <Tooltip cursor={{ strokeDasharray: '3 3' }} contentStyle={{ background: 'var(--surface2)', border: '1px solid var(--border)', borderRadius: 8, fontSize: 11 }} />
+              <ReferenceLine segment={[{ x: 5, y: 5 }, { x: 75, y: 75 }]} stroke="#64748b" strokeDasharray="4 4" />
+              <Scatter data={data.analytics.test_points} fill="#0f766e" fillOpacity={0.55} />
+            </ScatterChart>
+          </ResponsiveContainer>
+        </Card>
+      </div>
+
+      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 14, marginBottom: 14 }}>
+        <Card>
+          <SectionLabel>Permutation Feature Importance</SectionLabel>
+          <p style={{ color: 'var(--text-muted)', fontSize: 10, marginTop: 5 }}>Increase in test MAE after permuting each original input feature.</p>
+          <ResponsiveContainer width="100%" height={300}>
+            <BarChart data={importance} layout="vertical" margin={{ top: 12, right: 12, bottom: 0, left: 90 }}>
+              <CartesianGrid strokeDasharray="3 3" stroke="var(--border)" horizontal={false} />
+              <XAxis type="number" tick={{ fill: 'var(--text-muted)', fontSize: 10 }} axisLine={false} />
+              <YAxis type="category" dataKey="label" width={105} tick={{ fill: 'var(--text-dim)', fontSize: 10 }} axisLine={false} tickLine={false} />
+              <Tooltip contentStyle={{ background: 'var(--surface2)', border: '1px solid var(--border)', borderRadius: 8, fontSize: 11 }} />
+              <Bar dataKey="importance_mean" name="MAE increase" fill="#0f766e" radius={[0,4,4,0]} />
+            </BarChart>
+          </ResponsiveContainer>
+        </Card>
+
+        <Card>
+          <SectionLabel>Residual Distribution</SectionLabel>
+          <ResponsiveContainer width="100%" height={300}>
+            <BarChart data={data.analytics.residual_histogram.map(b => ({ label: `${b.bin_start.toFixed(0)}–${b.bin_end.toFixed(0)}`, count: b.count }))} margin={{ top: 12, right: 8, bottom: 5, left: -10 }}>
+              <CartesianGrid strokeDasharray="3 3" stroke="var(--border)" vertical={false} />
+              <XAxis dataKey="label" tick={{ fill: 'var(--text-muted)', fontSize: 8 }} axisLine={false} tickLine={false} />
+              <YAxis tick={{ fill: 'var(--text-muted)', fontSize: 10 }} axisLine={false} tickLine={false} />
+              <Tooltip contentStyle={{ background: 'var(--surface2)', border: '1px solid var(--border)', borderRadius: 8, fontSize: 11 }} />
+              <Bar dataKey="count" fill="#2563eb" radius={[4,4,0,0]} />
+            </BarChart>
+          </ResponsiveContainer>
+        </Card>
+      </div>
+
+      <div style={{ display: 'grid', gridTemplateColumns: '1.35fr 0.65fr', gap: 14, marginBottom: 14 }}>
+        <Card>
+          <SectionLabel>Error by Visit Type</SectionLabel>
+          <ResponsiveContainer width="100%" height={330}>
+            <BarChart data={visitError} layout="vertical" margin={{ top: 12, right: 10, bottom: 0, left: 135 }}>
+              <CartesianGrid strokeDasharray="3 3" stroke="var(--border)" horizontal={false} />
+              <XAxis type="number" tick={{ fill: 'var(--text-muted)', fontSize: 10 }} />
+              <YAxis type="category" dataKey="group" width={150} tick={{ fill: 'var(--text-dim)', fontSize: 9 }} axisLine={false} tickLine={false} />
+              <Tooltip contentStyle={{ background: 'var(--surface2)', border: '1px solid var(--border)', borderRadius: 8, fontSize: 11 }} />
+              <Bar dataKey="mae" name="MAE (min)" fill="#a78bfa" radius={[0,4,4,0]} />
+            </BarChart>
+          </ResponsiveContainer>
+        </Card>
+
+        <Card>
+          <SectionLabel>Error by Age Group</SectionLabel>
+          <ResponsiveContainer width="100%" height={330}>
+            <BarChart data={data.analytics.error_by_age_group} margin={{ top: 12, right: 10, bottom: 0, left: -10 }}>
+              <CartesianGrid strokeDasharray="3 3" stroke="var(--border)" vertical={false} />
+              <XAxis dataKey="group" tick={{ fill: 'var(--text-muted)', fontSize: 10 }} axisLine={false} />
+              <YAxis tick={{ fill: 'var(--text-muted)', fontSize: 10 }} axisLine={false} />
+              <Tooltip contentStyle={{ background: 'var(--surface2)', border: '1px solid var(--border)', borderRadius: 8, fontSize: 11 }} />
+              <Bar dataKey="mae" name="MAE (min)" fill="#f59e0b" radius={[4,4,0,0]} />
+            </BarChart>
+          </ResponsiveContainer>
+        </Card>
+      </div>
+
+      <Card>
+        <SectionLabel>Full Model Table</SectionLabel>
+        <div style={{ overflowX: 'auto', marginTop: 12 }}>
+          <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: 11 }}>
+            <thead><tr>{['Model','CV MAE','Test MAE','Test RMSE','Test R²','Status'].map(h => <th key={h} style={{ textAlign: 'left', padding: '9px 8px', color: 'var(--text-muted)', borderBottom: '1px solid var(--border)' }}>{h}</th>)}</tr></thead>
+            <tbody>{models.sort(([,a],[,b]) => a.cv_mae_mean - b.cv_mae_mean).map(([name,m]) => <tr key={name} style={{ borderBottom: '1px solid var(--border)' }}>
+              <td style={{ padding: 8, color: name === data.best_model ? 'var(--accent)' : 'var(--text)' }}>{name}</td><td style={{ padding: 8 }}>{m.cv_mae_mean} ± {m.cv_mae_std}</td><td style={{ padding: 8 }}>{m.test_mae}</td><td style={{ padding: 8 }}>{m.test_rmse}</td><td style={{ padding: 8 }}>{m.test_r2}</td><td style={{ padding: 8 }}>{name === data.best_model ? 'Deployed' : 'Evaluated'}</td>
+            </tr>)}</tbody>
+          </table>
         </div>
-        <div style={{ marginLeft: 'auto', fontFamily: 'var(--mono)', fontSize: '13px', color: 'var(--text-dim)' }}>
-          MAE: <span style={{ color: 'var(--accent)', fontWeight: 600 }}>{data.models[data.best_model].mae} min</span>
-          &nbsp;·&nbsp; R²: <span style={{ color: 'var(--accent)', fontWeight: 600 }}>{data.models[data.best_model].r2}</span>
-        </div>
-      </div>
+      </Card>
 
-      {/* Metric charts */}
-      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '20px', marginBottom: '28px' }}>
-        <MetricChart data={maeData}  metric="mae"  label="Mean Absolute Error"    unit=" min" lowerBetter />
-        <MetricChart data={rmseData} metric="rmse" label="Root Mean Squared Error" unit=" min" lowerBetter />
-        <MetricChart data={r2Data}   metric="r2"   label="R² Score (× 100)"       unit="%"    lowerBetter={false} />
-      </div>
-
-      {/* Full table */}
-      <div style={{ background: 'var(--surface)', border: '1px solid var(--border)', borderRadius: 'var(--radius-lg)', overflow: 'hidden' }}>
-        <table style={{ width: '100%', borderCollapse: 'collapse' }}>
-          <thead>
-            <tr style={{ borderBottom: '1px solid var(--border)' }}>
-              {['Model', 'MAE (min)', 'RMSE (min)', 'R²', 'Status'].map(h => (
-                <th key={h} style={{ padding: '14px 20px', textAlign: 'left', fontSize: '11px', fontWeight: 600, color: 'var(--text-muted)', textTransform: 'uppercase', letterSpacing: '0.8px' }}>
-                  {h}
-                </th>
-              ))}
-            </tr>
-          </thead>
-          <tbody>
-            {models.sort(([, a], [, b]) => a.mae - b.mae).map(([name, metrics]) => {
-              const isBest = name === data.best_model;
-              return (
-                <tr key={name} style={{ borderBottom: '1px solid var(--border)', background: isBest ? 'rgba(0,212,170,0.04)' : 'transparent', transition: 'background 0.1s' }}>
-                  <td style={{ padding: '14px 20px', fontWeight: isBest ? 600 : 400, color: isBest ? 'var(--accent)' : 'var(--text)', display: 'flex', alignItems: 'center', gap: '8px' }}>
-                    <span style={{ width: '10px', height: '10px', borderRadius: '50%', background: COLORS[name] || 'var(--border)', flexShrink: 0, display: 'inline-block' }} />
-                    {name}
-                  </td>
-                  <td style={{ padding: '14px 20px', fontFamily: 'var(--mono)', fontSize: '13px', color: metrics.mae === bestMAE ? 'var(--accent)' : 'var(--text-dim)' }}>{metrics.mae}</td>
-                  <td style={{ padding: '14px 20px', fontFamily: 'var(--mono)', fontSize: '13px', color: metrics.rmse === bestRMSE ? 'var(--accent)' : 'var(--text-dim)' }}>{metrics.rmse}</td>
-                  <td style={{ padding: '14px 20px', fontFamily: 'var(--mono)', fontSize: '13px', color: metrics.r2 === bestR2 ? 'var(--accent)' : 'var(--text-dim)' }}>{metrics.r2}</td>
-                  <td style={{ padding: '14px 20px' }}>
-                    <span style={{
-                      fontSize: '11px', fontWeight: 600, padding: '3px 10px', borderRadius: '20px',
-                      background: isBest ? 'rgba(0,212,170,0.12)' : 'var(--surface2)',
-                      color: isBest ? 'var(--accent)' : 'var(--text-muted)',
-                      border: `1px solid ${isBest ? 'rgba(0,212,170,0.3)' : 'var(--border)'}`,
-                    }}>
-                      {isBest ? 'Deployed' : 'Evaluated'}
-                    </span>
-                  </td>
-                </tr>
-              );
-            })}
-          </tbody>
-        </table>
-      </div>
-
-      <p style={{ marginTop: '16px', fontSize: '12px', color: 'var(--text-muted)' }}>
-        MAE = average prediction error in minutes · RMSE = penalizes larger errors more · R² = variance explained by model (0–1)
+      <p style={{ marginTop: 14, color: 'var(--text-muted)', fontSize: 10 }}>
+        Split: {data.split.train_size} train · {data.split.calibration_size} calibration · {data.split.test_size} final test. Test data is not used for model selection or conformal calibration.
       </p>
     </div>
   );

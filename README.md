@@ -1,7 +1,7 @@
 # Smart Scheduling
 
 <p align="center">
-  <b>AI-powered healthcare appointment duration prediction and clinic scheduling optimization.</b>
+  <b>Uncertainty-aware machine learning for healthcare appointment duration prediction and clinic scheduling.</b>
 </p>
 
 <p align="center">
@@ -9,103 +9,62 @@
   <img src="https://img.shields.io/badge/FastAPI-Backend-009688?logo=fastapi&logoColor=white" />
   <img src="https://img.shields.io/badge/React-TypeScript-3178C6?logo=react&logoColor=white" />
   <img src="https://img.shields.io/badge/scikit--learn-ML-F7931E?logo=scikitlearn&logoColor=white" />
-  <img src="https://img.shields.io/badge/Vercel-Deployed-000000?logo=vercel&logoColor=white" />
+  <img src="https://img.shields.io/badge/Conformal-90%25%20Intervals-7C3AED" />
+  <img src="https://img.shields.io/badge/Vercel-Live-000000?logo=vercel&logoColor=white" />
+  <img src="https://github.com/Ixhi08/smart-scheduling/actions/workflows/ci.yml/badge.svg" />
 </p>
 
-Built over ~2 years as an independent research project — beginning as a Bayesian prototype and later rebuilt as a full-stack machine learning system with multi-model benchmarking, a discrete-event simulation engine, and a deployed web interface.
+Built over ~2 years as an independent research project. Smart Scheduling began as a Bayesian appointment-duration prototype and evolved into a full-stack ML system with model benchmarking, calibrated uncertainty, local sensitivity analysis, constrained slot optimization, discrete-event simulation, and an interactive analytics dashboard.
 
 <p align="center">
-  <a href="https://smart-scheduling-ai.vercel.app/">
-    <b>Live Demo</b>
-  </a>
+  <a href="https://smart-scheduling-ai.vercel.app/"><b>Live Demo</b></a>
+  &nbsp;•&nbsp;
+  <a href="#methodology"><b>Methodology</b></a>
+  &nbsp;•&nbsp;
+  <a href="#running-locally"><b>Run Locally</b></a>
 </p>
 
-> **Demo note:** The backend is hosted on Render's free tier and may take ~30–60 seconds to wake after inactivity. Subsequent predictions are typically immediate.
+> **Demo note:** the backend currently runs on Render's free tier. The first request after inactivity may take ~30–60 seconds while the service wakes; later requests are typically immediate.
 
----
-
-## Key Results
+## What makes this version different
 
 <table>
 <tr>
-<td align="center">
-  <h3>~77%</h3>
-  <sub>Modeled Overtime Reduction</sub>
-</td>
-<td align="center">
-  <h3>3.74 min</h3>
-  <sub>Prediction MAE</sub>
-</td>
-<td align="center">
-  <h3>0.825</h3>
-  <sub>R²</sub>
-</td>
-<td align="center">
-  <h3>4</h3>
-  <sub>Models Benchmarked</sub>
-</td>
+<td align="center"><b>4</b><br><sub>ML models benchmarked</sub></td>
+<td align="center"><b>90%</b><br><sub>Calibrated conformal intervals</sub></td>
+<td align="center"><b>3</b><br><sub>Scheduling strategies</sub></td>
+<td align="center"><b>5</b><br><sub>Interactive analysis views</sub></td>
 </tr>
 </table>
 
-- Reduced modeled daily clinic overtime from **~130 minutes to ~30 minutes**
-- Benchmarked four machine learning approaches on **2,000 synthetic patient records**
-- Built the complete system end-to-end: **data generation → model training → API → simulation → frontend → deployment**
-- Developed the project across multiple years, progressing from a Bayesian prototype to a production full-stack ML application
+- **Rigorous model selection:** 5-fold stratified cross-validation on the training split only
+- **Separate calibration:** Mondrian split-conformal prediction intervals by visit type, with a global finite-sample fallback
+- **Interpretable predictions:** local sequential sensitivity analysis plus interactive what-if curves
+- **Capacity-aware scheduling:** robust 5-minute slot allocation that preserves more buffer for higher-uncertainty appointments
+- **No-lookahead simulation:** schedules are booked before actual durations are revealed and evaluated on the untouched final-test partition
+- **Model diagnostics:** predicted-vs-actual scatter, residuals, subgroup error, conformal coverage, and permutation feature importance
 
+## Application
 
+The interface is organized into five views:
 
-<!--
+| View | Purpose |
+|---|---|
+| **Predict** | Point prediction, 90% calibrated interval, uncertainty level, and robust recommended slot |
+| **Explain** | Local sensitivity contributions and what-if curves for patient characteristics |
+| **Optimize** | Clinic constraints, robust slot allocation, optional risk-first ordering, and appointment plan |
+| **Simulation** | Side-by-side fixed, adaptive, and optimized clinic-day schedules |
+| **Model Analytics** | Holdout metrics, calibration, residuals, subgroup error, and feature importance |
 
+## The problem
 
+Healthcare clinics often use fixed appointment slots even when visit complexity differs substantially. A medication refill and a new-patient intake may receive the same scheduled duration, which can produce either unused capacity or cascading delays.
 
--->
+Smart Scheduling predicts visit duration from appointment and patient characteristics, quantifies predictive uncertainty, and uses those estimates to construct more adaptive clinic schedules.
 
-<!--
-<p align="center">
-  <img src="docs/demo.gif" width="850" alt="Smart Scheduling application demo">
-</p>
--->
+## Prediction inputs
 
-<!--
-### Appointment Duration Prediction
-
-<p align="center">
-  <img src="docs/predict.png" width="850" alt="Smart Scheduling prediction interface">
-</p>
-
-### Clinic-Day Simulation
-
-<p align="center">
-  <img src="docs/simulation.png" width="850" alt="Smart Scheduling clinic simulation">
-</p>
-
-### Model Benchmarking
-
-<p align="center">
-  <img src="docs/benchmark.png" width="850" alt="Smart Scheduling model benchmark dashboard">
-</p>
--->
-
----
-
-## The Problem
-
-Healthcare clinics often rely on fixed appointment slots — commonly around 20 minutes — regardless of visit complexity.
-
-A medication refill and a new-patient intake may therefore receive the same scheduled duration even though their actual time requirements can differ substantially.
-
-This can create two problems:
-
-- Shorter visits leave unused scheduling capacity
-- Longer visits run over their assigned slots, causing delays that compound throughout the clinic day
-
-Smart Scheduling explores whether patient and appointment characteristics can be used to predict visit duration and generate more adaptive scheduling recommendations.
-
----
-
-## What It Does
-
-Smart Scheduling predicts the expected duration of an individual appointment using:
+The deployed model uses:
 
 - Visit type
 - Patient age
@@ -117,399 +76,274 @@ Smart Scheduling predicts the expected duration of an individual appointment usi
 - Late-arrival time
 - Visit complexity
 
-The system then converts the prediction into a recommended appointment slot.
+The output includes a point prediction, calibrated interval, uncertainty category, and recommended appointment slot.
 
-Predictions can also be passed into a discrete-event clinic simulation that compares AI-assisted scheduling against traditional fixed-slot scheduling across an entire clinic day.
-
----
-
-## Traditional vs. AI-Assisted Scheduling
+## System architecture
 
 ```mermaid
 flowchart LR
-    A["Traditional Scheduling<br/>Fixed 20-minute slots"]
-    B["Complex visits run over"]
-    C["Delays compound"]
-    D["~130 min modeled overtime"]
+    U[User] --> FE[React + TypeScript]
 
-    E["Smart Scheduling<br/>Predicted visit duration"]
-    F["Adaptive appointment slots"]
-    G["Clinic-day allocation"]
-    H["~30 min modeled overtime"]
+    FE -->|REST| API[FastAPI]
 
-    A --> B
-    B --> C
-    C --> D
+    API --> P[Prediction Pipeline]
+    API --> X[Explanation + What-if Engine]
+    API --> O[Robust Slot Optimizer]
+    API --> S[Discrete-Event Simulator]
+    API --> A[Analytics Artifacts]
 
-    E --> F
-    F --> G
-    G --> H
+    P --> M[Selected ML Model]
+    M --> C[Mondrian Conformal Calibration]
+    C --> R[Prediction + 90% Interval]
+
+    O --> T[Optimized Clinic Timeline]
+    S --> T2[Strategy Comparison]
 ```
 
-**Modeled reduction in daily overtime: ~77%**
+## Methodology
 
----
-
-## Results on Simulated Clinic Days
-
-| Metric | Fixed Scheduling | AI Scheduling |
-|---|---:|---:|
-| Daily overtime | ~130 min | ~30 min |
-| Overtime reduction | — | **~77%** |
-| Avg. prediction error | — | **3.74 min** |
-| Variance explained (R²) | — | **0.825** |
-
-These results come from simulated clinic days generated using the project's synthetic patient dataset and appointment-duration model.
-
----
-
-## Model Comparison
-
-Four models were trained and benchmarked on **2,000 synthetic patient records** using an **80/20 train-test split**.
-
-| Model | MAE (min) ↓ | RMSE (min) ↓ | R² ↑ |
-|---|---:|---:|---:|
-| **Neural Network** | **3.74** | **4.93** | **0.825** |
-| XGBoost | 3.99 | 5.28 | 0.800 |
-| Random Forest | 3.99 | 5.35 | 0.794 |
-| KNN | 4.62 | 6.25 | 0.719 |
-
-The **Neural Network** was selected for deployment based on overall predictive performance.
-
-### Deployed Model
-
-**Inputs**
-
-`visit type` · `age` · `insurance` · `provider` · `day of week` · `chronic conditions` · `first visit` · `late arrival` · `complexity`
-
-**Output**
-
-`predicted visit duration → recommended scheduling slot`
-
----
-
-## System Architecture
+### 1. Train / calibration / test separation
 
 ```mermaid
 flowchart LR
+    D[2,000 Synthetic Records] --> TR[60% Training]
+    D --> CA[20% Calibration]
+    D --> TE[20% Final Test]
 
-    U["User"]
+    TR --> CV[5-Fold Stratified CV]
+    CV --> SELECT[Model Selection]
+    SELECT --> FIT[Fit Selected Model]
 
-    subgraph Frontend
-        R["React + TypeScript"]
-        UI["Prediction / Benchmark / Simulation UI"]
-    end
+    CA --> CONF[Conformal Calibration]
+    FIT --> CONF
 
-    subgraph Backend
-        F["FastAPI REST API"]
-        P["Prediction Pipeline"]
-        S["Discrete-Event Simulator"]
-        BR["Benchmark Results"]
-    end
-
-    subgraph MachineLearning["Machine Learning"]
-        M["Neural Network"]
-        BM["Random Forest<br/>XGBoost<br/>KNN"]
-    end
-
-    U --> R
-    R --> UI
-    UI -->|REST requests| F
-
-    F --> P
-    F --> S
-    F --> BR
-
-    P --> M
-    BR --> BM
-
-    M --> PD["Predicted Duration"]
-    PD --> RS["Recommended Slot"]
-
-    S --> CS["Clinic-Day Simulation"]
-    CS --> OC["Overtime Comparison"]
+    FIT --> TEST[Final Test Metrics]
+    CONF --> TEST
 ```
 
-### Deployment
+The final test split is not used to choose the model or calibrate prediction intervals.
+
+### 2. Model benchmark
+
+Four regression approaches are trained and compared:
+
+- Random Forest
+- XGBoost
+- K-Nearest Neighbors
+- Feedforward Neural Network (`MLPRegressor`)
+
+The deployed model is selected by the lowest mean cross-validation MAE on the training split.
+
+### 3. Calibrated uncertainty
+
+The original project used a heuristic `prediction ± MAE` interval. The current version instead uses **90% split-conformal prediction intervals**.
+
+Calibration is performed by visit type when enough calibration observations are available. Rare categories fall back to the global finite-sample conformal residual quantile.
+
+For an individual visit:
+
+```text
+point prediction
+      ↓
+visit-type conformal residual radius
+      ↓
+90% calibrated prediction interval
+      ↓
+upper interval bound
+      ↓
+rounded to next 5-minute scheduling increment
+      ↓
+recommended robust slot
+```
+
+### 4. Local explanation
+
+The Explain view uses **sequential local sensitivity**, not SHAP and not causal attribution.
+
+Starting from a training-set reference patient, features are changed one at a time in a documented order. Each bar shows the change in model prediction produced by that step. The contributions sum to the difference between the reference prediction and the selected patient prediction, but they are explicitly described as path-dependent sensitivity estimates.
+
+Interactive what-if curves show how predictions change when varying:
+
+- Number of chronic conditions
+- Late-arrival time
+- Age
+- First vs. returning visit
+
+### 5. Robust slot optimization
+
+The optimizer begins with two slot targets:
+
+- **Base slot:** point prediction rounded to the next 5 minutes
+- **Desired robust slot:** conformal upper bound rounded to the next 5 minutes
+
+If all desired robust slots fit, they are retained. If they exceed clinic capacity but base slots still fit, the optimizer removes 5-minute buffer increments using an **uncertainty-weighted constrained allocation rule**. Higher-uncertainty visits are more strongly protected from compression.
+
+The optimizer never compresses a slot below the rounded point prediction simply to claim that the schedule fits.
+
+An optional **risk-first ordering heuristic** schedules appointments with larger predicted duration + uncertainty earlier. This heuristic uses model outputs only — never realized appointment durations.
+
+### 6. Corrected clinic simulation
+
+The initial version advanced future scheduled start times after seeing earlier actual durations. That allowed future schedules to react to information that would not be known when appointments were booked.
+
+The current simulation removes that look-ahead:
 
 ```mermaid
 flowchart LR
-    A["Browser"] --> B["Vercel<br/>React Frontend"]
-    B --> C["Render<br/>FastAPI Backend"]
-    C --> D["Serialized ML Model"]
-    C --> E["Simulation Engine"]
+    P[Held-out Patients] --> B[Book Entire Schedule]
+    B --> H[Hide Actual Durations]
+    H --> RUN[Run Clinic Day Sequentially]
+    RUN --> W[Patient Wait]
+    RUN --> I[Provider Idle Time]
+    RUN --> O[Clinic Overtime]
+    RUN --> D[Duration Overrun]
 ```
 
----
+All scheduled start times are determined **before** actual durations are used. Realized durations are then revealed only during simulation to evaluate the schedule.
 
-## Project Evolution
+The simulation samples exclusively from the same untouched 20% final-test partition used for model evaluation.
 
-```mermaid
-timeline
-    title Smart Scheduling Development
+## Scheduling strategies
 
-    10th Grade
-        : Bayesian appointment-duration prototype
-        : Initial symptom-based model
-        : 2nd Place Science Fair
+### Fixed scheduling
 
-    11th Grade
-        : Rebuilt with supervised machine learning
-        : Benchmarked four ML models
-        : Added discrete-event clinic simulation
-        : Built React + FastAPI application
-        : Deployed full-stack web interface
-        : 1st Place Science Fair
-```
+Every patient receives a 20-minute appointment slot.
 
-The project began in 10th grade as a Bayesian prototype using a simpler symptom-based dataset.
+### Conformal adaptive scheduling
 
-In 11th grade, it was rebuilt into the current system with supervised machine learning, multi-model benchmarking, discrete-event simulation, a REST API, and a production web interface.
+Each patient receives the upper 90% conformal bound rounded to the next 5 minutes. This is intentionally conservative and is not capacity constrained.
 
----
+### Optimized robust scheduling
+
+Conformal buffer is allocated subject to clinic working capacity and a configurable closing reserve. The UI reports whether the requested patient load is feasible without compressing below point-prediction slots.
+
+## Scenario presets
+
+The simulator includes demonstration presets:
+
+- Primary Care
+- Pediatrics
+- Cardiology
+- Urgent Care
+
+These presets **filter visit types from the same synthetic dataset**. They are not separate specialty-trained models and should not be interpreted as specialty-specific clinical validation.
+
+## Model analytics
+
+The analytics dashboard includes:
+
+- Cross-validation model-selection metrics
+- Final untouched test-set MAE, RMSE, and R²
+- Predicted vs. actual scatterplot
+- Residual histogram
+- Permutation feature importance
+- Error by visit type
+- Error by age group
+- Conformal interval coverage and width
+
+## Dataset
+
+The project uses **2,000 synthetic patient records** generated from distributions motivated by published primary-care appointment-duration literature, including Tai-Seale et al. (2017), *JAMA Internal Medicine*.
+
+Synthetic data is used instead of real clinical scheduling records because real patient data can contain protected health information.
+
+The dataset generator is deterministic by default (`seed=42`) so experiments are reproducible.
+
+## Limitations
+
+This project is a research and engineering demonstration, not a clinical scheduling system. Results are based on synthetic data and have not been externally validated on real clinic operations.
+
+The local explanation is a sensitivity method rather than a causal explanation. Scenario presets are filtered demonstrations rather than independently trained specialty models.
 
 ## Recognition
 
 - **1st Place — Coppell High School Science Fair, Robotics & Machine Learning (11th Grade)**
 - **2nd Place — Coppell High School Science Fair, Robotics & Machine Learning (10th Grade)**
 
----
+## Tech stack
 
-## Tech Stack
-
-### Machine Learning
-
-![Python](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white)
-![scikit-learn](https://img.shields.io/badge/scikit--learn-F7931E?logo=scikitlearn&logoColor=white)
-![XGBoost](https://img.shields.io/badge/XGBoost-ML-337AB7)
-![NumPy](https://img.shields.io/badge/NumPy-013243?logo=numpy&logoColor=white)
-![Pandas](https://img.shields.io/badge/Pandas-150458?logo=pandas&logoColor=white)
-
-### Backend
-
-![FastAPI](https://img.shields.io/badge/FastAPI-009688?logo=fastapi&logoColor=white)
-![Joblib](https://img.shields.io/badge/Joblib-Model%20Serialization-4B8BBE)
-
-### Frontend
-
-![React](https://img.shields.io/badge/React-20232A?logo=react&logoColor=61DAFB)
-![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white)
-![Recharts](https://img.shields.io/badge/Recharts-Visualization-22B5BF)
-
-### Deployment
-
-![Vercel](https://img.shields.io/badge/Vercel-Frontend-000000?logo=vercel&logoColor=white)
-![Render](https://img.shields.io/badge/Render-Backend-46E3B7?logo=render&logoColor=000000)
-
----
+**Machine Learning:** Python · scikit-learn · XGBoost · NumPy · Pandas · Joblib  
+**Backend:** FastAPI · Pydantic · Uvicorn  
+**Frontend:** React · TypeScript · Recharts · Lucide  
+**Deployment:** Vercel (frontend) · Render (backend)
 
 ## API
 
-The frontend communicates with the machine-learning backend through a FastAPI REST API.
-
 | Method | Endpoint | Description |
 |---|---|---|
-| `POST` | `/predict` | Predict appointment duration for one patient |
-| `GET` | `/benchmark` | Return benchmark metrics for trained models |
-| `POST` | `/simulate` | Run a full clinic-day simulation |
-| `GET` | `/visit-types` | Return valid input categories |
+| `POST` | `/predict` | Duration prediction + calibrated interval + robust slot |
+| `POST` | `/explain` | Local sensitivity explanation + batched what-if analysis |
+| `GET` | `/benchmark` | Model, calibration, and test analytics |
+| `POST` | `/simulate` | Fixed/adaptive/optimized clinic-day simulation |
+| `GET` | `/visit-types` | Valid inputs + scenario presets |
 | `GET` | `/health` | Backend health check |
 
-### Example Prediction Request
-
-```json
-{
-  "visit_type": "Hypertension Follow-up",
-  "age": 58,
-  "insurance_type": "Medicare",
-  "provider_type": "MD",
-  "day_of_week": "Monday",
-  "num_conditions": 2,
-  "is_first_visit": 0,
-  "arrived_late_min": 0
-}
-```
-
-### Example Response Structure
-
-```json
-{
-  "predicted_duration_min": 18.7,
-  "recommended_slot_min": 21.5,
-  "confidence_interval": [
-    15.0,
-    22.4
-  ],
-  "traditional_slot_min": 20,
-  "model_used": "Neural Network"
-}
-```
-
----
-
-## Project Structure
+## Project structure
 
 ```text
 smart-scheduling/
-│
 ├── backend/
-│   │
 │   ├── data/
-│   │   └── generate.py              # Synthetic dataset generator
-│   │
+│   │   ├── generate.py
+│   │   └── smart_scheduling_data.csv
 │   ├── models/
-│   │   ├── best_model.joblib        # Deployed trained model
-│   │   └── benchmark_results.json   # Model performance metrics
-│   │
-│   ├── main.py                      # FastAPI REST endpoints
-│   ├── train.py                     # Four-model training pipeline
-│   ├── simulate.py                  # Discrete-event clinic simulation
+│   │   ├── best_model.joblib
+│   │   ├── preprocessor.joblib
+│   │   └── benchmark_results.json
+│   ├── train.py
+│   ├── main.py
+│   ├── simulate.py
 │   └── requirements.txt
 │
 └── frontend/
-    │
     └── src/
-        │
+        ├── components/
+        │   ├── Common.tsx
+        │   ├── Nav.tsx
+        │   └── ScheduleTimeline.tsx
         ├── pages/
-        │   ├── PredictPage.tsx      # Patient intake + prediction
-        │   ├── BenchmarkPage.tsx    # Model comparison dashboard
-        │   └── SimulatePage.tsx     # Clinic-day simulation
-        │
-        ├── api.ts                   # Backend API client
+        │   ├── PredictPage.tsx
+        │   ├── ExplainPage.tsx
+        │   ├── OptimizePage.tsx
+        │   ├── SimulatePage.tsx
+        │   └── BenchmarkPage.tsx
+        ├── api.ts
         └── types/
             └── index.ts
 ```
 
----
+## Running locally
 
-## Dataset
-
-The model was trained on **2,000 synthetic patient records** generated using distributions derived from published primary-care appointment-duration research, including Tai-Seale et al. (2017), *JAMA Internal Medicine*.
-
-Synthetic data was used because real patient scheduling records contain protected health information.
-
-The generated dataset incorporates variation across:
-
-- Visit type
-- Patient age
-- Insurance type
-- Provider type
-- Day of week
-- Chronic condition count
-- First-visit status
-- Late arrival
-- Visit complexity
-
----
-
-## Training Pipeline
-
-```mermaid
-flowchart LR
-    A["Published Appointment<br/>Duration Distributions"]
-    B["Synthetic Patient<br/>Dataset"]
-    C["80 / 20<br/>Train-Test Split"]
-
-    D["Random Forest"]
-    E["XGBoost"]
-    F["KNN"]
-    G["Neural Network"]
-
-    H["MAE"]
-    I["RMSE"]
-    J["R²"]
-
-    K["Best Model"]
-    L["Production API"]
-
-    A --> B
-    B --> C
-
-    C --> D
-    C --> E
-    C --> F
-    C --> G
-
-    D --> H
-    E --> H
-    F --> H
-    G --> H
-
-    D --> I
-    E --> I
-    F --> I
-    G --> I
-
-    D --> J
-    E --> J
-    F --> J
-    G --> J
-
-    H --> K
-    I --> K
-    J --> K
-
-    K --> L
-```
-
----
-
-## Limitations
-
-Current results are based on synthetic patient records generated from published primary-care appointment-duration distributions rather than protected clinical data.
-
----
-
-## Running Locally
-
-### 1. Clone the Repository
-
-```bash
-git clone https://github.com/Ixhi08/smart-scheduling.git
-cd smart-scheduling
-```
-
-### 2. Start the Backend
+### Backend
 
 ```bash
 cd backend
-
 pip3 install -r requirements.txt
 
-# Generate dataset
+# Optional: regenerate the deterministic synthetic dataset
 python3 data/generate.py
 
-# Train and benchmark all four models
+# REQUIRED after pulling methodology/model changes
 python3 train.py
 
-# Start FastAPI
 uvicorn main:app --reload --port 8000
 ```
 
-Backend:
-
-```text
-http://localhost:8000
-```
-
-Interactive API documentation:
+FastAPI docs are available at:
 
 ```text
 http://localhost:8000/docs
 ```
 
-### 3. Start the Frontend
-
-Open another terminal:
+### Frontend
 
 ```bash
 cd frontend
-
 npm install
 npm start
 ```
 
-Frontend:
+The frontend runs at:
 
 ```text
 http://localhost:3000
@@ -521,20 +355,11 @@ For deployment, set:
 REACT_APP_API_URL=<your-backend-url>
 ```
 
----
+## Deployment note
 
-## Live Application
-
-**Frontend:**  
-https://smart-scheduling-ai.vercel.app/
-
-The production frontend is hosted on Vercel and communicates with a FastAPI backend hosted on Render.
-
-> Because the backend currently uses Render's free tier, the first request after a period of inactivity may take approximately 30–60 seconds while the service wakes. Requests are typically immediate once the backend is active.
-
----
+`best_model.joblib`, `preprocessor.joblib`, and `benchmark_results.json` must come from the **same training run**. After changing `train.py`, regenerate all three artifacts together before deploying the backend.
 
 <p align="center">
   <b>Smart Scheduling</b><br>
-  Independent machine learning + healthcare scheduling research project
+  Independent ML + healthcare scheduling research project
 </p>
