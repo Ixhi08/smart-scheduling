@@ -27,12 +27,11 @@ from typing import Iterable
 import joblib
 import numpy as np
 import pandas as pd
-from sklearn.model_selection import train_test_split
 
 BASE = Path(__file__).parent
 MODEL_PATH = BASE / "models" / "best_model.joblib"
 BENCHMARK_PATH = BASE / "models" / "benchmark_results.json"
-DATA_PATH = BASE / "data" / "smart_scheduling_data.csv"
+EVAL_DATA_PATH = BASE / "data" / "simulation_evaluation_data.csv"
 
 FIXED_SLOT_MIN = 20
 SLOT_INCREMENT_MIN = 5
@@ -45,39 +44,50 @@ MIN_SLOT_MIN = 10
 
 FEATURE_COLS = [
     "visit_type",
-    "insurance_type",
     "provider_type",
     "day_of_week",
     "age",
     "num_conditions",
     "is_first_visit",
-    "arrived_late_min",
-    "complexity_score",
 ]
 
+# Presets are transparent filters over a separate synthetic evaluation pool.
+# They are not specialty-trained or clinically validated models.
 SCENARIO_PRESETS = {
-    "Primary Care": None,  # full dataset
-    "Pediatrics": [
-        "Pediatric Well Visit",
-        "Upper Respiratory Infection",
-        "Asthma Management",
-        "Skin Rash / Dermatology",
-        "Urinary Tract Infection",
-    ],
-    "Cardiology": [
-        "Hypertension Follow-up",
-        "Chest Pain Evaluation",
-        "Type 2 Diabetes Management",
-    ],
-    "Urgent Care": [
-        "Upper Respiratory Infection",
-        "Acute Back Pain",
-        "Minor Laceration / Wound Care",
-        "Urinary Tract Infection",
-        "Chest Pain Evaluation",
-        "Skin Rash / Dermatology",
-        "Knee / Joint Pain",
-    ],
+    "Primary Care": {"visit_types": None, "age_min": 18, "age_max": 85},
+    "Pediatrics": {
+        "visit_types": [
+            "Pediatric Well Visit",
+            "Upper Respiratory Infection",
+            "Asthma Management",
+            "Skin Rash / Dermatology",
+            "Urinary Tract Infection",
+        ],
+        "age_min": 2,
+        "age_max": 17,
+    },
+    "Cardiology": {
+        "visit_types": [
+            "Hypertension Follow-up",
+            "Chest Pain Evaluation",
+            "Type 2 Diabetes Management",
+        ],
+        "age_min": 35,
+        "age_max": 85,
+    },
+    "Urgent Care": {
+        "visit_types": [
+            "Upper Respiratory Infection",
+            "Acute Back Pain",
+            "Minor Laceration / Wound Care",
+            "Urinary Tract Infection",
+            "Chest Pain Evaluation",
+            "Skin Rash / Dermatology",
+            "Knee / Joint Pain",
+        ],
+        "age_min": 5,
+        "age_max": 85,
+    },
 }
 
 
@@ -97,26 +107,22 @@ def _qhat_for_type(benchmark: dict, visit_type: str) -> float:
 
 
 def sample_patients(n: int = 24, seed: int = 99, preset: str = "Primary Care") -> pd.DataFrame:
-    """Sample a reproducible synthetic clinic day from the generated dataset."""
-    df = pd.read_csv(DATA_PATH)
+    """Sample a reproducible clinic day from an independent synthetic evaluation pool.
 
-    # Reconstruct the exact untouched 20% final-test partition used by train.py.
-    # Simulation therefore evaluates schedules only on records that were never
-    # used to fit the deployed model or conformal calibration.
-    all_idx = np.arange(len(df))
-    _, test_idx = train_test_split(
-        all_idx,
-        test_size=0.20,
-        random_state=42,
-        stratify=df["visit_type"],
-    )
-    df = df.iloc[test_idx].copy()
+    The pool is generated with a different seed and is never used for model
+    selection, fitting, conformal calibration, or final-test analytics.
+    """
+    df = pd.read_csv(EVAL_DATA_PATH)
 
-    allowed = SCENARIO_PRESETS.get(preset)
-    if allowed is None and preset not in SCENARIO_PRESETS:
+    config = SCENARIO_PRESETS.get(preset)
+    if config is None:
         raise ValueError(f"Unknown scenario preset: {preset}")
+
+    allowed = config.get("visit_types")
     if allowed:
         df = df[df["visit_type"].isin(allowed)].copy()
+    df = df[(df["age"] >= int(config["age_min"])) & (df["age"] <= int(config["age_max"]))].copy()
+
     if df.empty:
         raise ValueError(f"Scenario preset {preset!r} has no eligible records")
 
@@ -230,7 +236,7 @@ def allocate_robust_slots(
         "capacity_feasible": bool(feasible),
         "buffer_compressed_min": int(max(0, desired_total - int(current.sum()))),
         "scheduled_over_capacity_min": int(max(0, int(current.sum()) - capacity_min)),
-        "method": "uncertainty-weighted constrained 5-minute slot allocation",
+        "method": "discrete convex uncertainty-weighted buffer allocation in 5-minute increments",
     }
 
 
@@ -432,8 +438,9 @@ def simulate_day(
             "closing_buffer_min": max(0, closing_buffer),
         },
         "methodology_note": (
-            "Schedules are booked before actual durations are revealed and are evaluated on the untouched final-test partition. "
-            "Optimized ordering uses model predictions/uncertainty, never realized durations."
+            "Schedules are booked before actual durations are revealed and are evaluated on a separate synthetic simulation pool "
+            "that is not used for model fitting, calibration, selection, or final-test analytics. Optimized ordering uses model "
+            "predictions/uncertainty, never realized durations."
         ),
     }
 

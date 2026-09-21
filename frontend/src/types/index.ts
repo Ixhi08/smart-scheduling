@@ -13,20 +13,16 @@ export interface PredictionResult {
   time_saved_min: number;
   time_saved_pct: number;
   model_used: string;
-  complexity_score: number;
   recommended_slot_basis: string;
 }
 
 export interface PatientInput {
   visit_type: string;
   age: number;
-  insurance_type: string;
   provider_type: string;
   day_of_week: string;
   num_conditions: number;
   is_first_visit: number;
-  arrived_late_min: number;
-  complexity_score?: number | null;
 }
 
 export interface Contribution {
@@ -59,9 +55,9 @@ export interface ExplainResult {
   explanation: LocalExplanation;
   what_if: {
     num_conditions: WhatIfPoint[];
-    late_arrival_min: WhatIfPoint[];
     age: WhatIfPoint[];
     first_visit: WhatIfPoint[];
+    day_of_week: WhatIfPoint[];
   };
 }
 
@@ -157,6 +153,9 @@ export interface BenchmarkAnalytics {
   test_points: TestPoint[];
   error_by_visit_type: GroupDiagnostic[];
   error_by_age_group: GroupDiagnostic[];
+  error_by_insurance_type: GroupDiagnostic[];
+  insurance_mae_gap_min: number | null;
+  subgroup_audit_note: string;
   residual_histogram: ResidualBin[];
 }
 
@@ -273,7 +272,7 @@ export interface SimulationRequest {
 
 export interface VisitTypesResponse {
   visit_types: string[];
-  insurance_types: string[];
+  visit_type_age_ranges: Record<string, [number, number]>;
   provider_types: string[];
   days_of_week: string[];
   scenario_presets: string[];

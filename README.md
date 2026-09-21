@@ -41,7 +41,9 @@ Built over ~2 years as an independent research project. Smart Scheduling began a
 - **Separate calibration:** Mondrian split-conformal prediction intervals by visit type, with a global finite-sample fallback
 - **Interpretable predictions:** local sequential sensitivity analysis plus interactive what-if curves
 - **Capacity-aware scheduling:** robust 5-minute slot allocation that preserves more buffer for higher-uncertainty appointments
-- **No-lookahead simulation:** schedules are booked before actual durations are revealed and evaluated on the untouched final-test partition
+- **No-lookahead simulation:** schedules are booked before actual durations are revealed and evaluated on a separate synthetic evaluation pool
+- **Input audit:** insurance, arrival lateness, and hand-coded complexity are excluded from the predictive model
+- **Subgroup diagnostics:** age and insurance-group error/coverage checks are reported without using insurance as a predictor
 - **Model diagnostics:** predicted-vs-actual scatter, residuals, subgroup error, conformal coverage, and permutation feature importance
 
 ## Application
@@ -68,15 +70,14 @@ The deployed model uses:
 
 - Visit type
 - Patient age
-- Insurance type
 - Provider type
 - Day of week
 - Chronic condition count
 - First-visit status
-- Late-arrival time
-- Visit complexity
 
-The output includes a point prediction, calibrated interval, uncertainty category, and recommended appointment slot.
+The output includes a point prediction, calibrated interval, relative uncertainty category, and recommended appointment slot.
+
+**Deliberately excluded from prediction:** insurance type (audit-only), arrival lateness (not known when a future appointment is booked), and any hand-coded complexity score (redundant with visit type and too easy to make target-informed).
 
 ## System architecture
 
@@ -138,7 +139,7 @@ The deployed model is selected by the lowest mean cross-validation MAE on the tr
 
 The original project used a heuristic `prediction ± MAE` interval. The current version instead uses **90% split-conformal prediction intervals**.
 
-Calibration is performed by visit type when enough calibration observations are available. Rare categories fall back to the global finite-sample conformal residual quantile.
+Calibration is performed by visit type when enough calibration observations are available. Rare categories fall back to the global finite-sample conformal residual quantile. The 90% level is a nominal conformal target; empirical coverage can vary in finite held-out subgroups, especially for rare visit types.
 
 For an individual visit:
 
@@ -165,7 +166,7 @@ Starting from a training-set reference patient, features are changed one at a ti
 Interactive what-if curves show how predictions change when varying:
 
 - Number of chronic conditions
-- Late-arrival time
+- Day of week
 - Age
 - First vs. returning visit
 
@@ -176,7 +177,7 @@ The optimizer begins with two slot targets:
 - **Base slot:** point prediction rounded to the next 5 minutes
 - **Desired robust slot:** conformal upper bound rounded to the next 5 minutes
 
-If all desired robust slots fit, they are retained. If they exceed clinic capacity but base slots still fit, the optimizer removes 5-minute buffer increments using an **uncertainty-weighted constrained allocation rule**. Higher-uncertainty visits are more strongly protected from compression.
+If all desired robust slots fit, they are retained. If they exceed clinic capacity but base slots still fit, the allocator removes 5-minute buffer increments by the smallest marginal increase in a weighted quadratic buffer-loss objective. This is a discrete separable convex allocation problem: higher-uncertainty visits receive larger penalties for buffer removal and are therefore more strongly protected from compression.
 
 The optimizer never compresses a slot below the rounded point prediction simply to claim that the schedule fits.
 
@@ -201,7 +202,7 @@ flowchart LR
 
 All scheduled start times are determined **before** actual durations are used. Realized durations are then revealed only during simulation to evaluate the schedule.
 
-The simulation samples exclusively from the same untouched 20% final-test partition used for model evaluation.
+The simulator uses a **separate deterministic synthetic evaluation dataset** generated with a different random seed. It is not used for model selection, fitting, conformal calibration, or final-test analytics.
 
 ## Scheduling strategies
 
@@ -226,34 +227,51 @@ The simulator includes demonstration presets:
 - Cardiology
 - Urgent Care
 
-These presets **filter visit types from the same synthetic dataset**. They are not separate specialty-trained models and should not be interpreted as specialty-specific clinical validation.
+These presets filter visit type and age ranges from the separate synthetic simulation-evaluation pool. They are not separate specialty-trained models and should not be interpreted as specialty-specific clinical validation.
+
+## Current held-out results
+
+On the untouched 20% final test split of the synthetic development dataset, the selected neural network achieved:
+
+- **MAE:** 3.909 minutes
+- **RMSE:** 5.193 minutes
+- **R²:** 0.7536
+- **90% nominal conformal coverage:** 93.5% empirical coverage
+- **Average prediction-interval width:** 19.99 minutes
+
+These are synthetic held-out results, not clinical validation.
 
 ## Model analytics
 
 The analytics dashboard includes:
 
 - Cross-validation model-selection metrics
-- Final untouched test-set MAE, RMSE, and R²
+- Final held-out test-set MAE, RMSE, and R²
 - Predicted vs. actual scatterplot
 - Residual histogram
 - Permutation feature importance
 - Error by visit type
 - Error by age group
+- Insurance-group error/coverage audit while insurance remains excluded from the model
 - Conformal interval coverage and width
 
 ## Dataset
 
-The project uses **2,000 synthetic patient records** generated from distributions motivated by published primary-care appointment-duration literature, including Tai-Seale et al. (2017), *JAMA Internal Medicine*.
+The model-development dataset contains **2,000 synthetic records**. A separate **1,500-record synthetic evaluation pool** is generated with another seed for clinic-simulation experiments.
 
-Synthetic data is used instead of real clinical scheduling records because real patient data can contain protected health information.
+The overall duration scale is motivated by published primary-care literature. For example, Chen, Farwell & Jha reported a mean adult primary-care visit duration of 18.9 minutes in nationally representative 1997–2005 NAMCS data ([Arch Intern Med. 2009;169(20):1866–1872](https://doi.org/10.1001/archinternmed.2009.341)).
 
-The dataset generator is deterministic by default (`seed=42`) so experiments are reproducible.
+The individual visit-type baselines and feature multipliers in this repository are **transparent synthetic assumptions for simulation**, not clinically estimated coefficients. Synthetic data is used instead of real clinical scheduling records because real patient data can contain protected health information.
+
+The generator is deterministic by default (`seed=42` for model development; `seed=2026` for simulation evaluation) so experiments are reproducible.
 
 ## Limitations
 
 This project is a research and engineering demonstration, not a clinical scheduling system. Results are based on synthetic data and have not been externally validated on real clinic operations.
 
-The local explanation is a sensitivity method rather than a causal explanation. Scenario presets are filtered demonstrations rather than independently trained specialty models.
+The synthetic generator contains manually specified visit-type baselines and operational effects; these should not be interpreted as learned clinical relationships. Insurance is retained only for subgroup auditing and is not a model input or duration-generating factor. Arrival lateness is used only during clinic simulation and is not used to predict visit duration.
+
+The local explanation is a sensitivity method rather than a causal explanation. Scenario presets are filtered demonstrations rather than independently trained specialty models. Subgroup diagnostics on synthetic data are methodological checks, not evidence of real-world fairness or equity.
 
 ## Recognition
 
@@ -285,7 +303,8 @@ smart-scheduling/
 ├── backend/
 │   ├── data/
 │   │   ├── generate.py
-│   │   └── smart_scheduling_data.csv
+│   │   ├── smart_scheduling_data.csv
+│   │   └── simulation_evaluation_data.csv
 │   ├── models/
 │   │   ├── best_model.joblib
 │   │   ├── preprocessor.joblib
@@ -320,7 +339,7 @@ smart-scheduling/
 cd backend
 pip3 install -r requirements.txt
 
-# Optional: regenerate the deterministic synthetic dataset
+# Regenerate both deterministic synthetic datasets
 python3 data/generate.py
 
 # REQUIRED after pulling methodology/model changes

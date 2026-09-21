@@ -41,7 +41,7 @@ export const OptimizePage: React.FC = () => {
       <div style={{ marginBottom: 28 }}>
         <h1 style={{ fontSize: 27, letterSpacing: '-0.6px', marginBottom: 5 }}>Schedule Optimizer</h1>
         <p style={{ color: 'var(--text-muted)', fontSize: 14 }}>
-          Allocate uncertainty-aware appointment slots under clinic capacity, with an optional prediction-only risk-first ordering heuristic.
+          Allocate uncertainty-aware appointment slots under clinic capacity using a discrete buffer-allocation objective, with optional prediction-only risk-first ordering.
         </p>
       </div>
 
@@ -102,10 +102,10 @@ export const OptimizePage: React.FC = () => {
         ) : (
           <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4,1fr)', gap: 10 }}>
-              <StatBox label="Optimizer Slot Capacity" value={opt.capacity_min} unit="min" hint={`${result.clinic.closing_buffer_min}m closing reserve`} />
-              <StatBox label="Desired Robust Slots" value={opt.desired_total_min} unit="min" />
+              <StatBox label="Available Slot Capacity" value={opt.capacity_min} unit="min" hint={`${result.clinic.closing_buffer_min}m closing reserve`} />
+              <StatBox label="Requested Robust Time" value={opt.desired_total_min} unit="min" />
               <StatBox label="Allocated" value={opt.allocated_total_min} unit="min" accent="var(--accent)" />
-              <StatBox label="Buffer Compressed" value={opt.buffer_compressed_min} unit="min" accent={opt.buffer_compressed_min > 0 ? 'var(--warn)' : 'var(--accent2)'} />
+              <StatBox label="Buffer Reduced" value={opt.buffer_compressed_min} unit="min" accent={opt.buffer_compressed_min > 0 ? 'var(--warn)' : 'var(--accent2)'} />
             </div>
 
             {!opt.capacity_feasible && (

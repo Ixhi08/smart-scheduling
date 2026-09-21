@@ -105,7 +105,7 @@ export const ExplainPage: React.FC = () => {
                 <h2 style={{ fontSize: 18, marginBottom: 12 }}>What-if curves</h2>
                 <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 14 }}>
                   <WhatIfChart title="Chronic Conditions" data={result.what_if.num_conditions} xLabel="conditions" />
-                  <WhatIfChart title="Late Arrival" data={result.what_if.late_arrival_min} xLabel="minutes" />
+                  <WhatIfChart title="Day of Week" data={result.what_if.day_of_week} xLabel="day" />
                   <WhatIfChart title="Age Sensitivity" data={result.what_if.age} xLabel="age" />
                   <WhatIfChart title="First vs Returning" data={result.what_if.first_visit} xLabel="status" />
                 </div>

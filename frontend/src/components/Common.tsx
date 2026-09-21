@@ -4,12 +4,10 @@ import { PatientInput, VisitTypesResponse } from '../types';
 export const DEFAULT_PATIENT: PatientInput = {
   visit_type: 'Hypertension Follow-up',
   age: 58,
-  insurance_type: 'Medicare',
   provider_type: 'MD',
   day_of_week: 'Monday',
   num_conditions: 2,
   is_first_visit: 0,
-  arrived_late_min: 0,
 };
 
 export const inputStyle: React.CSSProperties = {
@@ -93,41 +91,58 @@ export const PatientForm: React.FC<{
   compact?: boolean;
 }> = ({ form, setForm, meta, compact = false }) => {
   const set = (key: keyof PatientInput, value: string | number) => setForm(f => ({ ...f, [key]: value }));
+  const ageRange = meta?.visit_type_age_ranges?.[form.visit_type] || [1, 110];
+  const setVisitType = (visitType: string) => {
+    const [minAge, maxAge] = meta?.visit_type_age_ranges?.[visitType] || [1, 110];
+    setForm(f => ({ ...f, visit_type: visitType, age: Math.min(maxAge, Math.max(minAge, f.age)) }));
+  };
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: compact ? 13 : 16 }}>
       <Field label="Visit type">
-        <select style={selectStyle} value={form.visit_type} onChange={e => set('visit_type', e.target.value)}>
+        <select style={selectStyle} value={form.visit_type} onChange={e => setVisitType(e.target.value)}>
           {(meta?.visit_types || [DEFAULT_PATIENT.visit_type]).map(v => <option key={v}>{v}</option>)}
         </select>
       </Field>
       <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12 }}>
         <Field label="Age">
-          <input type="number" style={inputStyle} min={1} max={110} value={form.age} onChange={e => set('age', Number(e.target.value) || 1)} />
+          <input
+            type="number"
+            style={inputStyle}
+            min={ageRange[0]}
+            max={ageRange[1]}
+            step={1}
+            value={form.age}
+            onChange={e => {
+              const value = Number(e.target.value);
+              set('age', Math.min(ageRange[1], Math.max(ageRange[0], Number.isFinite(value) ? value : ageRange[0])));
+            }}
+          />
         </Field>
         <Field label="Chronic conditions">
-          <input type="number" style={inputStyle} min={0} max={10} value={form.num_conditions} onChange={e => set('num_conditions', Number(e.target.value) || 0)} />
+          <input
+            type="number"
+            style={inputStyle}
+            min={0}
+            max={4}
+            step={1}
+            value={form.num_conditions}
+            onChange={e => {
+              const value = Math.trunc(Number(e.target.value));
+              set('num_conditions', Math.min(4, Math.max(0, Number.isFinite(value) ? value : 0)));
+            }}
+          />
         </Field>
       </div>
       <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12 }}>
-        <Field label="Insurance">
-          <select style={selectStyle} value={form.insurance_type} onChange={e => set('insurance_type', e.target.value)}>
-            {(meta?.insurance_types || ['Private', 'Medicare', 'Medicaid', 'Uninsured']).map(v => <option key={v}>{v}</option>)}
-          </select>
-        </Field>
         <Field label="Provider">
           <select style={selectStyle} value={form.provider_type} onChange={e => set('provider_type', e.target.value)}>
             {(meta?.provider_types || ['MD', 'DO', 'NP', 'PA']).map(v => <option key={v}>{v}</option>)}
           </select>
         </Field>
-      </div>
-      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12 }}>
         <Field label="Day of week">
           <select style={selectStyle} value={form.day_of_week} onChange={e => set('day_of_week', e.target.value)}>
             {(meta?.days_of_week || ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday']).map(v => <option key={v}>{v}</option>)}
           </select>
-        </Field>
-        <Field label="Late arrival" hint="Minutes">
-          <input type="number" style={inputStyle} min={0} max={60} value={form.arrived_late_min} onChange={e => set('arrived_late_min', Number(e.target.value) || 0)} />
         </Field>
       </div>
       <Field label="First visit">

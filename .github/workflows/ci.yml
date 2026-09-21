@@ -33,6 +33,11 @@ jobs:
 
           model = joblib.load(MODEL_PATH)
           benchmark = json.load(open(BENCHMARK_PATH))
+
+          assert 'insurance_type' not in benchmark['feature_names']
+          assert 'arrived_late_min' not in benchmark['feature_names']
+          assert 'complexity_score' not in benchmark['feature_names']
+
           patients = sample_patients(16, 42, 'Primary Care')
           first = simulate_day(patients, model, benchmark)
 
@@ -48,7 +53,28 @@ jobs:
               assert starts_a == starts_b, f'{strategy}: schedule leaks realized durations'
               assert slots_a == slots_b, f'{strategy}: slot allocation leaks realized durations'
 
+          pediatrics = sample_patients(20, 7, 'Pediatrics')
+          assert pediatrics['age'].max() <= 17
+
           assert first['optimization']['allocated_total_min'] <= first['optimization']['capacity_min'] or not first['optimization']['capacity_feasible']
+          assert 'separate synthetic simulation pool' in first['methodology_note']
+
+          # Explain/what-if must stay within the synthetic training support.
+          from main import PatientInput, _predict_core, _what_if, benchmark as api_benchmark
+          boundary_cases = [
+              PatientInput(visit_type='Hypertension Follow-up', age=35, provider_type='MD', day_of_week='Monday', num_conditions=4, is_first_visit=0),
+              PatientInput(visit_type='Pediatric Well Visit', age=2, provider_type='NP', day_of_week='Friday', num_conditions=0, is_first_visit=1),
+              PatientInput(visit_type='New Patient Intake', age=85, provider_type='DO', day_of_week='Wednesday', num_conditions=2, is_first_visit=1),
+          ]
+          for patient in boundary_cases:
+              prediction = _predict_core(patient)
+              what_if = _what_if(patient)
+              lo, hi = api_benchmark['visit_type_age_ranges'][patient.visit_type]
+              ages = [point['x'] for point in what_if['age']]
+              assert min(ages) >= lo and max(ages) <= hi
+              assert max(point['x'] for point in what_if['num_conditions']) <= 4
+              assert prediction['prediction_interval'][0] <= prediction['predicted_duration_min'] <= prediction['prediction_interval'][1]
+
           print('Backend smoke tests passed')
           PY
 

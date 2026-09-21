@@ -43,7 +43,7 @@ export const BenchmarkPage: React.FC = () => {
           <div style={{ display: 'flex', gap: 12, alignItems: 'center' }}><Award color="var(--accent)" size={21} /><div><div style={{ fontWeight: 700, color: 'var(--accent)' }}>{data.best_model}</div><div style={{ color: 'var(--text-muted)', fontSize: 11 }}>Selected by 5-fold CV MAE: {selected.cv_mae_mean} ± {selected.cv_mae_std} min</div></div></div>
         </Card>
         <Card style={{ background: 'rgba(59,130,246,0.04)', borderColor: 'rgba(59,130,246,0.25)' }}>
-          <div style={{ display: 'flex', gap: 12, alignItems: 'center' }}><ShieldCheck color="var(--accent2)" size={21} /><div><div style={{ fontWeight: 700, color: 'var(--accent2)' }}>90% Mondrian Conformal</div><div style={{ color: 'var(--text-muted)', fontSize: 11 }}>Held-out coverage: {(data.conformal.test_empirical_coverage * 100).toFixed(1)}% · visit-type calibrated with global fallback</div></div></div>
+          <div style={{ display: 'flex', gap: 12, alignItems: 'center' }}><ShieldCheck color="var(--accent2)" size={21} /><div><div style={{ fontWeight: 700, color: 'var(--accent2)' }}>90% Nominal Mondrian Conformal</div><div style={{ color: 'var(--text-muted)', fontSize: 11 }}>Held-out coverage: {(data.conformal.test_empirical_coverage * 100).toFixed(1)}% · nominal 90% target · visit-type calibrated with global fallback</div></div></div>
         </Card>
       </div>
 
@@ -139,6 +139,32 @@ export const BenchmarkPage: React.FC = () => {
               <Bar dataKey="mae" name="MAE (min)" fill="#f59e0b" radius={[4,4,0,0]} />
             </BarChart>
           </ResponsiveContainer>
+        </Card>
+      </div>
+
+      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 14, marginBottom: 14 }}>
+        <Card>
+          <SectionLabel>Subgroup Audit — Insurance Type</SectionLabel>
+          <p style={{ color: 'var(--text-muted)', fontSize: 10, marginTop: 5 }}>{data.analytics.subgroup_audit_note}</p>
+          <ResponsiveContainer width="100%" height={240}>
+            <BarChart data={data.analytics.error_by_insurance_type} margin={{ top: 12, right: 10, bottom: 0, left: -10 }}>
+              <CartesianGrid strokeDasharray="3 3" stroke="var(--border)" vertical={false} />
+              <XAxis dataKey="group" tick={{ fill: 'var(--text-muted)', fontSize: 9 }} axisLine={false} />
+              <YAxis tick={{ fill: 'var(--text-muted)', fontSize: 10 }} axisLine={false} />
+              <Tooltip contentStyle={{ background: 'var(--surface2)', border: '1px solid var(--border)', borderRadius: 8, fontSize: 11 }} />
+              <Bar dataKey="mae" name="MAE (min)" fill="#64748b" radius={[4,4,0,0]} />
+            </BarChart>
+          </ResponsiveContainer>
+        </Card>
+        <Card>
+          <SectionLabel>Subgroup Audit Summary</SectionLabel>
+          <div style={{ marginTop: 18, display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 10 }}>
+            <StatBox label="Insurance MAE gap" value={data.analytics.insurance_mae_gap_min ?? '—'} unit={data.analytics.insurance_mae_gap_min == null ? undefined : 'min'} />
+            <StatBox label="Model uses insurance" value="No" accent="var(--accent)" />
+          </div>
+          <p style={{ color: 'var(--text-muted)', fontSize: 11, lineHeight: 1.55, marginTop: 14 }}>
+            This is a synthetic subgroup performance check, not evidence of real-world fairness or clinical equity.
+          </p>
         </Card>
       </div>
 

@@ -1,21 +1,25 @@
 """
-Smart Scheduling — rigorous training, calibration, and analytics pipeline.
+Smart Scheduling — training, calibration, and analytics pipeline.
 
 Methodology
 -----------
-1. Stratified 60/20/20 train/calibration/test split by visit type.
+1. Stratified 60/20/20 train/calibration/final-test split by visit type.
 2. Select the deployed model using 5-fold stratified CV on TRAIN only.
-3. Fit candidate models on TRAIN and report final metrics on untouched TEST.
+3. Fit candidates on TRAIN; model selection never uses calibration or final test.
 4. Calibrate 90% Mondrian split-conformal intervals on CALIBRATION, using
-   visit-type-specific residual quantiles when each group has enough samples and
-   a global finite-sample conformal quantile as fallback.
-5. Build test-set diagnostics and permutation feature importance for the UI.
+   visit-type residual quantiles when groups are large enough and a global
+   finite-sample conformal quantile as fallback.
+5. Report final-test diagnostics only after model selection/calibration are fixed.
+6. Audit subgroup error by insurance type even though insurance is explicitly
+   excluded from model inputs.
 
-Saves
------
-- models/best_model.joblib
-- models/preprocessor.joblib
-- models/benchmark_results.json
+Model-input audit
+-----------------
+The deployed model intentionally excludes:
+- insurance_type: retained only as an audit attribute, not a scheduling input.
+- arrived_late_min: operational simulation variable not known at booking time.
+- any hand-coded complexity score: visit type already contains the relevant
+  category information, avoiding a redundant target-informed proxy.
 """
 
 from __future__ import annotations
@@ -37,6 +41,7 @@ from sklearn.neural_network import MLPRegressor
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import OneHotEncoder, StandardScaler
 from xgboost import XGBRegressor
+from data.generate import VISIT_TYPES
 
 RANDOM_STATE = 42
 CV_FOLDS = 5
@@ -50,52 +55,49 @@ DATA_PATH = BASE / "data" / "smart_scheduling_data.csv"
 MODELS_DIR = BASE / "models"
 MODELS_DIR.mkdir(exist_ok=True)
 
-CAT_FEATURES = ["visit_type", "insurance_type", "provider_type", "day_of_week"]
-NUM_FEATURES = [
-    "age",
-    "num_conditions",
-    "is_first_visit",
-    "arrived_late_min",
-    "complexity_score",
-]
+CAT_FEATURES = ["visit_type", "provider_type", "day_of_week"]
+NUM_FEATURES = ["age", "num_conditions", "is_first_visit"]
 FEATURES = CAT_FEATURES + NUM_FEATURES
+AUDIT_COLUMNS = ["insurance_type"]
+EXCLUDED_MODEL_INPUTS = ["insurance_type", "arrived_late_min", "complexity_score"]
 TARGET = "actual_duration_min"
 
 
 def load_and_split_data():
     df = pd.read_csv(DATA_PATH)
-    missing = [c for c in FEATURES + [TARGET] if c not in df.columns]
+    required = FEATURES + AUDIT_COLUMNS + ["arrived_late_min", TARGET]
+    missing = [c for c in required if c not in df.columns]
     if missing:
         raise ValueError(f"Dataset is missing required columns: {missing}")
 
-    X = df[FEATURES].copy()
-    y = df[TARGET].astype(float)
-
-    X_dev, X_test, y_dev, y_test = train_test_split(
-        X,
-        y,
+    all_idx = np.arange(len(df))
+    dev_idx, test_idx = train_test_split(
+        all_idx,
         test_size=0.20,
         random_state=RANDOM_STATE,
-        stratify=X["visit_type"],
+        stratify=df["visit_type"],
     )
-    X_train, X_cal, y_train, y_cal = train_test_split(
-        X_dev,
-        y_dev,
+    train_idx, cal_idx = train_test_split(
+        dev_idx,
         test_size=0.25,
         random_state=RANDOM_STATE,
-        stratify=X_dev["visit_type"],
+        stratify=df.iloc[dev_idx]["visit_type"],
     )
-    return df, X_train, X_cal, X_test, y_train, y_cal, y_test
+
+    def X(idx):
+        return df.iloc[idx][FEATURES].reset_index(drop=True)
+
+    def y(idx):
+        return df.iloc[idx][TARGET].astype(float).reset_index(drop=True)
+
+    audit_test = df.iloc[test_idx][AUDIT_COLUMNS].reset_index(drop=True)
+    return df, X(train_idx), X(cal_idx), X(test_idx), y(train_idx), y(cal_idx), y(test_idx), audit_test
 
 
 def build_preprocessor() -> ColumnTransformer:
     return ColumnTransformer(
         transformers=[
-            (
-                "cat",
-                OneHotEncoder(handle_unknown="ignore", sparse_output=False),
-                CAT_FEATURES,
-            ),
+            ("cat", OneHotEncoder(handle_unknown="ignore", sparse_output=False), CAT_FEATURES),
             ("num", StandardScaler(), NUM_FEATURES),
         ]
     )
@@ -120,11 +122,7 @@ def get_models():
             verbosity=0,
             n_jobs=-1,
         ),
-        "KNN": KNeighborsRegressor(
-            n_neighbors=8,
-            weights="distance",
-            metric="minkowski",
-        ),
+        "KNN": KNeighborsRegressor(n_neighbors=8, weights="distance", metric="minkowski"),
         "Neural Network": MLPRegressor(
             hidden_layer_sizes=(128, 64, 32),
             activation="relu",
@@ -142,7 +140,7 @@ def make_pipeline(model) -> Pipeline:
 
 
 def bounded_predict(pipeline: Pipeline, X: pd.DataFrame) -> np.ndarray:
-    preds = np.asarray(pipeline.predict(X), dtype=float)
+    preds = np.asarray(pipeline.predict(X[FEATURES]), dtype=float)
     return np.clip(preds, MIN_DURATION_MIN, MAX_DURATION_MIN)
 
 
@@ -155,14 +153,10 @@ def regression_metrics(y_true, preds) -> dict:
 
 
 def cv_metrics(name: str, pipeline: Pipeline, X_train, y_train, cv_splits) -> dict:
-    scoring = {
-        "mae": "neg_mean_absolute_error",
-        "rmse": "neg_root_mean_squared_error",
-        "r2": "r2",
-    }
+    scoring = {"mae": "neg_mean_absolute_error", "rmse": "neg_root_mean_squared_error", "r2": "r2"}
     scores = cross_validate(
         pipeline,
-        X_train,
+        X_train[FEATURES],
         y_train,
         cv=cv_splits,
         scoring=scoring,
@@ -190,7 +184,6 @@ def cv_metrics(name: str, pipeline: Pipeline, X_train, y_train, cv_splits) -> di
 
 
 def conformal_quantile(abs_residuals: np.ndarray, alpha: float) -> tuple[float, float, int]:
-    """Finite-sample split-conformal absolute-residual quantile."""
     scores = np.asarray(abs_residuals, dtype=float)
     if scores.ndim != 1 or len(scores) == 0:
         raise ValueError("Calibration residuals must be a non-empty 1D array")
@@ -213,10 +206,26 @@ def make_reference_profile(X_train: pd.DataFrame) -> dict:
     return profile
 
 
+def _group_diagnostics(test_frame: pd.DataFrame, group_col: str, include_width: bool = False) -> list[dict]:
+    out = []
+    for group, g in test_frame.groupby(group_col, observed=True, sort=True):
+        row = {
+            "group": str(group),
+            "count": int(len(g)),
+            "mae": round(float(np.mean(np.abs(g["actual"] - g["predicted"]))), 3),
+            "coverage": round(float(g["covered"].mean()), 4),
+        }
+        if include_width:
+            row["avg_interval_width"] = round(float(g["width"].mean()), 3)
+        out.append(row)
+    return out
+
+
 def make_analytics(
     best_pipeline: Pipeline,
     X_test: pd.DataFrame,
     y_test: pd.Series,
+    audit_test: pd.DataFrame,
     preds: np.ndarray,
     lower: np.ndarray,
     upper: np.ndarray,
@@ -227,11 +236,9 @@ def make_analytics(
     abs_err = np.abs(residuals)
     covered = (y_np >= lower) & (y_np <= upper)
 
-    # Permuting an informative feature worsens negative-MAE, so a positive value
-    # is the increase in MAE (minutes) caused by permutation.
     perm = permutation_importance(
         best_pipeline,
-        X_test,
+        X_test[FEATURES],
         y_test,
         scoring="neg_mean_absolute_error",
         n_repeats=8,
@@ -251,15 +258,22 @@ def make_analytics(
         reverse=True,
     )
 
+    test_frame = X_test.copy().reset_index(drop=True)
+    for col in AUDIT_COLUMNS:
+        test_frame[col] = audit_test[col].values
+    test_frame["actual"] = y_np
+    test_frame["predicted"] = preds
+    test_frame["covered"] = covered
+    test_frame["width"] = upper - lower
+
     test_points = []
-    for idx in range(len(X_test)):
-        row = X_test.iloc[idx]
+    for idx, row in test_frame.iterrows():
         test_points.append(
             {
-                "actual": round(float(y_np[idx]), 2),
-                "predicted": round(float(preds[idx]), 2),
-                "residual": round(float(residuals[idx]), 2),
-                "abs_error": round(float(abs_err[idx]), 2),
+                "actual": round(float(row["actual"]), 2),
+                "predicted": round(float(row["predicted"]), 2),
+                "residual": round(float(row["actual"] - row["predicted"]), 2),
+                "abs_error": round(float(abs(row["actual"] - row["predicted"])), 2),
                 "lower": round(float(lower[idx]), 2),
                 "upper": round(float(upper[idx]), 2),
                 "covered": bool(covered[idx]),
@@ -268,47 +282,22 @@ def make_analytics(
             }
         )
 
-    by_visit_type = []
-    test_frame = X_test.copy().reset_index(drop=True)
-    test_frame["actual"] = y_np
-    test_frame["predicted"] = preds
-    test_frame["covered"] = covered
-    test_frame["width"] = upper - lower
-    for visit_type, g in test_frame.groupby("visit_type", sort=True):
-        by_visit_type.append(
-            {
-                "group": str(visit_type),
-                "count": int(len(g)),
-                "mae": round(float(np.mean(np.abs(g["actual"] - g["predicted"]))), 3),
-                "coverage": round(float(g["covered"].mean()), 4),
-                "avg_interval_width": round(float(g["width"].mean()), 3),
-                "qhat_min": round(float(qhat_by_type.get(str(visit_type), np.nan)), 3)
-                if str(visit_type) in qhat_by_type
-                else None,
-            }
-        )
+    by_visit_type = _group_diagnostics(test_frame, "visit_type", include_width=True)
+    for row in by_visit_type:
+        row["qhat_min"] = round(float(qhat_by_type[row["group"]]), 3) if row["group"] in qhat_by_type else None
 
     age_labels = ["<18", "18–39", "40–59", "60–79", "80+"]
     age_bins = [-np.inf, 17, 39, 59, 79, np.inf]
     test_frame["age_group"] = pd.cut(test_frame["age"], bins=age_bins, labels=age_labels)
-    by_age_group = []
-    for age_group, g in test_frame.groupby("age_group", observed=True, sort=False):
-        by_age_group.append(
-            {
-                "group": str(age_group),
-                "count": int(len(g)),
-                "mae": round(float(np.mean(np.abs(g["actual"] - g["predicted"]))), 3),
-                "coverage": round(float(g["covered"].mean()), 4),
-            }
-        )
+    by_age_group = _group_diagnostics(test_frame, "age_group")
+    by_insurance_type = _group_diagnostics(test_frame, "insurance_type")
+
+    insurance_maes = [x["mae"] for x in by_insurance_type if x["count"] >= 10]
+    insurance_mae_gap = round(max(insurance_maes) - min(insurance_maes), 3) if len(insurance_maes) >= 2 else None
 
     counts, edges = np.histogram(residuals, bins=12)
     residual_histogram = [
-        {
-            "bin_start": round(float(edges[i]), 2),
-            "bin_end": round(float(edges[i + 1]), 2),
-            "count": int(counts[i]),
-        }
+        {"bin_start": round(float(edges[i]), 2), "bin_end": round(float(edges[i + 1]), 2), "count": int(counts[i])}
         for i in range(len(counts))
     ]
 
@@ -317,17 +306,17 @@ def make_analytics(
         "test_points": test_points,
         "error_by_visit_type": by_visit_type,
         "error_by_age_group": by_age_group,
+        "error_by_insurance_type": by_insurance_type,
+        "insurance_mae_gap_min": insurance_mae_gap,
+        "subgroup_audit_note": "Insurance type is excluded from model inputs and is used only for synthetic subgroup error auditing.",
         "residual_histogram": residual_histogram,
     }
 
 
 def train():
     print("Loading data and creating stratified 60/20/20 split…")
-    df, X_train, X_cal, X_test, y_train, y_cal, y_test = load_and_split_data()
-    print(
-        f"Rows: train={len(X_train)}, calibration={len(X_cal)}, "
-        f"test={len(X_test)} (total={len(df)})"
-    )
+    df, X_train, X_cal, X_test, y_train, y_cal, y_test, audit_test = load_and_split_data()
+    print(f"Rows: train={len(X_train)}, calibration={len(X_cal)}, test={len(X_test)} (total={len(df)})")
 
     skf = StratifiedKFold(n_splits=CV_FOLDS, shuffle=True, random_state=RANDOM_STATE)
     cv_splits = list(skf.split(X_train, X_train["visit_type"]))
@@ -341,7 +330,7 @@ def train():
         pipe = make_pipeline(estimator)
         cv_result = cv_metrics(name, pipe, X_train, y_train, cv_splits)
         selection_scores[name] = float(cv_result.pop("_selection_mae_raw"))
-        pipe.fit(X_train, y_train)
+        pipe.fit(X_train[FEATURES], y_train)
         test_preds = bounded_predict(pipe, X_test)
         test_result = regression_metrics(y_test, test_preds)
         results[name] = {
@@ -357,13 +346,11 @@ def train():
     best_pipeline = fitted_pipelines[best_name]
     print(f"\nSelected model: {best_name} by CV MAE")
 
-    # Global finite-sample conformal calibration.
     cal_preds = bounded_predict(best_pipeline, X_cal)
     cal_y = y_cal.to_numpy(dtype=float)
     cal_scores = np.abs(cal_y - cal_preds)
     global_qhat, q_level, rank = conformal_quantile(cal_scores, CONFORMAL_ALPHA)
 
-    # Mondrian/group-conditional calibration by visit type when group size supports it.
     qhat_by_type: dict[str, float] = {}
     group_sizes: dict[str, int] = {}
     cal_types = X_cal["visit_type"].astype(str).to_numpy()
@@ -400,7 +387,6 @@ def train():
         "quantile_rank": rank,
         "quantile_level": round(q_level, 6),
         "global_qhat_min": round(float(global_qhat), 4),
-        # kept for compatibility with Phase 1 UI/older clients
         "qhat_min": round(float(global_qhat), 4),
         "qhat_by_visit_type": {k: round(v, 4) for k, v in qhat_by_type.items()},
         "calibration_group_sizes": group_sizes,
@@ -411,15 +397,8 @@ def train():
     }
 
     analytics = make_analytics(
-        best_pipeline,
-        X_test,
-        y_test,
-        test_preds,
-        lower,
-        upper,
-        qhat_by_type,
+        best_pipeline, X_test, y_test, audit_test, test_preds, lower, upper, qhat_by_type
     )
-
     reference_profile = make_reference_profile(X_train)
 
     joblib.dump(best_pipeline, MODELS_DIR / "best_model.joblib")
@@ -447,8 +426,15 @@ def train():
         "analytics": analytics,
         "reference_profile": reference_profile,
         "feature_names": FEATURES,
+        "excluded_model_inputs": EXCLUDED_MODEL_INPUTS,
+        "audit_attributes": AUDIT_COLUMNS,
         "visit_types": sorted(df["visit_type"].astype(str).unique().tolist()),
+        "visit_type_age_ranges": {name: [int(spec[2]), int(spec[3])] for name, spec in VISIT_TYPES.items()},
         "duration_bounds_min": [MIN_DURATION_MIN, MAX_DURATION_MIN],
+        "data_note": (
+            "Synthetic research/engineering dataset. Per-visit-type durations and feature effects are explicit simulation assumptions, "
+            "not clinically estimated coefficients."
+        ),
     }
 
     with open(MODELS_DIR / "benchmark_results.json", "w") as f:
@@ -459,6 +445,8 @@ def train():
     print(f"  Visit-type q-hats: {len(qhat_by_type)} / {df['visit_type'].nunique()} groups")
     print(f"  Test coverage: {100 * conformal['test_empirical_coverage']:.1f}%")
     print(f"  Avg interval width: {conformal['test_avg_interval_width_min']:.2f} min")
+    print("Model inputs:", ", ".join(FEATURES))
+    print("Explicitly excluded:", ", ".join(EXCLUDED_MODEL_INPUTS))
     print("Saved: best_model.joblib, preprocessor.joblib, benchmark_results.json")
     return benchmark
 

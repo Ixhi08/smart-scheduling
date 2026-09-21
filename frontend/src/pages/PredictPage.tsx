@@ -14,10 +14,44 @@ export const PredictPage: React.FC = () => {
   useEffect(() => { api.visitTypes().then(setMeta).catch(() => {}); }, []);
 
   const run = async () => {
-    setLoading(true); setError('');
-    try { setResult(await api.predict(form)); }
-    catch { setError('Could not reach the prediction API. The backend may still be waking up.'); }
-    finally { setLoading(false); }
+    setError('');
+
+    const ageRange = meta?.visit_type_age_ranges?.[form.visit_type] || [1, 110];
+
+    if (form.age < ageRange[0] || form.age > ageRange[1]) {
+      setResult(null);
+      setError(`Age must be between ${ageRange[0]} and ${ageRange[1]} for this visit type.`);
+      return;
+    }
+
+    if (form.num_conditions < 0 || form.num_conditions > 4) {
+      setResult(null);
+      setError('Chronic conditions must be between 0 and 4.');
+      return;
+    }
+
+    setLoading(true);
+
+    try {
+      const prediction = await api.predict(form);
+      setResult(prediction);
+    } catch (err) {
+      setResult(null);
+
+      const message = err instanceof Error ? err.message : '';
+
+      if (
+        message.includes('Failed to fetch') ||
+        message.includes('NetworkError') ||
+        message.includes('Load failed')
+      ) {
+        setError('Could not reach the prediction API. The backend may still be waking up.');
+      } else {
+        setError(message || 'Prediction request failed. Please check the inputs and try again.');
+      }
+    } finally {
+      setLoading(false);
+    }
   };
 
   const uncertaintyColor = result?.uncertainty_level === 'Low'
